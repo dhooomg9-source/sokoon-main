@@ -26,8 +26,7 @@ export default function ProductsPage() {
 
   return (
     <div ref={pageRef} className="w-full flex flex-col pt-24 relative overflow-hidden bg-background">
-      {/* Thematic Background - Tech Minimalist */}
-      <div className="absolute inset-0 z-10 pointer-events-none filter grayscale opacity-[0.08] bg-cover bg-center bg-fixed" style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1505740420928-5e560c06d30e?q=80&w=2574&auto=format&fit=crop)' }}></div>
+      {/* Thematic Background Removed */}
       <div className="absolute top-0 inset-x-0 h-64 bg-gradient-to-b from-background via-background/80 to-transparent z-10 pointer-events-none"></div>
 
       <section className="py-16 px-6 md:px-12 lg:px-24 bg-transparent w-full flex flex-col items-center relative z-20">
@@ -47,7 +46,7 @@ export default function ProductsPage() {
               { title: 'SoundBarrier Elite', tag: 'Constraint', desc: 'Mass-loaded vinyl core wall partitions achieving STC-65 ratings for extreme isolation.', img: images.product3 }
             ].map((prod, i) => (
               <div key={i} className="reveal-block group p-5 bg-paper border border-dark/5 rounded-[2rem] hover:-translate-y-2 hover:shadow-2xl transition-all duration-500">
-                <div className="h-56 md:h-64 w-full rounded-[1.5rem] mb-6 bg-cover bg-center filter grayscale group-hover:grayscale-0 transition-all duration-700" style={{ backgroundImage: `url(${prod.img})` }}></div>
+                <div className="h-56 md:h-64 w-full rounded-[1.5rem] mb-6 bg-dark/5 transition-all duration-700"></div>
                 <div className="px-2 pb-4">
                   <span className="font-data text-xs px-3 py-1 bg-accent/10 text-accent rounded-full uppercase mb-4 inline-block font-bold">{prod.tag}</span>
                   <h3 className="font-heading font-bold text-2xl md:text-3xl text-dark mb-3">{prod.title}</h3>

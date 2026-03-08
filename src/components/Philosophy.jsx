@@ -7,8 +7,7 @@ gsap.registerPlugin(ScrollTrigger);
 export default function Philosophy() {
   const sectionRef = useRef(null);
   
-  // Real Unsplash URL matching "concrete, brutalist architecture, raw materials"
-  const bgImage = "https://images.unsplash.com/photo-1518002054494-3a6f94352e9d?q=80&w=2574&auto=format&fit=crop";
+  // Parallax Image removed per request
 
   useEffect(() => {
     let ctx = gsap.context(() => {
@@ -42,10 +41,7 @@ export default function Philosophy() {
 
   return (
     <section ref={sectionRef} className="relative w-full py-40 overflow-hidden bg-dark flex items-center justify-center border-t border-paper/10">
-      <div 
-        className="philosophy-bg absolute inset-[-20%] z-0 bg-cover bg-center opacity-10"
-        style={{ backgroundImage: `url(${bgImage})` }}
-      ></div>
+      <div className="philosophy-bg absolute inset-[-20%] z-0 bg-dark/40 opacity-10"></div>
       
       <div className="relative z-10 px-6 max-w-5xl mx-auto w-full flex flex-col items-start gap-12">
         <p className="phil-line font-heading text-xl md:text-3xl text-paper/60 uppercase tracking-widest max-w-2xl">

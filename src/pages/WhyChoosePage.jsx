@@ -4,7 +4,7 @@ import QuoteJourney from '../components/QuoteJourney';
 
 export default function WhyChoosePage() {
   const pageRef = useRef(null);
-  const heroWhy = "https://images.unsplash.com/photo-1518002054494-3a6f94352e9d?q=80&w=1600&auto=format&fit=crop";
+  // Images removed per request
 
   useEffect(() => {
     let ctx = gsap.context(() => {
@@ -21,8 +21,7 @@ export default function WhyChoosePage() {
 
   return (
     <div ref={pageRef} className="w-full flex flex-col pt-24 relative overflow-hidden bg-background">
-      {/* Thematic Background - Corporate Architecture */}
-      <div className="absolute inset-0 z-10 pointer-events-none filter grayscale opacity-[0.06] bg-cover bg-center bg-fixed" style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2574&auto=format&fit=crop)' }}></div>
+      {/* Thematic Background Removed */}
       <div className="absolute top-0 inset-x-0 h-64 bg-gradient-to-b from-background via-background/80 to-transparent z-10 pointer-events-none"></div>
 
       <section className="py-16 px-6 md:px-12 lg:px-24 bg-transparent w-full flex flex-col items-center relative z-20">
@@ -42,7 +41,7 @@ export default function WhyChoosePage() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 text-dark mt-16 mb-16">
             
             <div className="lg:col-span-5 flex flex-col justify-center gap-6 reveal-block">
-              <div className="w-full h-72 rounded-[2rem] bg-cover bg-center mb-4 shadow-xl" style={{ backgroundImage: `url(${heroWhy})` }}></div>
+              <div className="w-full h-72 rounded-[2rem] bg-dark/5 mb-4 shadow-xl"></div>
               <div className="p-8 bg-dark text-paper rounded-[2rem] shadow-xl">
                 <h4 className="font-heading text-xs text-paper/50 uppercase tracking-widest mb-4">Mission Statement</h4>
                 <p className="font-drama italic text-3xl text-paper leading-tight">

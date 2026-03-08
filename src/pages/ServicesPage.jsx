@@ -28,8 +28,7 @@ export default function ServicesPage() {
 
   return (
     <div ref={pageRef} className="w-full flex flex-col pt-24 relative overflow-hidden bg-background">
-      {/* Thematic Background - Acoustic Studio */}
-      <div className="absolute inset-0 z-10 pointer-events-none filter grayscale opacity-[0.10] bg-cover bg-center bg-fixed" style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?q=80&w=2574&auto=format&fit=crop)' }}></div>
+      {/* Thematic Background Removed */}
       <div className="absolute top-0 inset-x-0 h-64 bg-gradient-to-b from-background via-background/80 to-transparent z-10 pointer-events-none"></div>
 
       <section className="py-16 px-6 md:px-12 lg:px-24 bg-transparent w-full flex flex-col items-center relative z-20">
@@ -50,7 +49,7 @@ export default function ServicesPage() {
               { title: 'Isolated Booths', desc: 'Standalone silence chambers engineered for absolute sensory deprivation and secure communications.', img: images.booth }
             ].map((srv, i) => (
               <div key={i} className="reveal-block group relative rounded-[2rem] overflow-hidden bg-dark h-[350px] md:h-[400px] flex items-end w-full shadow-2xl">
-                <div className="absolute inset-0 bg-cover bg-center blend-overlay opacity-50 group-hover:opacity-80 group-hover:scale-105 transition-all duration-700 ease-[cubic-bezier(0.25,1,0.5,1)]" style={{ backgroundImage: `url(${srv.img})` }}></div>
+                <div className="absolute inset-0 bg-dark opacity-50 group-hover:opacity-80 group-hover:scale-105 transition-all duration-700 ease-[cubic-bezier(0.25,1,0.5,1)]"></div>
                 <div className="absolute inset-0 bg-gradient-to-t from-dark via-dark/40 to-transparent"></div>
                 <div className="relative z-10 p-10 w-full transform group-hover:-translate-y-4 transition-transform duration-500">
                   <h3 className="font-heading font-bold text-3xl md:text-4xl text-paper mb-3 flex justify-between items-center w-full">
