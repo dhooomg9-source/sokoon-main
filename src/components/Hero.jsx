@@ -42,10 +42,10 @@ export default function Hero() {
 
         <h1 className="hero-element flex flex-col gap-1 md:gap-2">
           <span className="font-heading font-bold text-5xl md:text-6xl lg:text-7xl tracking-tight leading-none text-dark">
-            Luxury meets
+            Sound Control,
           </span>
           <span className="font-drama italic font-medium text-7xl md:text-8xl lg:text-9xl leading-none text-accent">
-            Silence.
+            Redefined.
           </span>
         </h1>
         

@@ -62,8 +62,8 @@ export default function QuoteJourney() {
   return (
     <section id="quote-journey" ref={containerRef} className="py-20 px-6 md:px-12 lg:px-24 bg-paper min-h-[80vh] text-dark flex flex-col items-center w-full relative overflow-hidden">
       
-      {/* Technical Grid Pattern Background */}
-      <div className="absolute inset-0 z-10 pointer-events-none bg-[radial-gradient(#94a3b8_1px,transparent_1px)] [background-size:24px_24px] opacity-100"></div>
+      {/* Technical Grid Pattern Background - Modified for Legibility */}
+      <div className="absolute inset-0 z-10 pointer-events-none bg-[radial-gradient(#94a3b8_1px,transparent_1px)] [background-size:24px_24px] opacity-10"></div>
       <div className="absolute inset-0 z-10 pointer-events-none bg-gradient-to-b from-paper via-transparent to-paper"></div>
 
       <div className="text-center mb-16 max-w-3xl relative z-20">
@@ -80,7 +80,7 @@ export default function QuoteJourney() {
           <button 
             onClick={() => { setApproach('during'); setSector(null); setShowForm(false); }}
             className={`p-8 rounded-[2rem] text-left transition-all duration-300 border-2 ${
-              approach === 'during' ? 'border-accent bg-accent text-paper shadow-lg scale-[1.02]' : 'border-dark/10 hover:border-dark/30 hover:-translate-y-1'
+              approach === 'during' ? 'border-accent bg-accent text-paper shadow-lg scale-[1.02]' : 'border-dark/10 hover:border-accent hover:-translate-y-1 hover:shadow-md'
             }`}
           >
             <h4 className="font-heading font-bold text-3xl mb-2">During Finishes</h4>
@@ -90,7 +90,7 @@ export default function QuoteJourney() {
           <button 
             onClick={() => { setApproach('after'); setSector(null); setShowForm(false); }}
             className={`p-8 rounded-[2rem] text-left transition-all duration-300 border-2 ${
-              approach === 'after' ? 'border-accent bg-accent text-paper shadow-lg scale-[1.02]' : 'border-dark/10 hover:border-dark/30 hover:-translate-y-1'
+              approach === 'after' ? 'border-accent bg-accent text-paper shadow-lg scale-[1.02]' : 'border-dark/10 hover:border-accent hover:-translate-y-1 hover:shadow-md'
             }`}
           >
             <h4 className="font-heading font-bold text-3xl mb-2">After Building Finishes</h4>
@@ -109,7 +109,7 @@ export default function QuoteJourney() {
                 key={sec}
                 onClick={() => { setSector(sec); setShowForm(false); }}
                 className={`p-6 rounded-[1.5rem] font-heading font-bold uppercase tracking-tight text-lg sm:text-xl transition-all duration-300 border-2 ${
-                  sector === sec ? 'border-dark bg-dark text-paper scale-[1.05]' : 'border-dark/5 hover:border-dark/20 hover:bg-dark/5'
+                  sector === sec ? 'border-accent bg-accent text-paper shadow-lg scale-[1.05]' : 'border-dark/5 hover:border-accent hover:bg-accent/5 hover:-translate-y-1'
                 }`}
               >
                 {sec === 'highrise' ? 'High-rise' : sec}

@@ -1,6 +1,8 @@
 import React from 'react';
 import Hero from '../components/Hero';
+import AboutSokoon from '../components/AboutSokoon';
 import Features from '../components/Features';
+import Partners from '../components/Partners';
 import QuoteJourney from '../components/QuoteJourney';
 
 export default function Home() {
@@ -11,7 +13,9 @@ export default function Home() {
       
       <div className="relative z-10 w-full flex flex-col">
         <Hero />
+        <AboutSokoon />
         <Features />
+        <Partners />
         <QuoteJourney />
       </div>
     </div>
