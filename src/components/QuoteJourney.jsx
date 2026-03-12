@@ -134,10 +134,10 @@ export default function QuoteJourney() {
 
           <button
             onClick={() => setShowForm(true)}
-            className="btn-magnetic w-full md:w-auto px-10 py-5 bg-dark text-paper rounded-full font-heading font-bold text-xl relative group overflow-hidden hover:text-dark transition-colors duration-300 shadow-lg"
+            className="btn-magnetic w-full md:w-auto px-10 py-5 bg-accent text-paper rounded-[2rem] font-heading font-extrabold text-xl relative group overflow-hidden shadow-2xl border-2 border-accent hover:border-dark hover:text-paper transition-all duration-300"
           >
             <span className="relative z-10">Inquire About These Services</span>
-            <span className="absolute inset-0 bg-accent translate-y-[100%] group-hover:translate-y-0 transition-transform duration-300 z-0"></span>
+            <span className="absolute inset-0 bg-dark translate-y-[100%] group-hover:translate-y-0 transition-transform duration-300 z-0"></span>
           </button>
         </div>
       )}
