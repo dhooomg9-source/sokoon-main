@@ -75,24 +75,24 @@ export default function QuoteJourney() {
 
       {/* STEP 1: APPROACH */}
       <div className="w-full max-w-5xl mb-12">
-        <h3 className="font-heading font-bold text-2xl mb-8 border-b-2 border-dark/10 pb-4">01. Service Approach</h3>
+        <h3 className="font-heading font-bold text-2xl mb-8 border-b-2 border-dark/10 pb-4 text-dark">01. Service Approach</h3>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <button
             onClick={() => { setApproach('during'); setSector(null); setShowForm(false); }}
-            className={`p-8 rounded-[2rem] text-left transition-all duration-300 border-2 ${approach === 'during' ? 'border-accent bg-accent text-paper shadow-lg scale-[1.02]' : 'border-dark/10 hover:border-accent hover:-translate-y-1 hover:shadow-md'
+            className={`p-8 rounded-[2rem] text-left transition-all duration-300 border-2 ${approach === 'during' ? 'border-dark bg-dark text-paper shadow-xl scale-[1.02]' : 'border-dark/20 bg-paper hover:border-dark hover:shadow-md'
               }`}
           >
             <h4 className="font-heading font-bold text-3xl mb-2">During Finishes</h4>
-            <p className="font-data text-sm opacity-80">Integrating acoustic solutions during the active build phase.</p>
+            <p className="font-data text-base font-semibold opacity-90">Integrating acoustic solutions during the active build phase.</p>
           </button>
 
           <button
             onClick={() => { setApproach('after'); setSector(null); setShowForm(false); }}
-            className={`p-8 rounded-[2rem] text-left transition-all duration-300 border-2 ${approach === 'after' ? 'border-accent bg-accent text-paper shadow-lg scale-[1.02]' : 'border-dark/10 hover:border-accent hover:-translate-y-1 hover:shadow-md'
+            className={`p-8 rounded-[2rem] text-left transition-all duration-300 border-2 ${approach === 'after' ? 'border-dark bg-dark text-paper shadow-xl scale-[1.02]' : 'border-dark/20 bg-paper hover:border-dark hover:shadow-md'
               }`}
           >
             <h4 className="font-heading font-bold text-3xl mb-2">After Building Finishes</h4>
-            <p className="font-data text-sm opacity-80">Retrofitting surfaces and spaces post-construction.</p>
+            <p className="font-data text-base font-semibold opacity-90">Retrofitting surfaces and spaces post-construction.</p>
           </button>
         </div>
       </div>
@@ -100,13 +100,13 @@ export default function QuoteJourney() {
       {/* STEP 2: SECTOR */}
       {approach && (
         <div ref={sectorRef} className="w-full max-w-5xl mb-16">
-          <h3 className="font-heading font-bold text-2xl mb-8 border-b-2 border-dark/10 pb-4">02. Select Your Sector</h3>
+          <h3 className="font-heading font-bold text-2xl mb-8 border-b-2 border-dark/10 pb-4 text-dark">02. Select Your Sector</h3>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {['schools', 'highrise', 'consultancy', 'hospitals'].map(sec => (
               <button
                 key={sec}
                 onClick={() => { setSector(sec); setShowForm(false); }}
-                className={`p-6 rounded-[1.5rem] font-heading font-bold uppercase tracking-tight text-lg sm:text-xl transition-all duration-300 border-2 ${sector === sec ? 'border-accent bg-accent text-paper shadow-lg scale-[1.05]' : 'border-dark/5 hover:border-accent hover:bg-accent/5 hover:-translate-y-1'
+                className={`p-6 rounded-[1.5rem] font-heading font-bold uppercase tracking-tight text-lg sm:text-xl transition-all duration-300 border-2 ${sector === sec ? 'border-dark bg-dark text-paper shadow-xl scale-[1.05]' : 'border-dark/20 bg-paper text-dark hover:border-dark hover:-translate-y-1 shadow-sm'
                   }`}
               >
                 {sec === 'highrise' ? 'High-rise' : sec}
@@ -119,25 +119,25 @@ export default function QuoteJourney() {
       {/* STEP 3: PRODUCTS & SERVICES */}
       {sector && (
         <div ref={productRef} className="w-full max-w-5xl mb-16 bg-white p-8 md:p-12 rounded-[3rem] shadow-2xl border border-dark/5">
-          <h3 className="font-heading font-bold text-3xl md:text-4xl mb-4">Recommended Solutions for {sector === 'highrise' ? 'High-rise' : sector}</h3>
-          <p className="font-data text-dark/90 mb-10 max-w-2xl font-medium">Based on your requirement protocol ({approach} finishes), these are the highly calibrated interventions we prescribe.</p>
+          <h3 className="font-heading font-extrabold text-3xl md:text-4xl mb-4 text-dark">Recommended Solutions for {sector === 'highrise' ? 'High-rise' : sector}</h3>
+          <p className="font-data text-dark font-bold mb-10 max-w-2xl text-lg">Based on your requirement protocol ({approach} finishes), these are the highly calibrated interventions we prescribe.</p>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
             {activeProducts.map((prod) => (
-              <div key={prod.id} className="p-6 bg-background rounded-[1.5rem] border border-dark/5 hover:border-accent/50 transition-colors">
-                <div className="w-8 h-8 bg-dark/10 rounded-full mb-4 flex items-center justify-center font-data text-xs">{prod.id}</div>
-                <h4 className="font-heading font-bold text-xl mb-2">{prod.name}</h4>
-                <p className="font-data text-sm text-dark/90 font-medium">{prod.desc}</p>
+              <div key={prod.id} className="p-6 bg-background rounded-[1.5rem] border-2 border-dark/10 shadow-md hover:border-accent hover:shadow-xl transition-all duration-300">
+                <div className="w-10 h-10 bg-dark text-paper rounded-full mb-4 flex items-center justify-center font-data text-sm font-bold shadow-sm">{prod.id}</div>
+                <h4 className="font-heading font-extrabold text-2xl mb-3 text-dark">{prod.name}</h4>
+                <p className="font-data text-base text-dark font-semibold leading-relaxed">{prod.desc}</p>
               </div>
             ))}
           </div>
 
           <button
             onClick={() => setShowForm(true)}
-            className="btn-magnetic w-full md:w-auto px-8 py-4 bg-accent text-paper rounded-full font-heading font-semibold text-lg relative group overflow-hidden"
+            className="btn-magnetic w-full md:w-auto px-10 py-5 bg-dark text-paper rounded-full font-heading font-bold text-xl relative group overflow-hidden hover:text-dark transition-colors duration-300 shadow-lg"
           >
             <span className="relative z-10">Inquire About These Services</span>
-            <span className="absolute inset-0 bg-dark translate-y-[100%] group-hover:translate-y-0 transition-transform duration-300 z-0"></span>
+            <span className="absolute inset-0 bg-accent translate-y-[100%] group-hover:translate-y-0 transition-transform duration-300 z-0"></span>
           </button>
         </div>
       )}
