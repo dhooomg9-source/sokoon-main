@@ -79,20 +79,20 @@ export default function QuoteJourney() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <button
             onClick={() => { setApproach('during'); setSector(null); setShowForm(false); }}
-            className={`p-8 rounded-[2rem] text-left transition-all duration-300 border-2 ${approach === 'during' ? 'border-dark bg-dark text-accent shadow-xl scale-[1.02]' : 'border-accent/40 bg-accent/10 text-dark hover:border-dark hover:shadow-md'
+            className={`p-8 rounded-[2rem] text-left transition-all duration-300 border-2 ${approach === 'during' ? 'border-accent bg-accent text-paper shadow-xl scale-[1.02]' : 'border-dark/20 bg-paper hover:border-dark hover:shadow-md'
               }`}
           >
             <h4 className="font-heading font-bold text-3xl mb-2">During Finishes</h4>
-            <p className="font-data text-base font-semibold opacity-90">Integrating acoustic solutions during the active build phase.</p>
+            <p className="font-data text-base font-semibold">Integrating acoustic solutions during the active build phase.</p>
           </button>
 
           <button
             onClick={() => { setApproach('after'); setSector(null); setShowForm(false); }}
-            className={`p-8 rounded-[2rem] text-left transition-all duration-300 border-2 ${approach === 'after' ? 'border-dark bg-dark text-accent shadow-xl scale-[1.02]' : 'border-accent/40 bg-accent/10 text-dark hover:border-dark hover:shadow-md'
+            className={`p-8 rounded-[2rem] text-left transition-all duration-300 border-2 ${approach === 'after' ? 'border-accent bg-accent text-paper shadow-xl scale-[1.02]' : 'border-dark/20 bg-paper hover:border-dark hover:shadow-md'
               }`}
           >
             <h4 className="font-heading font-bold text-3xl mb-2">After Building Finishes</h4>
-            <p className="font-data text-base font-semibold opacity-90">Retrofitting surfaces and spaces post-construction.</p>
+            <p className="font-data text-base font-semibold">Retrofitting surfaces and spaces post-construction.</p>
           </button>
         </div>
       </div>
@@ -106,7 +106,7 @@ export default function QuoteJourney() {
               <button
                 key={sec}
                 onClick={() => { setSector(sec); setShowForm(false); }}
-                className={`p-6 rounded-[1.5rem] font-heading font-bold uppercase tracking-tight text-lg sm:text-xl transition-all duration-300 border-2 ${sector === sec ? 'border-dark bg-dark text-accent shadow-xl scale-[1.05]' : 'border-accent/40 bg-accent/10 text-dark hover:border-dark hover:-translate-y-1 shadow-sm'
+                className={`p-6 rounded-[1.5rem] font-heading font-bold uppercase tracking-tight text-lg sm:text-xl transition-all duration-300 border-2 ${sector === sec ? 'border-accent bg-accent text-paper shadow-xl scale-[1.05]' : 'border-dark/20 bg-paper text-dark hover:border-dark hover:-translate-y-1 shadow-sm'
                   }`}
               >
                 {sec === 'highrise' ? 'High-rise' : sec}
@@ -118,16 +118,16 @@ export default function QuoteJourney() {
 
       {/* STEP 3: PRODUCTS & SERVICES */}
       {sector && (
-        <div ref={productRef} className="w-full max-w-5xl mb-16 bg-accent/5 p-8 md:p-12 rounded-[3rem] shadow-xl border-2 border-accent/20">
+        <div ref={productRef} className="w-full max-w-5xl mb-16 bg-paper p-8 md:p-12 rounded-[3rem] shadow-xl border-2 border-dark/10">
           <h3 className="font-heading font-extrabold text-3xl md:text-4xl mb-4 text-dark">Recommended Solutions for {sector === 'highrise' ? 'High-rise' : sector}</h3>
-          <p className="font-data text-dark font-bold mb-10 max-w-2xl text-lg opacity-90">Based on your requirement protocol ({approach} finishes), these are the highly calibrated interventions we prescribe.</p>
+          <p className="font-data text-dark font-bold mb-10 max-w-2xl text-lg">Based on your requirement protocol ({approach} finishes), these are the highly calibrated interventions we prescribe.</p>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
             {activeProducts.map((prod) => (
-              <div key={prod.id} className="p-6 bg-accent/10 rounded-[1.5rem] border-2 border-accent/40 shadow-sm hover:border-dark hover:shadow-xl transition-all duration-300">
-                <div className="w-10 h-10 bg-dark text-accent rounded-full mb-4 flex items-center justify-center font-data text-sm font-bold shadow-sm">{prod.id}</div>
+              <div key={prod.id} className="p-6 bg-background rounded-[1.5rem] border-2 border-dark/20 shadow-md hover:border-dark hover:shadow-xl transition-all duration-300">
+                <div className="w-10 h-10 bg-dark text-paper rounded-full mb-4 flex items-center justify-center font-data text-sm font-bold shadow-sm">{prod.id}</div>
                 <h4 className="font-heading font-extrabold text-2xl mb-3 text-dark">{prod.name}</h4>
-                <p className="font-data text-base text-dark/90 font-semibold leading-relaxed">{prod.desc}</p>
+                <p className="font-data text-base text-dark font-semibold leading-relaxed">{prod.desc}</p>
               </div>
             ))}
           </div>
@@ -144,7 +144,7 @@ export default function QuoteJourney() {
 
       {/* STEP 4: INQUIRY FORM */}
       {showForm && (
-        <div ref={formRef} className="w-full max-w-3xl bg-accent text-dark p-8 md:p-12 rounded-[3rem] shadow-2xl border-4 border-dark">
+        <div ref={formRef} className="w-full max-w-3xl bg-paper text-dark p-8 md:p-12 rounded-[3rem] shadow-2xl border-4 border-dark">
           <h3 className="font-heading font-black text-3xl md:text-5xl mb-8 uppercase tracking-tighter">Submit Request</h3>
 
           <form action="https://formsubmit.co/Dhooom.g9@gmail.com" method="POST" className="flex flex-col gap-6 font-data">
@@ -156,33 +156,33 @@ export default function QuoteJourney() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
                 <label className="text-xs text-dark font-bold mb-2 block uppercase">Approach (Locked)</label>
-                <input type="text" name="Approach" readOnly value={approach === 'during' ? 'During Finishes' : 'After Building Finishes'} className="w-full bg-dark/5 border-2 border-dark/20 focus:border-dark rounded-xl p-3 text-dark font-bold outline-none cursor-not-allowed" />
+                <input type="text" name="Approach" readOnly value={approach === 'during' ? 'During Finishes' : 'After Building Finishes'} className="w-full bg-background border-2 border-dark/20 focus:border-dark rounded-xl p-3 text-dark font-bold outline-none cursor-not-allowed" />
               </div>
               <div>
                 <label className="text-xs text-dark font-bold mb-2 block uppercase">Sector (Locked)</label>
-                <input type="text" name="Sector" readOnly value={sector || ''} className="w-full bg-dark/5 border-2 border-dark/20 focus:border-dark rounded-xl p-3 text-dark font-bold outline-none capitalize cursor-not-allowed" />
+                <input type="text" name="Sector" readOnly value={sector || ''} className="w-full bg-background border-2 border-dark/20 focus:border-dark rounded-xl p-3 text-dark font-bold outline-none capitalize cursor-not-allowed" />
               </div>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
                 <label className="text-xs text-dark font-bold mb-2 block uppercase">Full Name</label>
-                <input type="text" name="Name" required placeholder="John Doe" className="w-full bg-paper/60 border-2 border-dark/20 rounded-xl p-3 text-dark font-bold outline-none focus:border-dark hover:border-dark/60 transition-colors placeholder:text-dark/40" />
+                <input type="text" name="Name" required placeholder="John Doe" className="w-full bg-white border-2 border-dark rounded-xl p-3 text-dark font-bold outline-none focus:border-accent hover:border-accent transition-colors placeholder:text-dark/50 focus:ring-2 focus:ring-accent/20" />
               </div>
               <div>
                 <label className="text-xs text-dark font-bold mb-2 block uppercase">Email Address</label>
-                <input type="email" name="Email" required placeholder="john@example.com" className="w-full bg-paper/60 border-2 border-dark/20 rounded-xl p-3 text-dark font-bold outline-none focus:border-dark hover:border-dark/60 transition-colors placeholder:text-dark/40" />
+                <input type="email" name="Email" required placeholder="john@example.com" className="w-full bg-white border-2 border-dark rounded-xl p-3 text-dark font-bold outline-none focus:border-accent hover:border-accent transition-colors placeholder:text-dark/50 focus:ring-2 focus:ring-accent/20" />
               </div>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <div>
                 <label className="text-xs text-dark font-bold mb-2 block uppercase">Phone Number</label>
-                <input type="tel" name="Phone" required placeholder="+1 234 567 8900" className="w-full bg-paper/60 border-2 border-dark/20 rounded-xl p-3 text-dark font-bold outline-none focus:border-dark hover:border-dark/60 transition-colors placeholder:text-dark/40" />
+                <input type="tel" name="Phone" required placeholder="+1 234 567 8900" className="w-full bg-white border-2 border-dark rounded-xl p-3 text-dark font-bold outline-none focus:border-accent hover:border-accent transition-colors placeholder:text-dark/50 focus:ring-2 focus:ring-accent/20" />
               </div>
               <div>
                 <label className="text-xs text-dark font-bold mb-2 block uppercase">Budget Range</label>
-                <select name="Budget" className="w-full bg-paper/60 border-2 border-dark/20 rounded-xl p-3 text-dark font-bold outline-none focus:border-dark hover:border-dark/60 transition-colors appearance-none cursor-pointer" required>
+                <select name="Budget" className="w-full bg-white border-2 border-dark rounded-xl p-3 text-dark font-bold outline-none focus:border-accent hover:border-accent transition-colors appearance-none cursor-pointer focus:ring-2 focus:ring-accent/20" required>
                   <option className="bg-paper text-dark" value="">Select Budget</option>
                   <option className="bg-paper text-dark" value="$10k - $50k">$10k - $50k</option>
                   <option className="bg-paper text-dark" value="$50k - $150k">$50k - $150k</option>
@@ -191,7 +191,7 @@ export default function QuoteJourney() {
               </div>
               <div>
                 <label className="text-xs text-dark font-bold mb-2 block uppercase">Timeline</label>
-                <select name="Timeline" className="w-full bg-paper/60 border-2 border-dark/20 rounded-xl p-3 text-dark font-bold outline-none focus:border-dark hover:border-dark/60 transition-colors appearance-none cursor-pointer" required>
+                <select name="Timeline" className="w-full bg-white border-2 border-dark rounded-xl p-3 text-dark font-bold outline-none focus:border-accent hover:border-accent transition-colors appearance-none cursor-pointer focus:ring-2 focus:ring-accent/20" required>
                   <option className="bg-paper text-dark" value="">Select Timeline</option>
                   <option className="bg-paper text-dark" value="Immediate (ASAP)">Immediate (ASAP)</option>
                   <option className="bg-paper text-dark" value="1 - 3 Months">1 - 3 Months</option>
@@ -202,12 +202,12 @@ export default function QuoteJourney() {
 
             <div>
               <label className="text-xs text-dark font-bold mb-2 block uppercase">Project Details</label>
-              <textarea name="Project Details" required rows="4" placeholder="Describe the scale, dimensions, and specific acoustic challenges..." className="w-full bg-paper/60 border-2 border-dark/20 rounded-xl p-3 text-dark font-bold outline-none focus:border-dark hover:border-dark/60 transition-colors resize-none placeholder:text-dark/40"></textarea>
+              <textarea name="Project Details" required rows="4" placeholder="Describe the scale, dimensions, and specific acoustic challenges..." className="w-full bg-white border-2 border-dark rounded-xl p-3 text-dark font-bold outline-none focus:border-accent hover:border-accent transition-colors resize-none placeholder:text-dark/50 focus:ring-2 focus:ring-accent/20"></textarea>
             </div>
 
-            <button type="submit" className="btn-magnetic mt-4 px-8 py-5 bg-dark text-accent rounded-full font-heading font-extrabold text-xl relative group overflow-hidden w-full shadow-2xl border-2 border-dark hover:bg-dark hover:text-paper">
+            <button type="submit" className="btn-magnetic mt-4 px-8 py-5 bg-accent text-paper rounded-[2rem] font-heading font-extrabold text-xl relative group overflow-hidden w-full shadow-2xl border-2 border-accent hover:border-dark hover:text-paper transition-all duration-300">
               <span className="relative z-10">Transmit Request Data</span>
-              <span className="absolute inset-0 bg-white/10 translate-y-[100%] group-hover:translate-y-0 transition-transform duration-300 z-0"></span>
+              <span className="absolute inset-0 bg-dark translate-y-[100%] group-hover:translate-y-0 transition-transform duration-300 z-0"></span>
             </button>
           </form>
         </div>
