@@ -7,18 +7,18 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: '#FAF8F5', // Ivory
-        paper: '#FFFFFF', // Card Background
-        accent: '#C9A84C', // Champagne
-        dark: '#0D0D12', // Obsidian
-        muted: '#2A2A35', // Slate
-        borderLight: '#E8E4DB', // Border / Divider
+        background: '#F5F3EE', // Off-white
+        paper: '#E8E4DD', // Paper (Primary/Brutalist Concrete)
+        accent: '#E63B2E', // Signal Red
+        dark: '#111111', // Black/System
+        muted: '#555555', // Industrial Grey
+        borderLight: '#DCD6CE', // Border / Divider
       },
       fontFamily: {
-        heading: ['"Inter"', 'sans-serif'],
-        drama: ['"Playfair Display"', 'serif'],
-        data: ['"JetBrains Mono"', 'monospace'],
-        body: ['"Inter"', 'sans-serif'],
+        heading: ['"Space Grotesk"', 'sans-serif'],
+        drama: ['"DM Serif Display"', 'serif'],
+        data: ['"Space Mono"', 'monospace'],
+        body: ['"Space Grotesk"', 'sans-serif'],
       },
       borderRadius: {
         '2rem': '2rem',
