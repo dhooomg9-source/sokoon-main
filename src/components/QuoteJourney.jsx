@@ -61,7 +61,7 @@ export default function QuoteJourney() {
 
   return (
     <section id="quote-journey" ref={containerRef} className="py-20 px-6 md:px-12 lg:px-24 bg-paper min-h-[80vh] text-dark flex flex-col items-center w-full relative overflow-hidden">
-      
+
       {/* Technical Grid Pattern Background - Modified for Legibility */}
       <div className="absolute inset-0 z-10 pointer-events-none bg-[radial-gradient(#94a3b8_1px,transparent_1px)] [background-size:24px_24px] opacity-10"></div>
       <div className="absolute inset-0 z-10 pointer-events-none bg-gradient-to-b from-paper via-transparent to-paper"></div>
@@ -77,21 +77,19 @@ export default function QuoteJourney() {
       <div className="w-full max-w-5xl mb-12">
         <h3 className="font-heading font-bold text-2xl mb-8 border-b-2 border-dark/10 pb-4">01. Service Approach</h3>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <button 
+          <button
             onClick={() => { setApproach('during'); setSector(null); setShowForm(false); }}
-            className={`p-8 rounded-[2rem] text-left transition-all duration-300 border-2 ${
-              approach === 'during' ? 'border-accent bg-accent text-paper shadow-lg scale-[1.02]' : 'border-dark/10 hover:border-accent hover:-translate-y-1 hover:shadow-md'
-            }`}
+            className={`p-8 rounded-[2rem] text-left transition-all duration-300 border-2 ${approach === 'during' ? 'border-accent bg-accent text-paper shadow-lg scale-[1.02]' : 'border-dark/10 hover:border-accent hover:-translate-y-1 hover:shadow-md'
+              }`}
           >
             <h4 className="font-heading font-bold text-3xl mb-2">During Finishes</h4>
             <p className="font-data text-sm opacity-80">Integrating acoustic solutions during the active build phase.</p>
           </button>
 
-          <button 
+          <button
             onClick={() => { setApproach('after'); setSector(null); setShowForm(false); }}
-            className={`p-8 rounded-[2rem] text-left transition-all duration-300 border-2 ${
-              approach === 'after' ? 'border-accent bg-accent text-paper shadow-lg scale-[1.02]' : 'border-dark/10 hover:border-accent hover:-translate-y-1 hover:shadow-md'
-            }`}
+            className={`p-8 rounded-[2rem] text-left transition-all duration-300 border-2 ${approach === 'after' ? 'border-accent bg-accent text-paper shadow-lg scale-[1.02]' : 'border-dark/10 hover:border-accent hover:-translate-y-1 hover:shadow-md'
+              }`}
           >
             <h4 className="font-heading font-bold text-3xl mb-2">After Building Finishes</h4>
             <p className="font-data text-sm opacity-80">Retrofitting surfaces and spaces post-construction.</p>
@@ -108,9 +106,8 @@ export default function QuoteJourney() {
               <button
                 key={sec}
                 onClick={() => { setSector(sec); setShowForm(false); }}
-                className={`p-6 rounded-[1.5rem] font-heading font-bold uppercase tracking-tight text-lg sm:text-xl transition-all duration-300 border-2 ${
-                  sector === sec ? 'border-accent bg-accent text-paper shadow-lg scale-[1.05]' : 'border-dark/5 hover:border-accent hover:bg-accent/5 hover:-translate-y-1'
-                }`}
+                className={`p-6 rounded-[1.5rem] font-heading font-bold uppercase tracking-tight text-lg sm:text-xl transition-all duration-300 border-2 ${sector === sec ? 'border-accent bg-accent text-paper shadow-lg scale-[1.05]' : 'border-dark/5 hover:border-accent hover:bg-accent/5 hover:-translate-y-1'
+                  }`}
               >
                 {sec === 'highrise' ? 'High-rise' : sec}
               </button>
@@ -124,7 +121,7 @@ export default function QuoteJourney() {
         <div ref={productRef} className="w-full max-w-5xl mb-16 bg-white p-8 md:p-12 rounded-[3rem] shadow-2xl border border-dark/5">
           <h3 className="font-heading font-bold text-3xl md:text-4xl mb-4">Recommended Solutions for {sector === 'highrise' ? 'High-rise' : sector}</h3>
           <p className="font-data text-dark/60 mb-10 max-w-2xl">Based on your requirement protocol ({approach} finishes), these are the highly calibrated interventions we prescribe.</p>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
             {activeProducts.map((prod) => (
               <div key={prod.id} className="p-6 bg-background rounded-[1.5rem] border border-dark/5 hover:border-accent/50 transition-colors">
@@ -135,7 +132,7 @@ export default function QuoteJourney() {
             ))}
           </div>
 
-          <button 
+          <button
             onClick={() => setShowForm(true)}
             className="btn-magnetic w-full md:w-auto px-8 py-4 bg-accent text-paper rounded-full font-heading font-semibold text-lg relative group overflow-hidden"
           >
@@ -149,42 +146,42 @@ export default function QuoteJourney() {
       {showForm && (
         <div ref={formRef} className="w-full max-w-3xl bg-dark text-paper p-8 md:p-12 rounded-[3rem] shadow-2xl">
           <h3 className="font-heading font-bold text-3xl md:text-5xl mb-8 uppercase tracking-tighter">Submit Request</h3>
-          
+
           <form action="https://formsubmit.co/Dhooom.g9@gmail.com" method="POST" className="flex flex-col gap-6 font-data">
             {/* Hidden fields for FormSubmit configuration */}
             <input type="hidden" name="_subject" value="New Sokoon Quote Request!" />
             <input type="hidden" name="_captcha" value="false" />
             <input type="hidden" name="_template" value="box" />
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
-                <label className="text-xs opacity-50 mb-2 block uppercase">Approach (Locked)</label>
-                <input type="text" name="Approach" readOnly value={approach === 'during' ? 'During Finishes' : 'After Building Finishes'} className="w-full bg-paper/5 border border-paper/20 rounded-xl p-3 text-paper opacity-70 outline-none" />
+                <label className="text-xs text-paper/80 font-bold mb-2 block uppercase">Approach (Locked)</label>
+                <input type="text" name="Approach" readOnly value={approach === 'during' ? 'During Finishes' : 'After Building Finishes'} className="w-full bg-paper/5 border border-paper/20 rounded-xl p-3 text-paper outline-none" />
               </div>
               <div>
-                <label className="text-xs opacity-50 mb-2 block uppercase">Sector (Locked)</label>
-                <input type="text" name="Sector" readOnly value={sector || ''} className="w-full bg-paper/5 border border-paper/20 rounded-xl p-3 text-paper opacity-70 outline-none capitalize" />
+                <label className="text-xs text-paper/80 font-bold mb-2 block uppercase">Sector (Locked)</label>
+                <input type="text" name="Sector" readOnly value={sector || ''} className="w-full bg-paper/5 border border-paper/20 rounded-xl p-3 text-paper outline-none capitalize" />
               </div>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
-                <label className="text-xs opacity-50 mb-2 block uppercase">Full Name</label>
+                <label className="text-xs text-paper/80 font-bold mb-2 block uppercase">Full Name</label>
                 <input type="text" name="Name" required placeholder="John Doe" className="w-full bg-paper/10 border border-paper/20 rounded-xl p-3 text-paper outline-none focus:border-accent transition-colors" />
               </div>
               <div>
-                <label className="text-xs opacity-50 mb-2 block uppercase">Email Address</label>
+                <label className="text-xs text-paper/80 font-bold mb-2 block uppercase">Email Address</label>
                 <input type="email" name="Email" required placeholder="john@example.com" className="w-full bg-paper/10 border border-paper/20 rounded-xl p-3 text-paper outline-none focus:border-accent transition-colors" />
               </div>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <div>
-                <label className="text-xs opacity-50 mb-2 block uppercase">Phone Number</label>
+                <label className="text-xs text-paper/80 font-bold mb-2 block uppercase">Phone Number</label>
                 <input type="tel" name="Phone" required placeholder="+1 234 567 8900" className="w-full bg-paper/10 border border-paper/20 rounded-xl p-3 text-paper outline-none focus:border-accent transition-colors" />
               </div>
               <div>
-                <label className="text-xs opacity-50 mb-2 block uppercase">Budget Range</label>
+                <label className="text-xs text-paper/80 font-bold mb-2 block uppercase">Budget Range</label>
                 <select name="Budget" className="w-full bg-paper/10 border border-paper/20 rounded-xl p-3 text-paper outline-none focus:border-accent transition-colors appearance-none" required>
                   <option className="bg-dark text-paper" value="">Select Budget</option>
                   <option className="bg-dark text-paper" value="$10k - $50k">$10k - $50k</option>
@@ -193,7 +190,7 @@ export default function QuoteJourney() {
                 </select>
               </div>
               <div>
-                <label className="text-xs opacity-50 mb-2 block uppercase">Timeline</label>
+                <label className="text-xs text-paper/80 font-bold mb-2 block uppercase">Timeline</label>
                 <select name="Timeline" className="w-full bg-paper/10 border border-paper/20 rounded-xl p-3 text-paper outline-none focus:border-accent transition-colors appearance-none" required>
                   <option className="bg-dark text-paper" value="">Select Timeline</option>
                   <option className="bg-dark text-paper" value="Immediate (ASAP)">Immediate (ASAP)</option>
@@ -204,7 +201,7 @@ export default function QuoteJourney() {
             </div>
 
             <div>
-              <label className="text-xs opacity-50 mb-2 block uppercase">Project Details</label>
+              <label className="text-xs text-paper/80 font-bold mb-2 block uppercase">Project Details</label>
               <textarea name="Project Details" required rows="4" placeholder="Describe the scale, dimensions, and specific acoustic challenges..." className="w-full bg-paper/10 border border-paper/20 rounded-xl p-3 text-paper outline-none focus:border-accent transition-colors resize-none"></textarea>
             </div>
 

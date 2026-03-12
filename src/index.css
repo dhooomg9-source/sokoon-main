@@ -6,6 +6,12 @@
   body {
     @apply bg-background text-dark font-body antialiased;
     overflow-x: hidden;
+    /* Acoustic panel texture - perforated look */
+    background-image:
+      radial-gradient(circle at center, rgba(0, 0, 0, 0.04) 1.5px, transparent 1.5px),
+      radial-gradient(circle at center, rgba(0, 0, 0, 0.04) 1.5px, transparent 1.5px);
+    background-size: 16px 16px;
+    background-position: 0 0, 8px 8px;
   }
 }
 
@@ -23,9 +29,9 @@
 
   /* Magnetic button transition */
   .btn-magnetic {
-    transition: transform 0.3s cubic-[0.25, 0.46, 0.45, 0.94];
+    transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   }
-  
+
   .btn-magnetic:hover {
     transform: scale(1.03);
   }
@@ -34,6 +40,7 @@
   .hover-lift {
     transition: transform 0.2s ease-out;
   }
+
   .hover-lift:hover {
     transform: translateY(-1px);
   }
@@ -44,8 +51,13 @@
   }
 
   @keyframes marquee-scroll {
-    0% { transform: translateX(0%); }
-    100% { transform: translateX(-50%); }
+    0% {
+      transform: translateX(0%);
+    }
+
+    100% {
+      transform: translateX(-50%);
+    }
   }
 
   .animate-marquee-scroll {

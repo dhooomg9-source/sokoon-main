@@ -35,8 +35,8 @@ export default function Footer() {
         <div className="flex flex-col gap-4 font-data text-sm">
           <h4 className="font-heading font-bold uppercase text-paper/50 mb-2">Contact Us</h4>
           <a href="mailto:Dhooom.g9@gmail.com" className="hover:text-accent transition-colors break-all">Dhooom.g9@gmail.com</a>
-          <a href="tel:+971501234567" className="hover:text-accent transition-colors">+971 50 123 4567</a>
-          <span className="text-paper/70">Dubai, UAE</span>
+          <a href="tel:+966501234567" className="hover:text-accent transition-colors">+966 50 123 4567</a>
+          <span className="text-paper/70">Riyadh, Saudi Arabia</span>
         </div>
       </div>
 

@@ -3,11 +3,16 @@ import '../index.css';
 
 export default function Partners() {
   const partners = [
-    "Foster & Partners", "Gensler", "Skidmore, Owings & Merrill", "ARUP",
-    "Zaha Hadid Architects", "Buro Happold", "WSP", "AECOM",
-    "HOK", "Perkins&Will", "Stantec", "Jacobs"
+    { name: "Public Investment Fund", url: "https://www.pif.gov.sa" },
+    { name: "NEOM", url: "https://www.neom.com" },
+    { name: "Saudi Aramco", url: "https://www.aramco.com" },
+    { name: "SABIC", url: "https://www.sabic.com" },
+    { name: "stc", url: "https://www.stc.com.sa" },
+    { name: "ROSHN", url: "https://www.roshn.sa" },
+    { name: "Red Sea Global", url: "https://www.redseaglobal.com" },
+    { name: "Diriyah Gate", url: "https://dgda.gov.sa" }
   ];
-  
+
   // Double the array for seamless marquee loops
   const duplicatedPartners = [...partners, ...partners];
 
@@ -25,11 +30,11 @@ export default function Partners() {
       </div>
 
       <div className="relative w-full flex overflow-hidden mask-edges z-0">
-        <div className="animate-marquee-scroll flex w-max items-center gap-16 md:gap-24 py-4">
+        <div className="animate-marquee-scroll flex w-max items-center gap-16 md:gap-24 py-4 hover:pause-marquee">
           {duplicatedPartners.map((partner, index) => (
-            <span key={index} className="text-3xl md:text-5xl font-drama italic text-dark/20 hover:text-accent transition-colors duration-300 cursor-default uppercase shrink-0">
-              {partner}
-            </span>
+            <a key={index} href={partner.url} target="_blank" rel="noopener noreferrer" className="text-3xl md:text-5xl font-drama italic text-dark/30 hover:text-accent transition-colors duration-300 uppercase shrink-0">
+              {partner.name}
+            </a>
           ))}
         </div>
       </div>

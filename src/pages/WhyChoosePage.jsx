@@ -30,7 +30,7 @@ export default function WhyChoosePage() {
             <div>
               <span className="font-data text-accent uppercase tracking-widest text-xs mb-3 block">03 // The Advantage</span>
               <h1 className="font-heading font-bold text-5xl md:text-7xl uppercase tracking-tighter">
-                Why Choose <br/><span className="text-accent font-drama italic">Sokoon.</span>
+                Why Choose <br /><span className="text-accent font-drama italic">Sokoon.</span>
               </h1>
             </div>
             <p className="font-body text-lg md:text-xl leading-relaxed max-w-2xl text-dark/80">
@@ -39,9 +39,11 @@ export default function WhyChoosePage() {
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 text-dark mt-16 mb-16">
-            
+
             <div className="lg:col-span-5 flex flex-col justify-center gap-6 reveal-block">
-              <div className="w-full h-72 rounded-[2rem] bg-dark/5 mb-4 shadow-xl"></div>
+              <div className="w-full h-72 rounded-[2rem] bg-background border border-borderLight hover:border-accent transition-colors duration-500 group mb-4 shadow-xl flex items-center justify-center">
+                <span className="font-data text-dark/30 uppercase tracking-widest text-sm relative z-10 group-hover:text-accent transition-colors">Acoustic Visualization</span>
+              </div>
               <div className="p-8 bg-dark text-paper rounded-[2rem] shadow-xl">
                 <h4 className="font-heading text-xs text-paper/50 uppercase tracking-widest mb-4">Mission Statement</h4>
                 <p className="font-drama italic text-3xl text-paper leading-tight">
@@ -58,7 +60,7 @@ export default function WhyChoosePage() {
                 { title: 'Excellence', desc: 'ISO-certified standards ensuring total operational perfection from blueprint to deployment.' }
               ].map((val, i) => (
                 <div key={i} className="reveal-block border-t-2 border-dark/10 pt-8 flex flex-col">
-                  <div className="font-data text-accent font-bold mb-4 tracking-tighter text-4xl leading-none">0{i+1}</div>
+                  <div className="font-data text-accent font-bold mb-4 tracking-tighter text-4xl leading-none">0{i + 1}</div>
                   <h4 className="font-heading font-bold text-3xl mb-4">{val.title}</h4>
                   <p className="font-data text-base opacity-70 leading-relaxed max-w-xs">{val.desc}</p>
                 </div>
