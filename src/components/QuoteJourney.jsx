@@ -120,14 +120,14 @@ export default function QuoteJourney() {
       {sector && (
         <div ref={productRef} className="w-full max-w-5xl mb-16 bg-white p-8 md:p-12 rounded-[3rem] shadow-2xl border border-dark/5">
           <h3 className="font-heading font-bold text-3xl md:text-4xl mb-4">Recommended Solutions for {sector === 'highrise' ? 'High-rise' : sector}</h3>
-          <p className="font-data text-dark/60 mb-10 max-w-2xl">Based on your requirement protocol ({approach} finishes), these are the highly calibrated interventions we prescribe.</p>
+          <p className="font-data text-dark/90 mb-10 max-w-2xl font-medium">Based on your requirement protocol ({approach} finishes), these are the highly calibrated interventions we prescribe.</p>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
             {activeProducts.map((prod) => (
               <div key={prod.id} className="p-6 bg-background rounded-[1.5rem] border border-dark/5 hover:border-accent/50 transition-colors">
                 <div className="w-8 h-8 bg-dark/10 rounded-full mb-4 flex items-center justify-center font-data text-xs">{prod.id}</div>
                 <h4 className="font-heading font-bold text-xl mb-2">{prod.name}</h4>
-                <p className="font-data text-sm text-dark/70">{prod.desc}</p>
+                <p className="font-data text-sm text-dark/90 font-medium">{prod.desc}</p>
               </div>
             ))}
           </div>
