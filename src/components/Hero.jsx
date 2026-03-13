@@ -28,11 +28,11 @@ export default function Hero() {
   }, []);
 
   return (
-    <section ref={containerRef} className="relative min-h-[100dvh] w-full overflow-hidden bg-background text-dark flex flex-col justify-center pt-40 pb-20 px-6 md:px-12 lg:px-24 selection:bg-accent selection:text-paper">
+    <section ref={containerRef} className="relative min-h-[100dvh] w-full overflow-hidden bg-background text-dark flex flex-col justify-start pt-[200px] pb-20 px-6 md:px-12 lg:px-24 selection:bg-accent selection:text-paper">
 
-      {/* Acoustic Wood-Wool Texture Background */}
+      {/* Premium Acoustic Wood-Wool Texture Background */}
       <div
-        className="hero-bg absolute inset-0 z-0 opacity-15 mix-blend-multiply pointer-events-none"
+        className="hero-bg absolute inset-0 z-0 opacity-40 pointer-events-none"
         style={{
           backgroundImage: "url('/acoustic-wood-wool.png')",
           backgroundSize: "cover",

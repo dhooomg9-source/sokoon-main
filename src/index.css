@@ -13,13 +13,8 @@
 
 @layer utilities {
   .bg-background {
-    background-color: #E8E5DF !important;
-    /* Warm Greige / Soft Taupe */
-    background-image:
-      linear-gradient(90deg, transparent 95%, rgba(0, 0, 0, 0.03) 95%, rgba(0, 0, 0, 0.06) 98%, rgba(255, 255, 255, 0.4) 100%),
-      linear-gradient(0deg, transparent 95%, rgba(0, 0, 0, 0.02) 95%, rgba(0, 0, 0, 0.04) 98%, rgba(255, 255, 255, 0.2) 100%) !important;
-    background-size: 64px 64px !important;
-    background-attachment: fixed !important;
+    background-color: #FAF8F5;
+    /* Midnight Luxe Ivory Base */
   }
 
   .clip-noise {
