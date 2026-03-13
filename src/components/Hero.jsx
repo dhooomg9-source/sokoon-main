@@ -30,11 +30,11 @@ export default function Hero() {
   return (
     <section ref={containerRef} className="relative min-h-[100dvh] w-full overflow-hidden bg-background text-dark flex flex-col justify-start pt-[200px] pb-20 px-6 md:px-12 lg:px-24 selection:bg-accent selection:text-paper">
 
-      {/* Premium Acoustic Wood-Wool Texture Background */}
+      {/* Premium Acoustic Geometric Beige Texture Background */}
       <div
         className="hero-bg absolute inset-0 z-0 opacity-100 pointer-events-none"
         style={{
-          backgroundImage: "url('/beige-acoustic-panels.png')",
+          backgroundImage: "url('/beige-triangular-panels.png')",
           backgroundSize: "cover",
           backgroundPosition: "center"
         }}
