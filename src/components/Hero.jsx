@@ -34,7 +34,7 @@ export default function Hero() {
       <div
         className="hero-bg absolute inset-0 z-0 opacity-100 pointer-events-none"
         style={{
-          backgroundImage: "url('/acoustic-wood-wool.png')",
+          backgroundImage: "url('/beige-acoustic-panels.png')",
           backgroundSize: "cover",
           backgroundPosition: "center"
         }}
