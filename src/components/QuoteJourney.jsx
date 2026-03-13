@@ -79,20 +79,20 @@ export default function QuoteJourney() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <button
             onClick={() => { setApproach('during'); setSector(null); setShowForm(false); }}
-            className={`p-8 rounded-[2rem] text-left transition-all duration-300 border-2 ${approach === 'during' ? 'border-accent bg-accent text-paper shadow-xl scale-[1.02]' : 'border-dark/20 bg-paper hover:border-dark hover:shadow-md'
+            className={`p-8 rounded-[2rem] text-left transition-all duration-300 border-2 ${approach === 'during' ? 'border-accent bg-accent text-dark shadow-xl scale-[1.02]' : 'border-dark bg-paper text-dark hover:shadow-md'
               }`}
           >
-            <h4 className="font-heading font-bold text-3xl mb-2">During Finishes</h4>
-            <p className="font-data text-base font-semibold">Integrating acoustic solutions during the active build phase.</p>
+            <h4 className="font-heading font-black text-3xl mb-2">During Finishes</h4>
+            <p className="font-data text-base font-bold">Integrating acoustic solutions during the active build phase.</p>
           </button>
 
           <button
             onClick={() => { setApproach('after'); setSector(null); setShowForm(false); }}
-            className={`p-8 rounded-[2rem] text-left transition-all duration-300 border-2 ${approach === 'after' ? 'border-accent bg-accent text-paper shadow-xl scale-[1.02]' : 'border-dark/20 bg-paper hover:border-dark hover:shadow-md'
+            className={`p-8 rounded-[2rem] text-left transition-all duration-300 border-2 ${approach === 'after' ? 'border-accent bg-accent text-dark shadow-xl scale-[1.02]' : 'border-dark bg-paper text-dark hover:shadow-md'
               }`}
           >
-            <h4 className="font-heading font-bold text-3xl mb-2">After Building Finishes</h4>
-            <p className="font-data text-base font-semibold">Retrofitting surfaces and spaces post-construction.</p>
+            <h4 className="font-heading font-black text-3xl mb-2">After Building Finishes</h4>
+            <p className="font-data text-base font-bold">Retrofitting surfaces and spaces post-construction.</p>
           </button>
         </div>
       </div>
@@ -106,7 +106,7 @@ export default function QuoteJourney() {
               <button
                 key={sec}
                 onClick={() => { setSector(sec); setShowForm(false); }}
-                className={`p-6 rounded-[1.5rem] font-heading font-bold uppercase tracking-tight text-lg sm:text-xl transition-all duration-300 border-2 ${sector === sec ? 'border-accent bg-accent text-paper shadow-xl scale-[1.05]' : 'border-dark/20 bg-paper text-dark hover:border-dark hover:-translate-y-1 shadow-sm'
+                className={`p-6 rounded-[1.5rem] font-heading font-black uppercase tracking-tight text-lg sm:text-xl transition-all duration-300 border-2 ${sector === sec ? 'border-accent bg-accent text-dark shadow-xl scale-[1.05]' : 'border-dark bg-paper text-dark hover:-translate-y-1 shadow-sm'
                   }`}
               >
                 {sec === 'highrise' ? 'High-rise' : sec}
@@ -134,10 +134,9 @@ export default function QuoteJourney() {
 
           <button
             onClick={() => setShowForm(true)}
-            className="btn-magnetic w-full md:w-auto px-10 py-5 bg-accent text-paper rounded-[2rem] font-heading font-extrabold text-xl relative group overflow-hidden shadow-2xl border-2 border-accent hover:border-dark hover:text-paper transition-all duration-300"
+            className="btn-magnetic w-full md:w-auto px-10 py-5 bg-accent text-dark rounded-[2rem] font-heading font-black text-xl shadow-2xl border-2 border-accent hover:scale-[1.02] transition-all duration-300"
           >
-            <span className="relative z-10">Inquire About These Services</span>
-            <span className="absolute inset-0 bg-dark translate-y-[100%] group-hover:translate-y-0 transition-transform duration-300 z-0"></span>
+            Inquire About These Services
           </button>
         </div>
       )}
@@ -205,9 +204,8 @@ export default function QuoteJourney() {
               <textarea name="Project Details" required rows="4" placeholder="Describe the scale, dimensions, and specific acoustic challenges..." className="w-full bg-white border-2 border-dark rounded-xl p-3 text-dark font-bold outline-none focus:border-accent hover:border-accent transition-colors resize-none placeholder:text-dark/50 focus:ring-2 focus:ring-accent/20"></textarea>
             </div>
 
-            <button type="submit" className="btn-magnetic mt-4 px-8 py-5 bg-accent text-paper rounded-[2rem] font-heading font-extrabold text-xl relative group overflow-hidden w-full shadow-2xl border-2 border-accent hover:border-dark hover:text-paper transition-all duration-300">
-              <span className="relative z-10">Transmit Request Data</span>
-              <span className="absolute inset-0 bg-dark translate-y-[100%] group-hover:translate-y-0 transition-transform duration-300 z-0"></span>
+            <button type="submit" className="btn-magnetic mt-4 px-8 py-5 bg-accent text-dark rounded-[2rem] font-heading font-black text-xl w-full shadow-2xl border-2 border-accent hover:scale-[1.02] transition-all duration-300">
+              Transmit Request Data
             </button>
           </form>
         </div>
