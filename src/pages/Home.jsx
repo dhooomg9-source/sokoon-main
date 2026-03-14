@@ -10,11 +10,10 @@ export default function Home() {
     <div className="w-full flex flex-col relative overflow-hidden bg-background">
       {/* Abstract gradient mesh for Home */}
       <div className="absolute top-0 right-0 w-full h-[150vh] bg-gradient-to-br from-accent/5 to-transparent pointer-events-none z-0"></div>
-      
+
       <div className="relative z-10 w-full flex flex-col">
         <Hero />
         <AboutSokoon />
-        <Features />
         <Partners />
         <QuoteJourney />
       </div>

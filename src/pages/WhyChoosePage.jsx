@@ -28,7 +28,6 @@ export default function WhyChoosePage() {
         <div className="w-full max-w-6xl">
           <div className="mb-12 reveal-block border-b border-dark/10 pb-8 flex flex-col lg:flex-row lg:items-end justify-between gap-8">
             <div>
-              <span className="font-data text-accent uppercase tracking-widest text-xs mb-3 block">The Advantage</span>
               <h1 className="font-heading font-bold text-5xl md:text-7xl uppercase tracking-tighter">
                 Why Choose <br /><span className="text-accent font-drama italic">Sokoon.</span>
               </h1>

@@ -34,7 +34,6 @@ export default function ServicesPage() {
       <section className="py-16 px-6 md:px-12 lg:px-24 bg-transparent w-full flex flex-col items-center relative z-20">
         <div className="w-full max-w-6xl">
           <div className="mb-12 reveal-block border-b border-dark/10 pb-8">
-            <span className="font-data text-accent uppercase tracking-widest text-xs mb-3 block">Protocol Definition</span>
             <h1 className="font-heading font-bold text-5xl md:text-7xl uppercase tracking-tighter">Acoustic Services</h1>
             <p className="font-data text-dark/70 mt-6 max-w-3xl text-lg md:text-xl leading-relaxed">
               Deploying tailored acoustic protocols across assessment, manufacturing, installation, and optimization. We analyze your spatial constraints and deliver absolute sonic equilibrium.
