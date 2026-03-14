@@ -30,11 +30,11 @@ export default function Hero() {
   return (
     <section ref={containerRef} className="relative min-h-[100dvh] w-full overflow-hidden bg-background text-dark flex flex-col justify-start pt-[200px] pb-20 px-6 md:px-12 lg:px-24 selection:bg-accent selection:text-paper">
 
-      {/* Premium Acoustic Bright PET Felt Texture Background */}
+      {/* Premium Acoustic Vibrant PET Felt Texture Background */}
       <div
         className="hero-bg absolute inset-0 z-0 opacity-100 pointer-events-none"
         style={{
-          backgroundImage: "url('/bright-pet-felt.png')",
+          backgroundImage: "url('/vibrant-pet-felt.png')",
           backgroundSize: "cover",
           backgroundPosition: "center"
         }}
