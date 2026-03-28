@@ -7,12 +7,16 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: '#FAF8F5', // Ivory
-        paper: '#FFFFFF', // Card Background
-        accent: '#C9A84C', // Champagne
-        dark: '#0D0D12', // Obsidian
-        muted: '#2A2A35', // Slate
-        borderLight: '#E8E4DB', // Border / Divider
+        body: 'var(--bg-body)',
+        card: 'var(--bg-card)',
+        'on-dark': 'var(--text-on-dark)',
+        primary: 'var(--text-primary)',
+        copy: 'var(--text-body)',
+        nav: 'var(--nav-default)',
+        accent: 'var(--accent-warm)',
+        dark: 'var(--bg-dark)',
+        subtle: 'var(--border-subtle)',
+        muted: 'var(--text-muted)',
       },
       fontFamily: {
         heading: ['"Inter"', 'sans-serif'],

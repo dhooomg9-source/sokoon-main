@@ -1,0 +1,1934 @@
+
+
+		<!-- Google Tag Manager (noscript) snippet added by Site Kit -->
+		<noscript>
+			<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-53NNJ3Q" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+		</noscript>
+		<!-- End Google Tag Manager (noscript) snippet added by Site Kit -->
+		<script>document.addEventListener("DOMContentLoaded", function () {
+  const form = document.querySelector('form.metform-form[data-form-id="342"]');
+  if (!form) return;
+
+  // Fields
+  const firstName = form.querySelector('input[name="mf-first-name"]');
+  const lastName = form.querySelector('input[name="mf-last-name"]');
+  const email = form.querySelector('input[name="mf-email"]');
+  const phone = form.querySelector('input[name="mf-phone"]');
+  const subject = form.querySelector('input[name="mf-subject"]');
+  const message = form.querySelector('textarea[name="mf-message"]');
+
+  // Helpers
+  const isTextOnly = (v) => /^[A-Za-z\s]+$/.test(v);
+  const isEmailValid = (v) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v);
+  const isNumbersOnly = (v) => /^[0-9]+$/.test(v);
+
+  // Remove old error text
+  function clearErrors() {
+    form.querySelectorAll(".mf-error-text").forEach((e) => e.remove());
+    form.querySelectorAll(".mf-input").forEach((el) => el.classList.remove("mf-error"));
+  }
+
+  // Add error message under field
+  function showError(field, message) {
+    field.classList.add("mf-error");
+
+    const error = document.createElement("div");
+    error.className = "mf-error-text";
+    error.style.color = "red";
+    error.style.fontSize = "13px";
+    error.style.marginTop = "5px";
+    error.innerText = message;
+
+    field.parentNode.appendChild(error);
+  }
+
+  // RTL live behavior
+  form.querySelectorAll(".mf-input").forEach((input) => {
+    input.addEventListener("input", () => {
+      if (input.value.trim() !== "") {
+        input.style.direction = "rtl";
+        input.style.textAlign = "right";
+      } else {
+        input.style.direction = "ltr";
+        input.style.textAlign = "left";
+      }
+    });
+  });
+
+  // Validation
+  form.addEventListener("submit", function (e) {
+    clearErrors();
+    let valid = true;
+
+    // First Name
+    if (firstName.value.trim() === "" || !isTextOnly(firstName.value)) {
+      showError(firstName, "Please enter a valid first name (text only)");
+      valid = false;
+    }
+
+    // Last Name
+    if (lastName.value.trim() === "" || !isTextOnly(lastName.value)) {
+      showError(lastName, "Please enter a valid last name (text only)");
+      valid = false;
+    }
+
+    // Email
+    if (!isEmailValid(email.value)) {
+      showError(email, "Please enter a valid email address");
+      valid = false;
+    }
+
+    // Phone
+    if (phone.value.trim() === "" || !isNumbersOnly(phone.value)) {
+      showError(phone, "Phone number must contain numbers only");
+      valid = false;
+    }
+
+    // Subject
+    if (subject.value.trim() === "") {
+      showError(subject, "Subject is required");
+      valid = false;
+    }
+
+    // Message
+    if (message.value.trim() === "") {
+      showError(message, "Message is required");
+      valid = false;
+    }
+
+    if (!valid) {
+      e.preventDefault(); // STOP FORM SUBMIT
+    }
+  });
+});
+</script>
+<a class="skip-link screen-reader-text" href="#content">Skip to content</a>
+
+		<header data-elementor-type="header" data-elementor-id="113" class="elementor elementor-113 elementor-location-header" data-elementor-post-type="elementor_library">
+			<div class="elementor-element elementor-element-e8374b1 e-con-full e-flex e-con e-parent" data-id="e8374b1" data-element_type="container" data-e-type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+		<div class="elementor-element elementor-element-67aa995 e-con-full e-flex e-con e-child" data-id="67aa995" data-element_type="container" data-e-type="container">
+				<div class="elementor-element elementor-element-2ae1eda elementor-widget elementor-widget-theme-site-logo elementor-widget-image" data-id="2ae1eda" data-element_type="widget" data-e-type="widget" data-widget_type="theme-site-logo.default">
+											<a href="https://acoustieg.com">
+			<img fetchpriority="high" width="1639" height="413" src="https://acoustieg.com/wp-content/uploads/2025/08/Logo-Mobile2.png" class="attachment-full size-full wp-image-7993" alt="" srcset="https://acoustieg.com/wp-content/uploads/2025/08/Logo-Mobile2.png 1639w, https://acoustieg.com/wp-content/uploads/2025/08/Logo-Mobile2-300x76.png 300w, https://acoustieg.com/wp-content/uploads/2025/08/Logo-Mobile2-1024x258.png 1024w, https://acoustieg.com/wp-content/uploads/2025/08/Logo-Mobile2-768x194.png 768w, https://acoustieg.com/wp-content/uploads/2025/08/Logo-Mobile2-1536x387.png 1536w, https://acoustieg.com/wp-content/uploads/2025/08/Logo-Mobile2-600x151.png 600w, https://acoustieg.com/wp-content/uploads/2025/08/Logo-Mobile2-64x16.png 64w" sizes="(max-width: 1639px) 100vw, 1639px">				</a>
+											</div>
+				</div>
+		<div class="elementor-element elementor-element-f6389ce e-con-full e-flex e-con e-child" data-id="f6389ce" data-element_type="container" data-e-type="container">
+				<div class="elementor-element elementor-element-b515ff6 elementor-nav-menu--dropdown-mobile elementor-nav-menu--stretch elementor-nav-menu__align-center elementor-hidden-mobile elementor-hidden-tablet elementor-nav-menu__text-align-aside elementor-nav-menu--toggle elementor-nav-menu--burger elementor-widget elementor-widget-nav-menu" data-id="b515ff6" data-element_type="widget" data-e-type="widget" data-settings="{&quot;full_width&quot;:&quot;stretch&quot;,&quot;submenu_icon&quot;:{&quot;value&quot;:&quot;<svg aria-hidden=\&quot;true\&quot; class=\&quot;fa-svg-chevron-down e-font-icon-svg e-fas-chevron-down\&quot; viewBox=\&quot;0 0 448 512\&quot; xmlns=\&quot;http:\/\/www.w3.org\/2000\/svg\&quot;><path d=\&quot;M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z\&quot;><\/path><\/svg>&quot;,&quot;library&quot;:&quot;fa-solid&quot;},&quot;layout&quot;:&quot;horizontal&quot;,&quot;toggle&quot;:&quot;burger&quot;}" data-widget_type="nav-menu.default">
+								<nav aria-label="Menu" class="elementor-nav-menu--main elementor-nav-menu__container elementor-nav-menu--layout-horizontal e--pointer-underline e--animation-fade">
+				<ul id="menu-1-b515ff6" class="elementor-nav-menu"><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-5057"><a href="https://acoustieg.com/projects/" class="elementor-item">Projects</a>
+<ul class="sub-menu elementor-nav-menu--dropdown">
+	<li class="menu-item menu-item-type-post_type menu-item-object-project menu-item-5056"><a href="https://acoustieg.com/project/human-resources-development-fund/" class="elementor-sub-item">RED SEA PROJECTS</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-project menu-item-5055"><a href="https://acoustieg.com/project/seven/" class="elementor-sub-item">SEVEN</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-project menu-item-5054"><a href="https://acoustieg.com/project/nokia/" class="elementor-sub-item">NOKIA OFFICES</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-project menu-item-5053"><a href="https://acoustieg.com/project/marco/" class="elementor-sub-item">FUTURE ART STUDIOS – DIRIYAH</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-project menu-item-5052"><a href="https://acoustieg.com/project/human-resources-development-fund-2/" class="elementor-sub-item">HUMAN RESOURCES DEVELOPMENT FUND</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-project menu-item-5051"><a href="https://acoustieg.com/project/siemens-energy/" class="elementor-sub-item">SIEMENS ENERGY OFFICES PROJECT</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-project menu-item-5050"><a href="https://acoustieg.com/project/wave-ii/" class="elementor-sub-item">WAVE II SCHOOLS PROJECT – MINISTRY OF EDUCATION</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-project menu-item-5049"><a href="https://acoustieg.com/project/bec-offices/" class="elementor-sub-item">BEC OFFICES</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-project menu-item-5048"><a href="https://acoustieg.com/project/national-elearning-platform/" class="elementor-sub-item">NATIONAL ELEARNING CENTER</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-project menu-item-5047"><a href="https://acoustieg.com/project/chord-studio/" class="elementor-sub-item">CHORD STUDIO</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-project menu-item-5046"><a href="https://acoustieg.com/project/bbiagcjv-joint-ventures/" class="elementor-sub-item">QIDDIYA PROJECT – SIX FLAGS</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-project menu-item-5045"><a href="https://acoustieg.com/project/aramco/" class="elementor-sub-item">ARAMCO</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-project menu-item-5044"><a href="https://acoustieg.com/project/national-security-center-nsc/" class="elementor-sub-item">NATIONAL SECURITY CENTER NSC</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-project menu-item-5043"><a href="https://acoustieg.com/project/archi-site/" class="elementor-sub-item">ROSHN FRONT</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-10700"><a href="https://acoustieg.com/products/" class="elementor-item">Products</a>
+<ul class="sub-menu elementor-nav-menu--dropdown">
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-3667"><a href="https://acoustieg.com/product-category/acoustic-wood-wool-panels/" class="elementor-sub-item">Acoustic Wood Wool Panels</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-3668"><a href="https://acoustieg.com/product-category/acoustic-baffles/" class="elementor-sub-item">Acoustic Baffles</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-3669"><a href="https://acoustieg.com/product-category/acoustic-wood-panels/" class="elementor-sub-item">Acoustic Wood Panels</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-3670"><a href="https://acoustieg.com/product-category/acoustic-foam-panel/" class="elementor-sub-item">Acoustic Foam Panel</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-3671"><a href="https://acoustieg.com/product-category/acousting-divider/" class="elementor-sub-item">Acousting Divider</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-3672"><a href="https://acoustieg.com/product-category/noise-barrier/" class="elementor-sub-item">Noise Barrier</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-3673"><a href="https://acoustieg.com/product-category/mlv/" class="elementor-sub-item">MLV</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-3674"><a href="https://acoustieg.com/product-category/acoustic-felt/" class="elementor-sub-item">Acoustic Felt</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-3675"><a href="https://acoustieg.com/product-category/acoustic-operable-walls/" class="elementor-sub-item">Acoustic Operable Walls</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-3676"><a href="https://acoustieg.com/product-category/silent-booth/" class="elementor-sub-item">Silent Booth</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-1205 current_page_item menu-item-2130"><a href="https://acoustieg.com/consulting-services/" aria-current="page" class="elementor-item elementor-item-active">Consulting Services</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2129"><a href="https://acoustieg.com/acoustic-services/" class="elementor-item">Acoustic Services</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-128"><a href="https://acoustieg.com/about-us/" class="elementor-item">About Us</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2132"><a href="https://acoustieg.com/company-profile/" class="elementor-item">Company Profile</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-12352"><a href="https://acoustieg.com/articles/" class="elementor-item">Articles</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2131"><a href="https://acoustieg.com/certificates/" class="elementor-item">Certificates</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7133"><a href="https://acoustieg.com/contact-us/" class="elementor-item">Contact Us</a></li>
+</ul>			</nav>
+					<div class="elementor-menu-toggle" role="button" tabindex="0" aria-label="Menu Toggle" aria-expanded="false">
+			<i aria-hidden="true" role="presentation" class="elementor-menu-toggle__icon--open website_icon website_icon-vector"></i><svg aria-hidden="true" role="presentation" class="elementor-menu-toggle__icon--close e-font-icon-svg e-eicon-close" viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg"><path d="M742 167L500 408 258 167C246 154 233 150 217 150 196 150 179 158 167 167 154 179 150 196 150 212 150 229 154 242 171 254L408 500 167 742C138 771 138 800 167 829 196 858 225 858 254 829L496 587 738 829C750 842 767 846 783 846 800 846 817 842 829 829 842 817 846 804 846 783 846 767 842 750 829 737L588 500 833 258C863 229 863 200 833 171 804 137 775 137 742 167Z"></path></svg>		</div>
+					<nav class="elementor-nav-menu--dropdown elementor-nav-menu__container" aria-hidden="true">
+				<ul id="menu-2-b515ff6" class="elementor-nav-menu"><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-5057"><a href="https://acoustieg.com/projects/" class="elementor-item" tabindex="-1">Projects</a>
+<ul class="sub-menu elementor-nav-menu--dropdown">
+	<li class="menu-item menu-item-type-post_type menu-item-object-project menu-item-5056"><a href="https://acoustieg.com/project/human-resources-development-fund/" class="elementor-sub-item" tabindex="-1">RED SEA PROJECTS</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-project menu-item-5055"><a href="https://acoustieg.com/project/seven/" class="elementor-sub-item" tabindex="-1">SEVEN</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-project menu-item-5054"><a href="https://acoustieg.com/project/nokia/" class="elementor-sub-item" tabindex="-1">NOKIA OFFICES</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-project menu-item-5053"><a href="https://acoustieg.com/project/marco/" class="elementor-sub-item" tabindex="-1">FUTURE ART STUDIOS – DIRIYAH</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-project menu-item-5052"><a href="https://acoustieg.com/project/human-resources-development-fund-2/" class="elementor-sub-item" tabindex="-1">HUMAN RESOURCES DEVELOPMENT FUND</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-project menu-item-5051"><a href="https://acoustieg.com/project/siemens-energy/" class="elementor-sub-item" tabindex="-1">SIEMENS ENERGY OFFICES PROJECT</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-project menu-item-5050"><a href="https://acoustieg.com/project/wave-ii/" class="elementor-sub-item" tabindex="-1">WAVE II SCHOOLS PROJECT – MINISTRY OF EDUCATION</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-project menu-item-5049"><a href="https://acoustieg.com/project/bec-offices/" class="elementor-sub-item" tabindex="-1">BEC OFFICES</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-project menu-item-5048"><a href="https://acoustieg.com/project/national-elearning-platform/" class="elementor-sub-item" tabindex="-1">NATIONAL ELEARNING CENTER</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-project menu-item-5047"><a href="https://acoustieg.com/project/chord-studio/" class="elementor-sub-item" tabindex="-1">CHORD STUDIO</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-project menu-item-5046"><a href="https://acoustieg.com/project/bbiagcjv-joint-ventures/" class="elementor-sub-item" tabindex="-1">QIDDIYA PROJECT – SIX FLAGS</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-project menu-item-5045"><a href="https://acoustieg.com/project/aramco/" class="elementor-sub-item" tabindex="-1">ARAMCO</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-project menu-item-5044"><a href="https://acoustieg.com/project/national-security-center-nsc/" class="elementor-sub-item" tabindex="-1">NATIONAL SECURITY CENTER NSC</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-project menu-item-5043"><a href="https://acoustieg.com/project/archi-site/" class="elementor-sub-item" tabindex="-1">ROSHN FRONT</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-10700"><a href="https://acoustieg.com/products/" class="elementor-item" tabindex="-1">Products</a>
+<ul class="sub-menu elementor-nav-menu--dropdown">
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-3667"><a href="https://acoustieg.com/product-category/acoustic-wood-wool-panels/" class="elementor-sub-item" tabindex="-1">Acoustic Wood Wool Panels</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-3668"><a href="https://acoustieg.com/product-category/acoustic-baffles/" class="elementor-sub-item" tabindex="-1">Acoustic Baffles</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-3669"><a href="https://acoustieg.com/product-category/acoustic-wood-panels/" class="elementor-sub-item" tabindex="-1">Acoustic Wood Panels</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-3670"><a href="https://acoustieg.com/product-category/acoustic-foam-panel/" class="elementor-sub-item" tabindex="-1">Acoustic Foam Panel</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-3671"><a href="https://acoustieg.com/product-category/acousting-divider/" class="elementor-sub-item" tabindex="-1">Acousting Divider</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-3672"><a href="https://acoustieg.com/product-category/noise-barrier/" class="elementor-sub-item" tabindex="-1">Noise Barrier</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-3673"><a href="https://acoustieg.com/product-category/mlv/" class="elementor-sub-item" tabindex="-1">MLV</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-3674"><a href="https://acoustieg.com/product-category/acoustic-felt/" class="elementor-sub-item" tabindex="-1">Acoustic Felt</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-3675"><a href="https://acoustieg.com/product-category/acoustic-operable-walls/" class="elementor-sub-item" tabindex="-1">Acoustic Operable Walls</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-3676"><a href="https://acoustieg.com/product-category/silent-booth/" class="elementor-sub-item" tabindex="-1">Silent Booth</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-1205 current_page_item menu-item-2130"><a href="https://acoustieg.com/consulting-services/" aria-current="page" class="elementor-item elementor-item-active" tabindex="-1">Consulting Services</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2129"><a href="https://acoustieg.com/acoustic-services/" class="elementor-item" tabindex="-1">Acoustic Services</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-128"><a href="https://acoustieg.com/about-us/" class="elementor-item" tabindex="-1">About Us</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2132"><a href="https://acoustieg.com/company-profile/" class="elementor-item" tabindex="-1">Company Profile</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-12352"><a href="https://acoustieg.com/articles/" class="elementor-item" tabindex="-1">Articles</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2131"><a href="https://acoustieg.com/certificates/" class="elementor-item" tabindex="-1">Certificates</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7133"><a href="https://acoustieg.com/contact-us/" class="elementor-item" tabindex="-1">Contact Us</a></li>
+</ul>			</nav>
+						</div>
+				<div class="elementor-element elementor-element-340c3f6 elementor-hidden-desktop elementor-hidden-tablet elementor-hidden-mobile elementor-widget elementor-widget-ucaddon_fullscreen_navigation_menu" data-id="340c3f6" data-element_type="widget" data-e-type="widget" data-widget_type="ucaddon_fullscreen_navigation_menu.default">
+				<div class="elementor-widget-container">
+					
+<!-- start Fullscreen Menu -->
+<style>/* widget: Fullscreen Menu */
+
+.elementor-sticky{
+	overflow: visible !important;
+}
+
+	
+
+
+#uc_fullscreen_navigation_menu_elementor_340c3f6 * {
+  box-sizing: border-box;
+}
+#uc_fullscreen_navigation_menu_elementor_340c3f6 a,
+#uc_fullscreen_navigation_menu_elementor_340c3f6 a:visited,
+#uc_fullscreen_navigation_menu_elementor_340c3f6 a:hover,
+#uc_fullscreen_navigation_menu_elementor_340c3f6 a:active {
+  text-decoration: none;
+}
+
+
+#uc_fullscreen_navigation_menu_elementor_340c3f6 .ue-input-wrapper{
+  position:relative;  
+}
+
+#uc_fullscreen_navigation_menu_elementor_340c3f6 .ue-input-wrapper-align{
+  display:flex;
+}
+
+#uc_fullscreen_navigation_menu_elementor_340c3f6 .ue_hamburger *{
+  transition: all 200ms;
+}
+
+#uc_fullscreen_navigation_menu_elementor_340c3f6 .ue_hamburger_custom_open svg{
+  height:1em;
+  width:1em;
+}
+
+#uc_fullscreen_navigation_menu_elementor_340c3f6 .ue_hamburger_custom_close svg{
+  height:1em;
+  width:1em;
+}
+
+#uc_fullscreen_navigation_menu_elementor_340c3f6 .uc_hamburger{
+  display: inline-block;  
+}
+
+#uc_fullscreen_navigation_menu_elementor_340c3f6 .uc_line{
+  transition: all .3s;
+}
+
+#uc_fullscreen_navigation_menu_elementor_340c3f6{
+  position:relative;
+  z-index:99998;
+}
+
+#uc_fullscreen_navigation_menu_elementor_340c3f6 .checkbox-toggle {
+  position: absolute;
+  z-index: 100000000;
+  cursor: pointer;
+  opacity: 0;
+  top:0px;
+}
+
+#uc_fullscreen_navigation_menu_elementor_340c3f6 .checkbox-toggle:checked + .ue_hamburger > div:after {
+  opacity: 0;
+}
+
+#uc_fullscreen_navigation_menu_elementor_340c3f6.menu-opened .ue_menu {
+  pointer-events: auto;
+}
+
+#uc_fullscreen_navigation_menu_elementor_340c3f6.menu-opened .ue_menu > div.ue_inner_menu {
+      visibility: visible;
+  -webkit-transition-duration: 0.75s;
+          transition-duration: 0.75s;
+}
+
+#uc_fullscreen_navigation_menu_elementor_340c3f6.menu-opened .ue_menu > div.ue_inner_menu > div > div {
+  opacity: 1;
+  transition: opacity 0.4s ease 0.4s;
+}
+
+/* start open transition animations */
+#uc_fullscreen_navigation_menu_elementor_340c3f6 .ue_menu .ue_inner_menu {
+transform: scale(0);
+}
+
+#uc_fullscreen_navigation_menu_elementor_340c3f6.menu-opened .ue_menu > div.ue_inner_menu {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition-duration: 0.75s;
+          transition-duration: 0.75s;
+}
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+/* end open transition animations */
+
+#uc_fullscreen_navigation_menu_elementor_340c3f6 .ue_hamburger {
+  top: 0;
+  cursor: pointer;
+  transition: 0.4s;
+  backface-visibility: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position:absolute;
+  z-index:99999999;
+}
+
+
+
+#uc_fullscreen_navigation_menu_elementor_340c3f6 .ue_menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  pointer-events: none;
+  visibility: hidden;       
+  backface-visibility: hidden;
+  outline: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* start protection from doubled fixed section in elementor */
+.uc-hidden #uc_fullscreen_navigation_menu_elementor_340c3f6 .ue_menu{
+   opacity: 0;
+   pointer-events: none;
+}
+.uc-visible #uc_fullscreen_navigation_menu_elementor_340c3f6 .ue_menu{
+   opacity: 1;
+   pointer-events: all;
+}
+/* end protection from doubled fixed section in elementor */
+
+#uc_fullscreen_navigation_menu_elementor_340c3f6 .ue_menu .ue_inner_menu {
+  color: #fff;
+  transition: all 0.4s ease;
+  height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  display: flex;
+}
+#uc_fullscreen_navigation_menu_elementor_340c3f6 .ue_inner_menu-box{
+    margin-top: auto;
+  	
+  margin-bottom: auto;
+  width: 100vw;
+  flex: none;
+  backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#uc_fullscreen_navigation_menu_elementor_340c3f6 .ue_menu > div > div > div {
+  max-width: 90vw;
+  width: 100%;
+  opacity: 0;
+  -webkit-transition: opacity 0.4s ease;
+  transition: opacity 0.4s ease;
+  overflow-y: auto;
+  flex: none;
+  display: flex;
+  align-items: center;
+}
+#uc_fullscreen_navigation_menu_elementor_340c3f6 ul:not(#uc_fullscreen_navigation_menu_elementor_340c3f6 section ul) {
+  list-style: none;
+  margin: 0;
+  display: block;
+  padding:0px;
+}
+#uc_fullscreen_navigation_menu_elementor_340c3f6 .ue_menu  div  div  ul li {
+  padding: 0;
+  display: block;
+}
+#uc_fullscreen_navigation_menu_elementor_340c3f6 .ue_menu  div  div  ul  li a {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  transition: color 0.4s ease;
+}
+
+	
+#uc_fullscreen_navigation_menu_elementor_340c3f6 .ue_menu  div  div  ul  li a:hover:after {
+  width: 100%;
+}
+#uc_fullscreen_navigation_menu_elementor_340c3f6 .ue_menu  div  div  ul  li  a:after {
+  content: '';
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  transition: width 0.4s ease;
+}
+
+	
+
+.ue_menu_wrapper{
+  position:relative;
+}
+
+	.ue_hamburger_custom_close    {
+      display:none;
+    }
+
+	#uc_fullscreen_navigation_menu_elementor_340c3f6 .checkbox-toggle:checked + .ue_hamburger div.ue_hamburger_custom_close {
+          display:block;
+     }
+     
+     #uc_fullscreen_navigation_menu_elementor_340c3f6 .checkbox-toggle:checked + .ue_hamburger div.ue_hamburger_custom_open     {
+       display:none;
+     }
+
+	 #uc_fullscreen_navigation_menu_elementor_340c3f6 input:hover + .ue_hamburger > div      {
+        color:;
+      }
+
+#uc_fullscreen_navigation_menu_elementor_340c3f6 .ue_hamburger > div {
+  color:#121212;
+}
+
+
+
+#uc_fullscreen_navigation_menu_elementor_340c3f6 .ue_menu-social-icons a{
+  display:inline-block;
+  line-height:1em;
+}
+
+#uc_fullscreen_navigation_menu_elementor_340c3f6 .ue_menu-social-icons a svg{
+  height:1em;
+  width:1em;
+}
+
+#uc_fullscreen_navigation_menu_elementor_340c3f6 .sub-menu{
+transition: 0.5s;
+overflow: hidden;
+height: auto;
+}
+
+#uc_fullscreen_navigation_menu_elementor_340c3f6 .collapsed i::before,
+#uc_fullscreen_navigation_menu_elementor_340c3f6 .expanded i::before{
+    font-weight: 900;
+  	font-size: 14px;
+    line-height:1em;
+  	display: inline-block;
+    vertical-align: middle;
+}
+#uc_fullscreen_navigation_menu_elementor_340c3f6 .uc-menu-item-pointer{
+  	position: absolute;
+  	pointer-events: all;
+           right: -15px;
+  	   transform: translate(14px,0);
+    }
+
+#uc_fullscreen_navigation_menu_elementor_340c3f6 .uc-menu-item-pointer > *{
+  pointer-events: none;
+}
+
+#uc_fullscreen_navigation_menu_elementor_340c3f6 .uc-menu-item-pointer svg{
+	width: 14px;
+  	height: 14px;
+}
+
+
+
+</style>
+
+<div class="outer-menu" id="uc_fullscreen_navigation_menu_elementor_340c3f6">
+  
+  <div class="ue_menu_wrapper">
+    <div class="ue-input-wrapper-align">
+    <div class="ue-input-wrapper">
+    
+    <input data-uid="uc_fullscreen_navigation_menu_elementor_340c3f6_input" autocomplete="off" name="uc_fullscreen_navigation_menu_elementor_340c3f6_input" class="checkbox-toggle" type="checkbox" aria-label="menu" aria-haspopup="menu">   
+    
+    <div class="ue_hamburger uc_animated_hamburger_icon" role="button" tabindex="0" aria-expanded="false" aria-controls="uc_fullscreen_navigation_menu_elementor_340c3f6_menu">
+      
+              <div>
+                      <div class="ue_hamburger_custom_open"><i class="website_icon website_icon-vector"></i></div>
+            <div class="ue_hamburger_custom_close"><i class="fas fa-times"></i></div>
+          	
+        </div>
+      	
+      
+          </div>
+      
+    </div>
+    </div>
+  
+    <div class="ue_menu">
+
+      <div class="ue_inner_menu" data-closeothers="no" data-clickable="true" data-icon-position="end" data-icon-source="" data-expandall="false">
+
+                	<div class="ue_inner_menu_expand_icon" style="display: none"><i class="fas fa-arrow-down"></i></div>
+        	<div class="ue_inner_menu_collapse_icon" style="display: none"><i class="fas fa-arrow-up"></i></div>
+        	
+        
+        <div class="ue_inner_menu-box">
+
+          <div></div>
+
+          	
+
+          <div>
+            <ul id="menu-main-menu" class="uc-list-menu"><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-5057"><a href="https://acoustieg.com/projects/">Projects</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-post_type menu-item-object-project menu-item-5056"><a href="https://acoustieg.com/project/human-resources-development-fund/">RED SEA PROJECTS</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-project menu-item-5055"><a href="https://acoustieg.com/project/seven/">SEVEN</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-project menu-item-5054"><a href="https://acoustieg.com/project/nokia/">NOKIA OFFICES</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-project menu-item-5053"><a href="https://acoustieg.com/project/marco/">FUTURE ART STUDIOS – DIRIYAH</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-project menu-item-5052"><a href="https://acoustieg.com/project/human-resources-development-fund-2/">HUMAN RESOURCES DEVELOPMENT FUND</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-project menu-item-5051"><a href="https://acoustieg.com/project/siemens-energy/">SIEMENS ENERGY OFFICES PROJECT</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-project menu-item-5050"><a href="https://acoustieg.com/project/wave-ii/">WAVE II SCHOOLS PROJECT – MINISTRY OF EDUCATION</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-project menu-item-5049"><a href="https://acoustieg.com/project/bec-offices/">BEC OFFICES</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-project menu-item-5048"><a href="https://acoustieg.com/project/national-elearning-platform/">NATIONAL ELEARNING CENTER</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-project menu-item-5047"><a href="https://acoustieg.com/project/chord-studio/">CHORD STUDIO</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-project menu-item-5046"><a href="https://acoustieg.com/project/bbiagcjv-joint-ventures/">QIDDIYA PROJECT – SIX FLAGS</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-project menu-item-5045"><a href="https://acoustieg.com/project/aramco/">ARAMCO</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-project menu-item-5044"><a href="https://acoustieg.com/project/national-security-center-nsc/">NATIONAL SECURITY CENTER NSC</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-project menu-item-5043"><a href="https://acoustieg.com/project/archi-site/">ROSHN FRONT</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-10700"><a href="https://acoustieg.com/products/">Products</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-3667"><a href="https://acoustieg.com/product-category/acoustic-wood-wool-panels/">Acoustic Wood Wool Panels</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-3668"><a href="https://acoustieg.com/product-category/acoustic-baffles/">Acoustic Baffles</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-3669"><a href="https://acoustieg.com/product-category/acoustic-wood-panels/">Acoustic Wood Panels</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-3670"><a href="https://acoustieg.com/product-category/acoustic-foam-panel/">Acoustic Foam Panel</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-3671"><a href="https://acoustieg.com/product-category/acousting-divider/">Acousting Divider</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-3672"><a href="https://acoustieg.com/product-category/noise-barrier/">Noise Barrier</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-3673"><a href="https://acoustieg.com/product-category/mlv/">MLV</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-3674"><a href="https://acoustieg.com/product-category/acoustic-felt/">Acoustic Felt</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-3675"><a href="https://acoustieg.com/product-category/acoustic-operable-walls/">Acoustic Operable Walls</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-3676"><a href="https://acoustieg.com/product-category/silent-booth/">Silent Booth</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-1205 current_page_item menu-item-2130"><a href="https://acoustieg.com/consulting-services/" aria-current="page">Consulting Services</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2129"><a href="https://acoustieg.com/acoustic-services/">Acoustic Services</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-128"><a href="https://acoustieg.com/about-us/">About Us</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2132"><a href="https://acoustieg.com/company-profile/">Company Profile</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-12352"><a href="https://acoustieg.com/articles/">Articles</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2131"><a href="https://acoustieg.com/certificates/">Certificates</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7133"><a href="https://acoustieg.com/contact-us/">Contact Us</a></li>
+</ul>
+          </div>
+
+
+                        <div class="ue_menu-social-icons">
+                      <a class="" href="https://wa.me/966591402722">
+	<i class="icon icon-whatsapp-1"></i>
+</a>
+<a class="" href="https://www.linkedin.com/company/acoustieg-sa/">
+	<i class="website_icon website_icon-linkidin"></i>
+</a>
+<a class="" href="https://x.com/acoustieg">
+	<i class="twitter twitter-twitter"></i>
+</a>
+<a class="" href="https://www.instagram.com/acoustieg/">
+	<i class="fab fa-instagram"></i>
+</a>
+
+                </div> 
+          	
+
+          <div></div>
+
+        </div>
+
+      </div>
+    </div>
+  
+  </div>
+</div>
+<!-- end Fullscreen Menu -->				</div>
+				</div>
+				<div class="elementor-element elementor-element-fdb6ad2 elementor-hidden-desktop elementor-view-default elementor-widget elementor-widget-icon" data-id="fdb6ad2" data-element_type="widget" data-e-type="widget" data-widget_type="icon.default">
+							<div class="elementor-icon-wrapper">
+			<a class="elementor-icon" href="#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6NTU5OSwidG9nZ2xlIjpmYWxzZX0%3D">
+			<i aria-hidden="true" class="website_icon website_icon-vector"></i>			</a>
+		</div>
+						</div>
+				</div>
+		<div class="elementor-element elementor-element-5a39026 e-con-full elementor-hidden-mobile elementor-hidden-tablet e-flex e-con e-child" data-id="5a39026" data-element_type="container" data-e-type="container">
+				<div class="elementor-element elementor-element-a2b232f elementor-widget elementor-widget-html" data-id="a2b232f" data-element_type="widget" data-e-type="widget" data-widget_type="html.default">
+					<div class="header-search-desktop">
+  <span class="search-toggle-desktop">
+    <img src="https://acoustieg.com/wp-content/uploads/2025/10/Search-icon.png" class="search-icon-img-desktop">
+  </span>
+
+  <div class="search-dropdown-desktop">
+    <div class="search-wrapper desktop-search">
+
+      <form class="search-form" role="search">
+        <button type="submit" class="search-btn">
+          <img src="https://acoustieg.com/wp-content/uploads/2025/10/Search-mobile-icon.png" width="17">
+        </button>
+
+        <div class="divider"></div>
+
+        <input type="search" class="search-input" placeholder="Search" aria-label="Search">
+      </form>
+
+      <div class="search-results"></div>
+
+    </div>
+  </div>
+</div>
+				</div>
+				<div class="elementor-element elementor-element-2a9a5b7 elementor-widget elementor-widget-wpml-language-switcher" data-id="2a9a5b7" data-element_type="widget" data-e-type="widget" data-widget_type="wpml-language-switcher.default">
+				<div class="elementor-widget-container">
+					<div class="wpml-elementor-ls">
+<div class="wpml-ls-statics-shortcode_actions wpml-ls wpml-ls-legacy-list-horizontal">
+	<ul role="menu"><li class="wpml-ls-slot-shortcode_actions wpml-ls-item wpml-ls-item-ar wpml-ls-first-item wpml-ls-last-item wpml-ls-item-legacy-list-horizontal" role="none">
+				<a href="https://acoustieg.com/ar/consulting-services/" class="wpml-ls-link" role="menuitem" aria-label="Switch to AR" title="Switch to AR">
+                                                        <img class="wpml-ls-flag" src="https://acoustieg.com/wp-content/plugins/sitepress-multilingual-cms/res/flags/ar.svg" alt="AR" width="18" height="12"></a>
+			</li></ul>
+</div>
+</div>				</div>
+				</div>
+		<!-- dce invisible element 3d20fe2 -->		<div class="dce-visibility-event elementor-element elementor-element-1a570c3 dce_masking-none elementor-widget elementor-widget-image" data-id="1a570c3" data-element_type="widget" data-e-type="widget" data-settings="{&quot;enabled_visibility&quot;:&quot;yes&quot;,&quot;dce_visibility_selected&quot;:&quot;yes&quot;}" data-widget_type="image.default">
+																<a href="#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6MjYzNCwidG9nZ2xlIjpmYWxzZX0%3D">
+							<img width="97" height="96" src="https://acoustieg.com/wp-content/uploads/2025/08/Profile-Icon.png" class="attachment-full size-full wp-image-7045" alt="" srcset="https://acoustieg.com/wp-content/uploads/2025/08/Profile-Icon.png 97w, https://acoustieg.com/wp-content/uploads/2025/08/Profile-Icon-64x63.png 64w" sizes="(max-width: 97px) 100vw, 97px">								</a>
+															</div>
+				</div>
+				</div>
+		<div class="elementor-element elementor-element-ef009f7 elementor-hidden-desktop e-con-full e-flex e-con e-parent" data-id="ef009f7" data-element_type="container" data-e-type="container">
+				<div class="elementor-element elementor-element-aab03b3 elementor-widget elementor-widget-html" data-id="aab03b3" data-element_type="widget" data-e-type="widget" data-widget_type="html.default">
+					<div class="search-wrapper mobile-search">
+  <form class="search-form" role="search">
+    <button type="submit" class="search-btn">
+      <img src="https://acoustieg.com/wp-content/uploads/2025/10/Search-mobile-icon.png" width="17">
+    </button>
+
+    <div class="divider"></div>
+
+    <input type="search" class="search-input" placeholder="Search" aria-label="Search">
+
+  </form>
+
+  <div class="search-results"></div>
+</div>
+				</div>
+				<div class="elementor-element elementor-element-021fca6 elementor-widget-mobile__width-initial elementor-widget elementor-widget-html" data-id="021fca6" data-element_type="widget" data-e-type="widget" data-widget_type="html.default">
+					<script>
+(function(){
+
+/* ===== Static Services Data ===== */
+const staticServices = [
+  /* Consulting Services */
+  { title: "Noise Survey", type: "Consulting Service", link: "https://acoustieg.com/consulting-services/#noise-survey" },
+  { title: "Acoustic Consultancy", type: "Consulting Service", link: "https://acoustieg.com/consulting-services/#acoustic-consultancy" },
+  { title: "Acoustic Design Services", type: "Consulting Service", link: "https://acoustieg.com/consulting-services/#acoustic-design" },
+  { title: "Sound Proofing Consultancy", type: "Consulting Service", link: "https://acoustieg.com/consulting-services/#sound-proofing" },
+  { title: "Noise Reduction Consultancy", type: "Consulting Service", link: "https://acoustieg.com/consulting-services/#noise-reduction" },
+
+  /* Acoustic Services */
+  { title: "Acoustic Spray", type: "Acoustic Service", link: "https://acoustieg.com/acoustic-services/#acoustic-spray" },
+  { title: "Fabric Stretch System", type: "Acoustic Service", link: "https://acoustieg.com/acoustic-services/#fabric-stretch" },
+  { title: "Sound Masking System", type: "Acoustic Service", link: "https://acoustieg.com/acoustic-services/#sound-masking" },
+  { title: "Box In A Box System", type: "Acoustic Service", link: "https://acoustieg.com/acoustic-services/#box-in-box" },
+  { title: "Floating Floor, Ceiling and Wall System", type: "Acoustic Service", link: "https://acoustieg.com/acoustic-services/#floating-floor" },
+  { title: "Turnkey Solutions", type: "Acoustic Service", link: "https://acoustieg.com/acoustic-services/#turnkey-solutions" }
+];
+
+  /* ===== Desktop Toggle ===== */
+  const toggle = document.querySelector('.search-toggle-desktop');
+  const dropdown = document.querySelector('.search-dropdown-desktop');
+
+  if(toggle && dropdown){
+    toggle.addEventListener('click', e => {
+      e.stopPropagation();
+      dropdown.style.display =
+        dropdown.style.display === 'block' ? 'none' : 'block';
+      dropdown.querySelector('.search-input')?.focus();
+    });
+
+    document.addEventListener('click', () => dropdown.style.display = 'none');
+    dropdown.addEventListener('click', e => e.stopPropagation());
+  }
+
+  /* ===== Word Stemming/Normalization ===== */
+  function normalizeWord(word) {
+    word = word.toLowerCase().trim();
+    
+    // Common plural patterns
+    const patterns = [
+      { regex: /ies$/, singular: 'y' },      // batteries → battery
+      { regex: /ves$/, singular: 'f' },      // shelves → shelf
+      { regex: /ves$/, singular: 'fe' },     // knives → knife
+      { regex: /ses$/, singular: 's' },      // glasses → glass
+      { regex: /xes$/, singular: 'x' },      // boxes → box
+      { regex: /ches$/, singular: 'ch' },    // benches → bench
+      { regex: /shes$/, singular: 'sh' },    // brushes → brush
+      { regex: /s$/, singular: '' },         // baffles → baffle, panels → panel
+    ];
+    
+    // Try to get singular form
+    let singular = word;
+    for(let pattern of patterns) {
+      if(pattern.regex.test(word)) {
+        singular = word.replace(pattern.regex, pattern.singular);
+        break;
+      }
+    }
+    
+    // Return both forms
+    return {
+      original: word,
+      singular: singular,
+      plural: singular === word ? word + 's' : word // If already plural, keep it
+    };
+  }
+
+  /* ===== IMPROVED Smart Search with Stemming ===== */
+  function smartMatch(title, query) {
+    const titleLower = title.toLowerCase().trim();
+    const queryLower = query.toLowerCase().trim();
+    
+    // TIER 1: Exact phrase match (highest priority)
+    if(titleLower.includes(queryLower)) {
+      return { match: true, score: 100 };
+    }
+    
+    // Split query into words (filter out single characters)
+    const words = queryLower.split(/\s+/).filter(w => w.length > 1);
+    
+    if(words.length === 0) {
+      return { match: false, score: 0 };
+    }
+    
+    // Normalize words (get singular/plural forms)
+    const normalizedWords = words.map(w => normalizeWord(w));
+    
+    // TIER 2: ALL words exist in title (with stemming)
+    const allWordsMatch = normalizedWords.every(wordObj => {
+      return titleLower.includes(wordObj.original) || 
+             titleLower.includes(wordObj.singular) || 
+             titleLower.includes(wordObj.plural);
+    });
+    
+    if(allWordsMatch) {
+      return { match: true, score: 50 };
+    }
+    
+    // TIER 3: Individual word matches (with stemming)
+    const matchingWords = normalizedWords.filter(wordObj => {
+      return titleLower.includes(wordObj.original) || 
+             titleLower.includes(wordObj.singular) || 
+             titleLower.includes(wordObj.plural);
+    });
+    
+    if(matchingWords.length > 0) {
+      // Score based on how many words matched
+      const matchRatio = matchingWords.length / normalizedWords.length;
+      return { match: true, score: 20 + (matchRatio * 10) }; // 20-30 range
+    }
+    
+    return { match: false, score: 0 };
+  }
+
+  /* ===== Normalize URL & Title for deduplication ===== */
+  function normalizeUrl(url) {
+    return url.toLowerCase().replace(/\/+$/, '').replace(/^https?:\/\//, '');
+  }
+  
+  function normalizeTitle(title) {
+    return title.toLowerCase().trim().replace(/\s+/g, ' ');
+  }
+
+  /* ===== Live Search ===== */
+  document.querySelectorAll('.search-wrapper').forEach(wrapper => {
+
+    const input = wrapper.querySelector('.search-input');
+    const form  = wrapper.querySelector('.search-form');
+    const box   = wrapper.querySelector('.search-results');
+    let timer;
+
+    if(!input || !form || !box) return;
+
+    input.addEventListener('input', function(){
+      clearTimeout(timer);
+      const q = this.value.trim();
+
+      if(q.length < 2){
+        box.style.display = 'none';
+        box.innerHTML = '';
+        return;
+      }
+
+      timer = setTimeout(() => {
+
+        /* ===== Clear previous results ===== */
+        box.innerHTML = '<div class="search-loading">Searching...</div>';
+        box.style.display = 'block';
+
+        /* ===== Deduplication tracking ===== */
+        const resultsMap = new Map(); // key = unique ID, value = item object
+        const seenUrls = new Set();
+        const seenTitles = new Set();
+
+        /* ===== Helper to add unique items ===== */
+        function addItem(item, score) {
+          const normalizedUrl = normalizeUrl(item.link);
+          const normalizedTitle = normalizeTitle(item.title);
+          
+          // Create unique key
+          const uniqueKey = `${normalizedUrl}::${normalizedTitle}`;
+          
+          // Skip if duplicate URL or title
+          if(seenUrls.has(normalizedUrl) || seenTitles.has(normalizedTitle)) {
+            return false;
+          }
+          
+          // Add or update if score is higher
+          if(!resultsMap.has(uniqueKey) || resultsMap.get(uniqueKey).score < score) {
+            seenUrls.add(normalizedUrl);
+            seenTitles.add(normalizedTitle);
+            
+            resultsMap.set(uniqueKey, {
+              title: item.title,
+              link: item.link,
+              type: item.type,
+              image: item.image || '',
+              score: score,
+              hasImage: !!item.image
+            });
+            return true;
+          }
+          return false;
+        }
+
+        /* ===== 1️⃣ Process Static Services ===== */
+        staticServices.forEach(service => {
+          const result = smartMatch(service.title, q);
+          if(result.match) {
+            addItem(service, result.score);
+          }
+        });
+
+        /* ===== 2️⃣ Fetch Products & Projects from WordPress ===== */
+        fetch('/wp-admin/admin-ajax.php?action=mobile_live_search&s=' + encodeURIComponent(q))
+          .then(res => res.json())
+          .then(data => {
+
+            // Add WordPress results with their scores
+            data.forEach(item => {
+              // Use score from backend if available, otherwise recalculate
+              const score = item.score || smartMatch(item.title, q).score;
+              addItem(item, score);
+            });
+
+            /* ===== Sort by score (highest → lowest) ===== */
+            const sortedResults = Array.from(resultsMap.values())
+              .sort((a, b) => b.score - a.score)
+              .slice(0, 15); // Limit to top 15 results
+
+            /* ===== Display Results ===== */
+            box.innerHTML = '';
+            
+            if(sortedResults.length === 0) {
+              box.innerHTML = '<div class="search-empty">No results found</div>';
+              return;
+            }
+            
+            sortedResults.forEach(item => {
+              const div = document.createElement('div');
+              div.className = 'search-item';
+              
+              if(item.hasImage && item.image) {
+                div.innerHTML = `
+                  <img src="${item.image}" alt="${item.title}" loading="lazy">
+                  <span>${item.title}</span>
+                  <small>${item.type}</small>
+                `;
+              } else {
+                div.innerHTML = `
+                  <span>${item.title}</span>
+                  <small>${item.type}</small>
+                `;
+              }
+              
+              div.onclick = () => window.location.href = item.link;
+              box.appendChild(div);
+            });
+
+          })
+          .catch(err => {
+            console.error('Search error:', err);
+            
+            // Show static services only on error
+            const sortedResults = Array.from(resultsMap.values())
+              .sort((a, b) => b.score - a.score);
+            
+            box.innerHTML = '';
+            
+            if(sortedResults.length === 0) {
+              box.innerHTML = '<div class="search-empty">Error loading results</div>';
+              return;
+            }
+            
+            sortedResults.forEach(item => {
+              const div = document.createElement('div');
+              div.className = 'search-item';
+              div.innerHTML = `
+                <span>${item.title}</span>
+                <small>${item.type}</small>
+              `;
+              div.onclick = () => window.location.href = item.link;
+              box.appendChild(div);
+            });
+          });
+
+      }, 300); // 300ms debounce
+    });
+
+    /* ===== Form Submit Handler ===== */
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      if(!input.value.trim()) return;
+      window.location.href =
+        '/?s=' + encodeURIComponent(input.value) +
+        '&post_type[]=product&post_type[]=project';
+    });
+
+    /* ===== Close on outside click ===== */
+    document.addEventListener('click', e => {
+      if(!wrapper.contains(e.target)){
+        box.style.display = 'none';
+      }
+    });
+
+  });
+
+})();
+</script>				</div>
+				</div>
+				</header>
+				<div data-elementor-type="wp-page" data-elementor-id="1205" class="elementor elementor-1205" data-elementor-post-type="page">
+				<div data-dce-background-color="#00000000" data-dce-background-overlay-color="#12121200" data-dce-background-image-url="https://acoustieg.com/wp-content/uploads/2025/08/backgroundjpg-2-1.png" class="elementor-element elementor-element-e869e3f e-con-full e-flex e-con e-parent" data-id="e869e3f" data-element_type="container" data-e-type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+				<div class="elementor-element elementor-element-dda44ac elementor-widget__width-auto elementor-widget-mobile__width-initial elementor-widget elementor-widget-heading" data-id="dda44ac" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+					<h2 class="elementor-heading-title elementor-size-default">CONSULTING SERVICES</h2>				</div>
+				<div class="elementor-element elementor-element-72b1fa8 elementor-widget elementor-widget-text-editor" data-id="72b1fa8" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
+									<p><span style="white-space-collapse: preserve;">We provide expert consulting services to help clients achieve optimal sound environments:</span></p>								</div>
+				</div>
+		<div class="elementor-element elementor-element-4678d92 e-flex e-con-boxed e-con e-parent" data-id="4678d92" data-element_type="container" data-e-type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+					<div class="e-con-inner">
+				<div class="elementor-element elementor-element-628bfb6 elementor-widget elementor-widget-heading" data-id="628bfb6" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+					<h2 class="elementor-heading-title elementor-size-default">HOW CAN WE HELP?</h2>				</div>
+				<div class="elementor-element elementor-element-7b105eb elementor-widget elementor-widget-text-editor" data-id="7b105eb" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
+									<p>We solve sound-related problems through expert analysis, design, and implementation</p>								</div>
+					</div>
+				</div>
+		<div class="elementor-element elementor-element-9b202fb e-flex e-con-boxed e-con e-parent" data-id="9b202fb" data-element_type="container" data-e-type="container" id="noise-survey" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+					<div class="e-con-inner">
+		<div data-dce-background-color="#F8F8F8" class="elementor-element elementor-element-5946ac8 e-con-full e-flex e-con e-child" data-id="5946ac8" data-element_type="container" data-e-type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+		<div data-dce-background-overlay-color="#00000000" data-dce-background-image-url="https://acoustieg.com/wp-content/uploads/2025/11/Noise-Survey.png" class="elementor-element elementor-element-66342d4 e-con-full e-flex e-con e-child" data-id="66342d4" data-element_type="container" data-e-type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+				</div>
+		<div class="elementor-element elementor-element-664046b e-con-full e-flex e-con e-child" data-id="664046b" data-element_type="container" data-e-type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+		<div class="elementor-element elementor-element-6b9f82d e-con-full e-flex e-con e-child" data-id="6b9f82d" data-element_type="container" data-e-type="container">
+		<div class="elementor-element elementor-element-9374a73 e-con-full e-flex e-con e-child" data-id="9374a73" data-element_type="container" data-e-type="container">
+				<div class="elementor-element elementor-element-7973ef0 elementor-hidden-mobile elementor-widget elementor-widget-heading" data-id="7973ef0" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+					<h2 class="elementor-heading-title elementor-size-default">1.</h2>				</div>
+				<div class="elementor-element elementor-element-75ce9b3 elementor-widget elementor-widget-heading" data-id="75ce9b3" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+					<h2 class="elementor-heading-title elementor-size-default">Noise <span style="color:#2FB0AB">Survey</span></h2>				</div>
+				</div>
+				<div class="elementor-element elementor-element-3f9cae6 elementor-widget elementor-widget-text-editor" data-id="3f9cae6" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
+									<div>We conduct thorough on-site noise surveys to accurately assess the sound environment in your facility, workplace, or project site. Our team uses professional-grade equipment to measure noise levels at various times of day and in different operational scenarios.</div><p>Detailed on-site assessment to measure noise levels and identify specific sound-related issues with tailored recommendations for effective .noise control</p>								</div>
+				</div>
+				<div class="elementor-element elementor-element-76db207 elementor-widget elementor-widget-text-editor" data-id="76db207" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
+									<p>01</p>								</div>
+				</div>
+				</div>
+					</div>
+				</div>
+		<div class="elementor-element elementor-element-be78e67 e-flex e-con-boxed e-con e-parent" data-id="be78e67" data-element_type="container" data-e-type="container" id="acoustic-consultancy" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+					<div class="e-con-inner">
+		<div data-dce-background-color="#F8F8F8" class="elementor-element elementor-element-c5a6d8c e-con-full e-flex e-con e-child" data-id="c5a6d8c" data-element_type="container" data-e-type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+		<div data-dce-background-overlay-color="#00000000" data-dce-background-image-url="https://acoustieg.com/wp-content/uploads/2025/11/Acoustic-Consultancy-updated.png" class="elementor-element elementor-element-8814d9e e-con-full e-flex e-con e-child" data-id="8814d9e" data-element_type="container" data-e-type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+				</div>
+		<div class="elementor-element elementor-element-4391801 e-con-full e-flex e-con e-child" data-id="4391801" data-element_type="container" data-e-type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+		<div class="elementor-element elementor-element-48563b0 e-con-full e-flex e-con e-child" data-id="48563b0" data-element_type="container" data-e-type="container">
+		<div class="elementor-element elementor-element-fb6463e e-con-full e-flex e-con e-child" data-id="fb6463e" data-element_type="container" data-e-type="container">
+				<div class="elementor-element elementor-element-180a875 elementor-hidden-mobile elementor-widget elementor-widget-heading" data-id="180a875" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+					<h2 class="elementor-heading-title elementor-size-default">2. </h2>				</div>
+				<div class="elementor-element elementor-element-54f6df6 elementor-widget elementor-widget-heading" data-id="54f6df6" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+					<h2 class="elementor-heading-title elementor-size-default">acoustic <span style="color:#2FB0AB">consultancy</span></h2>				</div>
+				</div>
+				<div class="elementor-element elementor-element-e44dbd5 elementor-widget elementor-widget-text-editor" data-id="e44dbd5" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
+									<p>We offer expert acoustic consultancy to help you design, modify, or upgrade spaces for optimal sound performance. Whether you’re building a theater, setting up an office, or managing a noisy industrial facility, we tailor solutions to your specific needs.<br><br><br></p><p>Specialized advice and planning to optimize acoustic performance in various environments, including offices, theaters, and industrial spaces.</p>								</div>
+				</div>
+				<div class="elementor-element elementor-element-a65ed22 elementor-widget elementor-widget-text-editor" data-id="a65ed22" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
+									<p>02</p>								</div>
+				</div>
+				</div>
+					</div>
+				</div>
+		<div class="elementor-element elementor-element-b9ba968 e-flex e-con-boxed e-con e-parent" data-id="b9ba968" data-element_type="container" data-e-type="container" id="acoustic-design" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+					<div class="e-con-inner">
+		<div data-dce-background-color="#F8F8F8" class="elementor-element elementor-element-7551f83 e-con-full e-flex e-con e-child" data-id="7551f83" data-element_type="container" data-e-type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+		<div data-dce-background-overlay-color="#00000000" data-dce-background-image-url="https://acoustieg.com/wp-content/uploads/2025/08/consulting_services_3.png" class="elementor-element elementor-element-4a86d50 e-con-full e-flex e-con e-child" data-id="4a86d50" data-element_type="container" data-e-type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+				</div>
+		<div class="elementor-element elementor-element-cd51a7e e-con-full e-flex e-con e-child" data-id="cd51a7e" data-element_type="container" data-e-type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+		<div class="elementor-element elementor-element-3c76c17 e-con-full e-flex e-con e-child" data-id="3c76c17" data-element_type="container" data-e-type="container">
+		<div class="elementor-element elementor-element-8b4fe0f e-con-full e-flex e-con e-child" data-id="8b4fe0f" data-element_type="container" data-e-type="container">
+				<div class="elementor-element elementor-element-473f47e elementor-hidden-mobile elementor-widget elementor-widget-heading" data-id="473f47e" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+					<h2 class="elementor-heading-title elementor-size-default">3. </h2>				</div>
+				<div class="elementor-element elementor-element-116ee5b elementor-widget elementor-widget-heading" data-id="116ee5b" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+					<h2 class="elementor-heading-title elementor-size-default">acoustic design  <span style="color:#2FB0AB">services</span></h2>				</div>
+				</div>
+				<div class="elementor-element elementor-element-ce1cd13 elementor-widget elementor-widget-text-editor" data-id="ce1cd13" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
+									<p>We deliver customized acoustic design strategies to help you control sound in your space—whether you need clarity, quiet, or both. Our focus is on creating environments that sound better, feel better, and function better.</p><p>Customized design strategies focused on improving clarity, reducing unwanted noise, and optimizing acoustic for both comfort and functionality in different settings.</p>								</div>
+				</div>
+				<div class="elementor-element elementor-element-2d49fde elementor-widget elementor-widget-text-editor" data-id="2d49fde" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
+									<p>03</p>								</div>
+				</div>
+				</div>
+					</div>
+				</div>
+		<div class="elementor-element elementor-element-4e4dbaa e-flex e-con-boxed e-con e-parent" data-id="4e4dbaa" data-element_type="container" data-e-type="container" id="sound-proofing" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+					<div class="e-con-inner">
+		<div data-dce-background-color="#F8F8F8" class="elementor-element elementor-element-5a7ee7b e-con-full e-flex e-con e-child" data-id="5a7ee7b" data-element_type="container" data-e-type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+		<div data-dce-background-overlay-color="#00000000" data-dce-background-image-url="https://acoustieg.com/wp-content/uploads/2025/11/Sound-Proofing-Consultancy-updated.png" class="elementor-element elementor-element-a7c78d6 e-con-full e-flex e-con e-child" data-id="a7c78d6" data-element_type="container" data-e-type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+				</div>
+		<div class="elementor-element elementor-element-803010f e-con-full e-flex e-con e-child" data-id="803010f" data-element_type="container" data-e-type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+		<div class="elementor-element elementor-element-bfa4033 e-con-full e-flex e-con e-child" data-id="bfa4033" data-element_type="container" data-e-type="container">
+		<div class="elementor-element elementor-element-05c8ce7 e-con-full e-flex e-con e-child" data-id="05c8ce7" data-element_type="container" data-e-type="container">
+				<div class="elementor-element elementor-element-969dda5 elementor-hidden-mobile elementor-widget elementor-widget-heading" data-id="969dda5" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+					<h2 class="elementor-heading-title elementor-size-default">4. </h2>				</div>
+				<div class="elementor-element elementor-element-95a6060 elementor-widget elementor-widget-heading" data-id="95a6060" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+					<h2 class="elementor-heading-title elementor-size-default">sound proofing <br> <span style="color:#2FB0AB">consultancy</span></h2>				</div>
+				</div>
+				<div class="elementor-element elementor-element-c777b78 elementor-widget elementor-widget-text-editor" data-id="c777b78" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
+									<p>We provide soundproofing consultancy to help you reduce sound transmission and create quieter, more controlled environments. Whether you’re dealing with noisy neighbors, loud machinery, or poor acoustic privacy, we design practical, site-specific solutions.<br><br><br>Bespoke solutions to reduce sound transmission, enhance privacy, and quieter, more peaceful spaces in residential, commercial, and industrial buildings.</p>								</div>
+				</div>
+				<div class="elementor-element elementor-element-2c4428f elementor-widget elementor-widget-text-editor" data-id="2c4428f" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
+									<p>04</p>								</div>
+				</div>
+				</div>
+					</div>
+				</div>
+		<div class="elementor-element elementor-element-8486790 e-flex e-con-boxed e-con e-parent" data-id="8486790" data-element_type="container" data-e-type="container" id="noise-reduction" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+					<div class="e-con-inner">
+		<div data-dce-background-color="#F8F8F8" class="elementor-element elementor-element-63de057 e-con-full e-flex e-con e-child" data-id="63de057" data-element_type="container" data-e-type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+		<div data-dce-background-overlay-color="#00000000" data-dce-background-image-url="https://acoustieg.com/wp-content/uploads/2025/11/Noise-Reduction-Consultancy-updated.png" class="elementor-element elementor-element-98f240f e-con-full e-flex e-con e-child" data-id="98f240f" data-element_type="container" data-e-type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+				</div>
+		<div class="elementor-element elementor-element-996b90c e-con-full e-flex e-con e-child" data-id="996b90c" data-element_type="container" data-e-type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+		<div class="elementor-element elementor-element-aa10b15 e-con-full e-flex e-con e-child" data-id="aa10b15" data-element_type="container" data-e-type="container">
+		<div class="elementor-element elementor-element-0e8a267 e-con-full e-flex e-con e-child" data-id="0e8a267" data-element_type="container" data-e-type="container">
+				<div class="elementor-element elementor-element-c8aa66d elementor-hidden-mobile elementor-widget elementor-widget-heading" data-id="c8aa66d" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+					<h2 class="elementor-heading-title elementor-size-default">5. </h2>				</div>
+				<div class="elementor-element elementor-element-bee572f elementor-widget elementor-widget-heading" data-id="bee572f" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+					<h2 class="elementor-heading-title elementor-size-default">noise reduction<br> <span style="color:#2FB0AB">consultancy</span></h2>				</div>
+				</div>
+				<div class="elementor-element elementor-element-9421bbc elementor-widget elementor-widget-text-editor" data-id="9421bbc" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
+									We help you control excessive noise through targeted, practical strategies. Our consultancy focuses on improving acoustic conditions to support comfort, focus, and overall well-being in your space.
+<br><br>
+Practical strategies and recommendations to control excessive noise and improve the acoustic environment, boosting comfort, productivity, and well-being								</div>
+				</div>
+				<div class="elementor-element elementor-element-233f321 elementor-widget elementor-widget-text-editor" data-id="233f321" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
+									<p>05</p>								</div>
+				</div>
+				</div>
+					</div>
+				</div>
+				</div>
+				<footer data-elementor-type="footer" data-elementor-id="118" class="elementor elementor-118 elementor-location-footer" data-elementor-post-type="elementor_library">
+			<div class="elementor-element elementor-element-42c1b9f e-con-full e-flex e-con e-parent" data-id="42c1b9f" data-element_type="container" data-e-type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+		<div class="elementor-element elementor-element-c6c3b01 e-con-full e-flex e-con e-child" data-id="c6c3b01" data-element_type="container" data-e-type="container">
+		<div class="elementor-element elementor-element-82e3e2e e-con-full e-flex e-con e-child" data-id="82e3e2e" data-element_type="container" data-e-type="container">
+				<div class="elementor-element elementor-element-41a13a4 dce_masking-none elementor-widget elementor-widget-image" data-id="41a13a4" data-element_type="widget" data-e-type="widget" data-widget_type="image.default">
+															<img width="948" height="228" src="https://acoustieg.com/wp-content/uploads/2025/08/ACOUSTIEG-White-Logo.png" class="attachment-full size-full wp-image-5594" alt="" srcset="https://acoustieg.com/wp-content/uploads/2025/08/ACOUSTIEG-White-Logo.png 948w, https://acoustieg.com/wp-content/uploads/2025/08/ACOUSTIEG-White-Logo-300x72.png 300w, https://acoustieg.com/wp-content/uploads/2025/08/ACOUSTIEG-White-Logo-768x185.png 768w, https://acoustieg.com/wp-content/uploads/2025/08/ACOUSTIEG-White-Logo-600x144.png 600w, https://acoustieg.com/wp-content/uploads/2025/08/ACOUSTIEG-White-Logo-64x15.png 64w" sizes="(max-width: 948px) 100vw, 948px">															</div>
+				<div class="elementor-element elementor-element-b26efba elementor-hidden-mobile elementor-widget elementor-widget-text-editor" data-id="b26efba" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
+									<p>Pioneering Acoustic Solutions | Soundproofing<br>Systems | Acoustic Design &amp; Consultancy <br>Based&nbsp;in&nbsp;Saudi&nbsp;Arabia</p>								</div>
+				<div class="elementor-element elementor-element-d49d871 elementor-hidden-desktop elementor-hidden-tablet elementor-widget elementor-widget-text-editor" data-id="d49d871" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
+									<p>Pioneering Acoustic Solutions | Soundproofing Systems&nbsp;<br>Acoustic Design &amp; Consultancy</p>								</div>
+				<div class="elementor-element elementor-element-c92633c e-grid-align-left elementor-hidden-mobile elementor-shape-rounded elementor-grid-0 elementor-widget elementor-widget-social-icons" data-id="c92633c" data-element_type="widget" data-e-type="widget" data-widget_type="social-icons.default">
+							<div class="elementor-social-icons-wrapper elementor-grid" role="list">
+							<span class="elementor-grid-item" role="listitem">
+					<a class="elementor-icon elementor-social-icon elementor-social-icon-whatsapp elementor-repeater-item-6933c4b" href="https://wa.me/+966561060576" target="_blank">
+						<span class="elementor-screen-only">Whatsapp</span>
+						<svg aria-hidden="true" class="e-font-icon-svg e-fab-whatsapp" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"></path></svg>					</a>
+				</span>
+							<span class="elementor-grid-item" role="listitem">
+					<a class="elementor-icon elementor-social-icon elementor-social-icon-website_icon-linkidin elementor-repeater-item-7d907bb" href="https://www.linkedin.com/company/acoustieg-sa/" target="_blank">
+						<span class="elementor-screen-only">Website_icon-linkidin</span>
+						<i aria-hidden="true" class="website_icon website_icon-linkidin"></i>					</a>
+				</span>
+							<span class="elementor-grid-item" role="listitem">
+					<a class="elementor-icon elementor-social-icon elementor-social-icon-x-twitter elementor-repeater-item-401716a" href="https://x.com/acoustieg" target="_blank">
+						<span class="elementor-screen-only">X-twitter</span>
+						<svg aria-hidden="true" class="e-font-icon-svg e-fab-x-twitter" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"></path></svg>					</a>
+				</span>
+							<span class="elementor-grid-item" role="listitem">
+					<a class="elementor-icon elementor-social-icon elementor-social-icon-instagram elementor-repeater-item-dd1874d" href="https://www.instagram.com/acoustieg/" target="_blank">
+						<span class="elementor-screen-only">Instagram</span>
+						<svg aria-hidden="true" class="e-font-icon-svg e-fab-instagram" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path></svg>					</a>
+				</span>
+					</div>
+						</div>
+				</div>
+		<div class="elementor-element elementor-element-edfffc7 e-con-full e-flex e-con e-child" data-id="edfffc7" data-element_type="container" data-e-type="container">
+				<div class="elementor-element elementor-element-44aef66 elementor-widget elementor-widget-text-editor" data-id="44aef66" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
+									<p>QUICK <span class="menucolor">LINKS</span></p>								</div>
+				<div class="elementor-element elementor-element-ffb1ee3 elementor-widget-divider--view-line elementor-widget elementor-widget-divider" data-id="ffb1ee3" data-element_type="widget" data-e-type="widget" data-widget_type="divider.default">
+							<div class="elementor-divider">
+			<span class="elementor-divider-separator">
+						</span>
+		</div>
+						</div>
+		<div class="elementor-element elementor-element-a92b621 e-con-full e-flex e-con e-child" data-id="a92b621" data-element_type="container" data-e-type="container">
+				<div class="elementor-element elementor-element-2412351 elementor-nav-menu__align-start elementor-nav-menu--dropdown-none elementor-widget-mobile__width-initial elementor-widget__width-initial elementor-widget elementor-widget-nav-menu" data-id="2412351" data-element_type="widget" data-e-type="widget" data-settings="{&quot;layout&quot;:&quot;vertical&quot;,&quot;submenu_icon&quot;:{&quot;value&quot;:&quot;<svg aria-hidden=\&quot;true\&quot; class=\&quot;e-font-icon-svg e-fas-caret-down\&quot; viewBox=\&quot;0 0 320 512\&quot; xmlns=\&quot;http:\/\/www.w3.org\/2000\/svg\&quot;><path d=\&quot;M31.3 192h257.3c17.8 0 26.7 21.5 14.1 34.1L174.1 354.8c-7.8 7.8-20.5 7.8-28.3 0L17.2 226.1C4.6 213.5 13.5 192 31.3 192z\&quot;><\/path><\/svg>&quot;,&quot;library&quot;:&quot;fa-solid&quot;}}" data-widget_type="nav-menu.default">
+								<nav aria-label="Menu" class="elementor-nav-menu--main elementor-nav-menu__container elementor-nav-menu--layout-vertical e--pointer-none">
+				<ul id="menu-1-2412351" class="elementor-nav-menu sm-vertical"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-5058"><a href="https://acoustieg.com/" class="elementor-item">Home</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5061"><a href="https://acoustieg.com/about-us/" class="elementor-item">About Us</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10701"><a href="https://acoustieg.com/products/" class="elementor-item">Products</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5059"><a href="https://acoustieg.com/projects/" class="elementor-item">Projects</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-12269"><a href="https://acoustieg.com/articles/" class="elementor-item">Articles</a></li>
+</ul>			</nav>
+						<nav class="elementor-nav-menu--dropdown elementor-nav-menu__container" aria-hidden="true">
+				<ul id="menu-2-2412351" class="elementor-nav-menu sm-vertical"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-5058"><a href="https://acoustieg.com/" class="elementor-item" tabindex="-1">Home</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5061"><a href="https://acoustieg.com/about-us/" class="elementor-item" tabindex="-1">About Us</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10701"><a href="https://acoustieg.com/products/" class="elementor-item" tabindex="-1">Products</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5059"><a href="https://acoustieg.com/projects/" class="elementor-item" tabindex="-1">Projects</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-12269"><a href="https://acoustieg.com/articles/" class="elementor-item" tabindex="-1">Articles</a></li>
+</ul>			</nav>
+						</div>
+				<div class="elementor-element elementor-element-52312a2 elementor-nav-menu__align-start elementor-nav-menu--dropdown-none elementor-widget-mobile__width-initial elementor-widget__width-initial elementor-hidden-desktop elementor-hidden-tablet elementor-widget elementor-widget-nav-menu" data-id="52312a2" data-element_type="widget" data-e-type="widget" data-settings="{&quot;layout&quot;:&quot;vertical&quot;,&quot;submenu_icon&quot;:{&quot;value&quot;:&quot;<svg aria-hidden=\&quot;true\&quot; class=\&quot;e-font-icon-svg e-fas-caret-down\&quot; viewBox=\&quot;0 0 320 512\&quot; xmlns=\&quot;http:\/\/www.w3.org\/2000\/svg\&quot;><path d=\&quot;M31.3 192h257.3c17.8 0 26.7 21.5 14.1 34.1L174.1 354.8c-7.8 7.8-20.5 7.8-28.3 0L17.2 226.1C4.6 213.5 13.5 192 31.3 192z\&quot;><\/path><\/svg>&quot;,&quot;library&quot;:&quot;fa-solid&quot;}}" data-widget_type="nav-menu.default">
+								<nav aria-label="Menu" class="elementor-nav-menu--main elementor-nav-menu__container elementor-nav-menu--layout-vertical e--pointer-none">
+				<ul id="menu-1-52312a2" class="elementor-nav-menu sm-vertical"><li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-1205 current_page_item menu-item-5076"><a href="https://acoustieg.com/consulting-services/" aria-current="page" class="elementor-item elementor-item-active">Consulting Services</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5075"><a href="https://acoustieg.com/acoustic-services/" class="elementor-item">Acoustic Services</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10151"><a href="https://acoustieg.com/company-profile/" class="elementor-item">Company Profile</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10150"><a href="https://acoustieg.com/certificates/" class="elementor-item">Certificates</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5077"><a href="https://acoustieg.com/contact-us/" class="elementor-item">Contact Us</a></li>
+</ul>			</nav>
+						<nav class="elementor-nav-menu--dropdown elementor-nav-menu__container" aria-hidden="true">
+				<ul id="menu-2-52312a2" class="elementor-nav-menu sm-vertical"><li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-1205 current_page_item menu-item-5076"><a href="https://acoustieg.com/consulting-services/" aria-current="page" class="elementor-item elementor-item-active" tabindex="-1">Consulting Services</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5075"><a href="https://acoustieg.com/acoustic-services/" class="elementor-item" tabindex="-1">Acoustic Services</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10151"><a href="https://acoustieg.com/company-profile/" class="elementor-item" tabindex="-1">Company Profile</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10150"><a href="https://acoustieg.com/certificates/" class="elementor-item" tabindex="-1">Certificates</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5077"><a href="https://acoustieg.com/contact-us/" class="elementor-item" tabindex="-1">Contact Us</a></li>
+</ul>			</nav>
+						</div>
+				</div>
+				</div>
+		<div class="elementor-element elementor-element-b845925 e-con-full elementor-hidden-mobile e-flex e-con e-child" data-id="b845925" data-element_type="container" data-e-type="container">
+				<div class="elementor-element elementor-element-2b563e2 elementor-nav-menu__align-start elementor-nav-menu--dropdown-none elementor-widget-mobile__width-initial elementor-widget elementor-widget-nav-menu" data-id="2b563e2" data-element_type="widget" data-e-type="widget" data-settings="{&quot;layout&quot;:&quot;vertical&quot;,&quot;submenu_icon&quot;:{&quot;value&quot;:&quot;<svg aria-hidden=\&quot;true\&quot; class=\&quot;e-font-icon-svg e-fas-caret-down\&quot; viewBox=\&quot;0 0 320 512\&quot; xmlns=\&quot;http:\/\/www.w3.org\/2000\/svg\&quot;><path d=\&quot;M31.3 192h257.3c17.8 0 26.7 21.5 14.1 34.1L174.1 354.8c-7.8 7.8-20.5 7.8-28.3 0L17.2 226.1C4.6 213.5 13.5 192 31.3 192z\&quot;><\/path><\/svg>&quot;,&quot;library&quot;:&quot;fa-solid&quot;}}" data-widget_type="nav-menu.default">
+								<nav aria-label="Menu" class="elementor-nav-menu--main elementor-nav-menu__container elementor-nav-menu--layout-vertical e--pointer-none">
+				<ul id="menu-1-2b563e2" class="elementor-nav-menu sm-vertical"><li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-1205 current_page_item menu-item-5076"><a href="https://acoustieg.com/consulting-services/" aria-current="page" class="elementor-item elementor-item-active">Consulting Services</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5075"><a href="https://acoustieg.com/acoustic-services/" class="elementor-item">Acoustic Services</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10151"><a href="https://acoustieg.com/company-profile/" class="elementor-item">Company Profile</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10150"><a href="https://acoustieg.com/certificates/" class="elementor-item">Certificates</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5077"><a href="https://acoustieg.com/contact-us/" class="elementor-item">Contact Us</a></li>
+</ul>			</nav>
+						<nav class="elementor-nav-menu--dropdown elementor-nav-menu__container" aria-hidden="true">
+				<ul id="menu-2-2b563e2" class="elementor-nav-menu sm-vertical"><li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-1205 current_page_item menu-item-5076"><a href="https://acoustieg.com/consulting-services/" aria-current="page" class="elementor-item elementor-item-active" tabindex="-1">Consulting Services</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5075"><a href="https://acoustieg.com/acoustic-services/" class="elementor-item" tabindex="-1">Acoustic Services</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10151"><a href="https://acoustieg.com/company-profile/" class="elementor-item" tabindex="-1">Company Profile</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10150"><a href="https://acoustieg.com/certificates/" class="elementor-item" tabindex="-1">Certificates</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5077"><a href="https://acoustieg.com/contact-us/" class="elementor-item" tabindex="-1">Contact Us</a></li>
+</ul>			</nav>
+						</div>
+				</div>
+		<div class="elementor-element elementor-element-dc012b8 e-con-full e-flex e-con e-child" data-id="dc012b8" data-element_type="container" data-e-type="container">
+		<div class="elementor-element elementor-element-f7fc215 e-con-full e-flex e-con e-child" data-id="f7fc215" data-element_type="container" data-e-type="container">
+				<div class="elementor-element elementor-element-51bcca7 elementor-widget elementor-widget-text-editor" data-id="51bcca7" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
+									<p>CALL <span class="menucolor">US</span></p>								</div>
+				<div class="elementor-element elementor-element-5605272 elementor-widget-divider--view-line elementor-widget elementor-widget-divider" data-id="5605272" data-element_type="widget" data-e-type="widget" data-widget_type="divider.default">
+							<div class="elementor-divider">
+			<span class="elementor-divider-separator">
+						</span>
+		</div>
+						</div>
+				<div class="elementor-element elementor-element-f454145 elementor-widget elementor-widget-heading" data-id="f454145" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+					<h2 class="elementor-heading-title elementor-size-default"><a href="tel:+966%2059%20140%202722" target="_blank">+966 59 140 2722</a></h2>				</div>
+				</div>
+		<div class="elementor-element elementor-element-633e4c3 e-con-full e-flex e-con e-child" data-id="633e4c3" data-element_type="container" data-e-type="container">
+				<div class="elementor-element elementor-element-0bde350 elementor-widget elementor-widget-text-editor" data-id="0bde350" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
+									<p>EMAIL <span class="menucolor">US</span></p>								</div>
+				<div class="elementor-element elementor-element-6a00dd3 elementor-widget-divider--view-line elementor-widget elementor-widget-divider" data-id="6a00dd3" data-element_type="widget" data-e-type="widget" data-widget_type="divider.default">
+							<div class="elementor-divider">
+			<span class="elementor-divider-separator">
+						</span>
+		</div>
+						</div>
+				<div class="elementor-element elementor-element-b186040 elementor-widget elementor-widget-heading" data-id="b186040" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+					<h2 class="elementor-heading-title elementor-size-default"><a href="mailto:Info@acoustieg.com" target="_blank">Info@acoustieg.com</a></h2>				</div>
+				</div>
+		<div class="elementor-element elementor-element-1c30bd2 e-con-full e-flex e-con e-child" data-id="1c30bd2" data-element_type="container" data-e-type="container">
+				<div class="elementor-element elementor-element-af2ab3a elementor-widget elementor-widget-text-editor" data-id="af2ab3a" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
+									<p>MEET <span class="menucolor">US</span></p>								</div>
+				<div class="elementor-element elementor-element-88cad73 elementor-widget-divider--view-line elementor-widget elementor-widget-divider" data-id="88cad73" data-element_type="widget" data-e-type="widget" data-widget_type="divider.default">
+							<div class="elementor-divider">
+			<span class="elementor-divider-separator">
+						</span>
+		</div>
+						</div>
+				<div class="elementor-element elementor-element-2915120 elementor-widget elementor-widget-heading" data-id="2915120" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+					<h2 class="elementor-heading-title elementor-size-default"><a href="https://maps.app.goo.gl/NLMi223vhqShynW56" target="_blank">Riyadh, Saudi Arabia</a></h2>				</div>
+				<div class="elementor-element elementor-element-2ab8f64 elementor-widget elementor-widget-heading" data-id="2ab8f64" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+					<h2 class="elementor-heading-title elementor-size-default"><a href="https://maps.app.goo.gl/bmGrgwHPZoHrzGee8" target="_blank">Dammam, Saudi Arabia</a></h2>				</div>
+				</div>
+				<div class="elementor-element elementor-element-d2a4b22 e-grid-align-left e-grid-align-mobile-center elementor-hidden-desktop elementor-hidden-tablet elementor-shape-rounded elementor-grid-0 elementor-widget elementor-widget-social-icons" data-id="d2a4b22" data-element_type="widget" data-e-type="widget" data-widget_type="social-icons.default">
+							<div class="elementor-social-icons-wrapper elementor-grid" role="list">
+							<span class="elementor-grid-item" role="listitem">
+					<a class="elementor-icon elementor-social-icon elementor-social-icon-whatsapp elementor-repeater-item-6933c4b" href="https://wa.me/+966561060576" target="_blank">
+						<span class="elementor-screen-only">Whatsapp</span>
+						<svg aria-hidden="true" class="e-font-icon-svg e-fab-whatsapp" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"></path></svg>					</a>
+				</span>
+							<span class="elementor-grid-item" role="listitem">
+					<a class="elementor-icon elementor-social-icon elementor-social-icon-website_icon-linkidin elementor-repeater-item-7d907bb" href="https://www.linkedin.com/company/acoustieg-sa/?originalSubdomain=sa" target="_blank">
+						<span class="elementor-screen-only">Website_icon-linkidin</span>
+						<i aria-hidden="true" class="website_icon website_icon-linkidin"></i>					</a>
+				</span>
+							<span class="elementor-grid-item" role="listitem">
+					<a class="elementor-icon elementor-social-icon elementor-social-icon-x-twitter elementor-repeater-item-401716a" href="https://x.com/acoustieg" target="_blank">
+						<span class="elementor-screen-only">X-twitter</span>
+						<svg aria-hidden="true" class="e-font-icon-svg e-fab-x-twitter" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"></path></svg>					</a>
+				</span>
+							<span class="elementor-grid-item" role="listitem">
+					<a class="elementor-icon elementor-social-icon elementor-social-icon-instagram elementor-repeater-item-dd1874d" href="https://www.instagram.com/acoustieg/" target="_blank">
+						<span class="elementor-screen-only">Instagram</span>
+						<svg aria-hidden="true" class="e-font-icon-svg e-fab-instagram" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path></svg>					</a>
+				</span>
+					</div>
+						</div>
+				</div>
+				</div>
+				</div>
+		<div class="elementor-element elementor-element-e61c801 e-con-full e-flex e-con e-parent" data-id="e61c801" data-element_type="container" data-e-type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+		<div class="elementor-element elementor-element-08ff6a5 e-con-full e-flex e-con e-child" data-id="08ff6a5" data-element_type="container" data-e-type="container">
+				<div class="elementor-element elementor-element-912c979 elementor-widget elementor-widget-text-editor" data-id="912c979" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
+									<p>All rights reserved to <span class="menucolor">ACOUSTIEG</span> © 2025</p>								</div>
+				</div>
+				</div>
+				</footer>
+		
+<script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/wp-*.php","/wp-admin/*","/wp-content/uploads/*","/wp-content/*","/wp-content/plugins/*","/wp-content/themes/hello-elementor/*","/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+    <script>
+    (function($){
+        if (typeof $ === "undefined") return;
+
+        // Keep original scrollTop
+        var _scrollTop = $.fn.scrollTop;
+
+        $.fn.scrollTop = function(val) {
+            // If this is the window object and value is being set → block it
+            if (this[0] === window && val !== undefined) {
+                console.log("Blocked UR auto-scroll");
+                return this; // do nothing
+            }
+            // Otherwise, run normal behavior
+            return _scrollTop.apply(this, arguments);
+        };
+
+    })(jQuery);
+    </script>
+    		<div data-elementor-type="popup" data-elementor-id="5599" class="elementor elementor-5599 elementor-location-popup" data-elementor-settings="{&quot;prevent_scroll&quot;:&quot;yes&quot;,&quot;timing&quot;:[]}" data-elementor-post-type="elementor_library">
+			<div class="elementor-element elementor-element-4e6a81e e-con-full e-flex e-con e-parent" data-id="4e6a81e" data-element_type="container" data-e-type="container">
+				<div class="elementor-element elementor-element-f491b08 dce_masking-none elementor-widget elementor-widget-image" data-id="f491b08" data-element_type="widget" data-e-type="widget" data-widget_type="image.default">
+															<img width="948" height="228" src="https://acoustieg.com/wp-content/uploads/2025/08/ACOUSTIEG-White-Logo.png" class="attachment-full size-full wp-image-5594" alt="" srcset="https://acoustieg.com/wp-content/uploads/2025/08/ACOUSTIEG-White-Logo.png 948w, https://acoustieg.com/wp-content/uploads/2025/08/ACOUSTIEG-White-Logo-300x72.png 300w, https://acoustieg.com/wp-content/uploads/2025/08/ACOUSTIEG-White-Logo-768x185.png 768w, https://acoustieg.com/wp-content/uploads/2025/08/ACOUSTIEG-White-Logo-600x144.png 600w, https://acoustieg.com/wp-content/uploads/2025/08/ACOUSTIEG-White-Logo-64x15.png 64w" sizes="(max-width: 948px) 100vw, 948px">															</div>
+		<div class="elementor-element elementor-element-e364df5 e-con-full e-flex e-con e-child" data-id="e364df5" data-element_type="container" data-e-type="container">
+		<!-- dce invisible element 0a4b103 -->		<div class="dce-visibility-event elementor-element elementor-element-d8e8b8a elementor-nav-menu--dropdown-none elementor-widget-mobile__width-initial elementor-nav-menu__align-start elementor-widget elementor-widget-nav-menu" data-id="d8e8b8a" data-element_type="widget" data-e-type="widget" data-settings="{&quot;layout&quot;:&quot;vertical&quot;,&quot;enabled_visibility&quot;:&quot;yes&quot;,&quot;submenu_icon&quot;:{&quot;value&quot;:&quot;<svg aria-hidden=\&quot;true\&quot; class=\&quot;e-font-icon-svg e-fas-caret-down\&quot; viewBox=\&quot;0 0 320 512\&quot; xmlns=\&quot;http:\/\/www.w3.org\/2000\/svg\&quot;><path d=\&quot;M31.3 192h257.3c17.8 0 26.7 21.5 14.1 34.1L174.1 354.8c-7.8 7.8-20.5 7.8-28.3 0L17.2 226.1C4.6 213.5 13.5 192 31.3 192z\&quot;><\/path><\/svg>&quot;,&quot;library&quot;:&quot;fa-solid&quot;},&quot;dce_visibility_selected&quot;:&quot;yes&quot;}" data-widget_type="nav-menu.default">
+								<nav aria-label="Menu" class="elementor-nav-menu--main elementor-nav-menu__container elementor-nav-menu--layout-vertical e--pointer-none">
+				<ul id="menu-1-d8e8b8a" class="elementor-nav-menu sm-vertical"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-6232"><a href="https://acoustieg.com/" class="elementor-item">Home</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6233"><a href="https://acoustieg.com/about-us/" class="elementor-item">About Us</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-1205 current_page_item menu-item-11596"><a href="https://acoustieg.com/consulting-services/" aria-current="page" class="elementor-item elementor-item-active">Consulting Services</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-11595"><a href="https://acoustieg.com/acoustic-services/" class="elementor-item">Acoustic Services</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6239"><a href="https://acoustieg.com/products/" class="elementor-item">Products</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6240"><a href="https://acoustieg.com/projects/" class="elementor-item">Projects</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-12271"><a href="https://acoustieg.com/articles/" class="elementor-item">Articles</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6235"><a href="https://acoustieg.com/certificates/" class="elementor-item">Certificates</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6236"><a href="https://acoustieg.com/company-profile/" class="elementor-item">Company Profile</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6238"><a href="https://acoustieg.com/contact-us/" class="elementor-item">Contact Us</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6241"><a href="https://acoustieg.com/login/" class="elementor-item">My Account</a></li>
+</ul>			</nav>
+						<nav class="elementor-nav-menu--dropdown elementor-nav-menu__container" aria-hidden="true">
+				<ul id="menu-2-d8e8b8a" class="elementor-nav-menu sm-vertical"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-6232"><a href="https://acoustieg.com/" class="elementor-item" tabindex="-1">Home</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6233"><a href="https://acoustieg.com/about-us/" class="elementor-item" tabindex="-1">About Us</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-1205 current_page_item menu-item-11596"><a href="https://acoustieg.com/consulting-services/" aria-current="page" class="elementor-item elementor-item-active" tabindex="-1">Consulting Services</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-11595"><a href="https://acoustieg.com/acoustic-services/" class="elementor-item" tabindex="-1">Acoustic Services</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6239"><a href="https://acoustieg.com/products/" class="elementor-item" tabindex="-1">Products</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6240"><a href="https://acoustieg.com/projects/" class="elementor-item" tabindex="-1">Projects</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-12271"><a href="https://acoustieg.com/articles/" class="elementor-item" tabindex="-1">Articles</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6235"><a href="https://acoustieg.com/certificates/" class="elementor-item" tabindex="-1">Certificates</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6236"><a href="https://acoustieg.com/company-profile/" class="elementor-item" tabindex="-1">Company Profile</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6238"><a href="https://acoustieg.com/contact-us/" class="elementor-item" tabindex="-1">Contact Us</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6241"><a href="https://acoustieg.com/login/" class="elementor-item" tabindex="-1">My Account</a></li>
+</ul>			</nav>
+						</div>
+				<div class="elementor-element elementor-element-dfe2f56 elementor-widget elementor-widget-wpml-language-switcher" data-id="dfe2f56" data-element_type="widget" data-e-type="widget" data-widget_type="wpml-language-switcher.default">
+				<div class="elementor-widget-container">
+					<div class="wpml-elementor-ls">
+<div class="wpml-ls-statics-shortcode_actions wpml-ls wpml-ls-legacy-list-horizontal">
+	<ul role="menu"><li class="wpml-ls-slot-shortcode_actions wpml-ls-item wpml-ls-item-ar wpml-ls-first-item wpml-ls-item-legacy-list-horizontal" role="none">
+				<a href="https://acoustieg.com/ar/consulting-services/" class="wpml-ls-link" role="menuitem" aria-label="Switch to AR" title="Switch to AR">
+                    <span class="wpml-ls-display">AR</span></a>
+			</li><li class="wpml-ls-slot-shortcode_actions wpml-ls-item wpml-ls-item-en wpml-ls-current-language wpml-ls-last-item wpml-ls-item-legacy-list-horizontal" role="none">
+				<a href="https://acoustieg.com/consulting-services/" class="wpml-ls-link" role="menuitem">
+                    <span class="wpml-ls-native" role="menuitem">EN</span></a>
+			</li></ul>
+</div>
+</div>				</div>
+				</div>
+				<div class="elementor-element elementor-element-2f18fcd e-grid-align-left e-grid-align-mobile-center elementor-hidden-desktop e-grid-align-tablet-center elementor-shape-rounded elementor-grid-0 elementor-widget elementor-widget-social-icons" data-id="2f18fcd" data-element_type="widget" data-e-type="widget" data-widget_type="social-icons.default">
+							<div class="elementor-social-icons-wrapper elementor-grid" role="list">
+							<span class="elementor-grid-item" role="listitem">
+					<a class="elementor-icon elementor-social-icon elementor-social-icon-whatsapp elementor-repeater-item-6933c4b" href="https://wa.me/+966561060576" target="_blank">
+						<span class="elementor-screen-only">Whatsapp</span>
+						<svg aria-hidden="true" class="e-font-icon-svg e-fab-whatsapp" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"></path></svg>					</a>
+				</span>
+							<span class="elementor-grid-item" role="listitem">
+					<a class="elementor-icon elementor-social-icon elementor-social-icon-website_icon-linkidin elementor-repeater-item-7d907bb" href="https://www.linkedin.com/company/acoustieg-sa/?originalSubdomain=sa" target="_blank">
+						<span class="elementor-screen-only">Website_icon-linkidin</span>
+						<i aria-hidden="true" class="website_icon website_icon-linkidin"></i>					</a>
+				</span>
+							<span class="elementor-grid-item" role="listitem">
+					<a class="elementor-icon elementor-social-icon elementor-social-icon-x-twitter elementor-repeater-item-401716a" href="https://x.com/acoustieg" target="_blank">
+						<span class="elementor-screen-only">X-twitter</span>
+						<svg aria-hidden="true" class="e-font-icon-svg e-fab-x-twitter" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"></path></svg>					</a>
+				</span>
+							<span class="elementor-grid-item" role="listitem">
+					<a class="elementor-icon elementor-social-icon elementor-social-icon-instagram elementor-repeater-item-dd1874d" href="https://www.instagram.com/acoustieg/" target="_blank">
+						<span class="elementor-screen-only">Instagram</span>
+						<svg aria-hidden="true" class="e-font-icon-svg e-fab-instagram" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path></svg>					</a>
+				</span>
+					</div>
+						</div>
+				</div>
+		<div class="elementor-element elementor-element-e5327c9 e-con-full elementor-hidden-desktop elementor-hidden-tablet elementor-hidden-mobile e-flex e-con e-child" data-id="e5327c9" data-element_type="container" data-e-type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+		<div class="elementor-element elementor-element-88b3800 e-con-full e-flex e-con e-child" data-id="88b3800" data-element_type="container" data-e-type="container">
+				<div class="elementor-element elementor-element-a116159 elementor-widget elementor-widget-text-editor" data-id="a116159" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
+									<p>All rights reserved to <span class="menucolor">ACOUSTIEG</span> © 2025</p>								</div>
+				</div>
+				</div>
+				</div>
+				</div>
+				<div data-elementor-type="popup" data-elementor-id="2634" class="elementor elementor-2634 elementor-location-popup" data-elementor-settings="{&quot;prevent_scroll&quot;:&quot;yes&quot;,&quot;timing&quot;:[]}" data-elementor-post-type="elementor_library">
+			<div class="elementor-element elementor-element-53f2a53 e-con-full e-flex e-con e-parent" data-id="53f2a53" data-element_type="container" data-e-type="container">
+		<div class="elementor-element elementor-element-a9e5106 e-con-full e-flex e-con e-child" data-id="a9e5106" data-element_type="container" data-e-type="container">
+				<div class="elementor-element elementor-element-e9bedf5 elementor-hidden-tablet elementor-hidden-mobile elementor-widget elementor-widget-heading" data-id="e9bedf5" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+					<h2 class="elementor-heading-title elementor-size-default">LOG IN TO<br>YOUR ACCOUNT</h2>				</div>
+				<div class="elementor-element elementor-element-5c828f5 elementor-hidden-desktop elementor-hidden-tablet elementor-widget elementor-widget-heading" data-id="5c828f5" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+					<h2 class="elementor-heading-title elementor-size-default">LOG IN </h2>				</div>
+				<div class="elementor-element elementor-element-f50628a elementor-hidden-desktop elementor-hidden-tablet elementor-widget elementor-widget-heading" data-id="f50628a" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+					<h2 class="elementor-heading-title elementor-size-default">TO YOUR ACCOUNT</h2>				</div>
+				<div class="elementor-element elementor-element-cad08a3 elementor-hidden-desktop elementor-hidden-tablet elementor-widget-divider--view-line elementor-widget elementor-widget-divider" data-id="cad08a3" data-element_type="widget" data-e-type="widget" data-widget_type="divider.default">
+							<div class="elementor-divider">
+			<span class="elementor-divider-separator">
+						</span>
+		</div>
+						</div>
+				<div class="elementor-element elementor-element-4c3ff5d elementor-hidden-mobile elementor-widget elementor-widget-text-editor" data-id="4c3ff5d" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
+									<p>Access your dashboard, manage your projects, and explore our full services</p>								</div>
+				<div class="elementor-element elementor-element-479c614 elementor-widget elementor-widget-shortcode" data-id="479c614" data-element_type="widget" data-e-type="widget" data-widget_type="shortcode.default">
+							<div class="elementor-shortcode"><div id="user-registration" class="user-registration">
+<div class="ur-frontend-form login  " id="ur-frontend-form">
+		<form class="user-registration-form user-registration-form-login login" method="post">
+		<div class="ur-form-row">
+			<div class="ur-form-grid">
+												<div class=" user-registration-form-row user-registration-form-row--wide form-row form-row-wide" data-field="username">
+					<label for="username">Email <span class="required">*</span></label>					<span class="input-wrapper">
+						<input placeholder="Your Email" type="text" class="user-registration-Input user-registration-Input--text input-text" name="username" id="username" value="" style="">
+												</span>
+				</div>
+									<div class=" user-registration-form-row user-registration-form-row--wide form-row form-row-wide" data-field="password">
+						<label for="password">Password <span class="required">*</span></label>						<span class="input-wrapper">
+						<span class="password-input-group">
+						<input placeholder="Your Password" class="user-registration-Input user-registration-Input--text input-text" type="password" name="password" id="password" style="">
+
+																			</span>
+					</span></div>
+								
+								<div class="form-row">
+					<input type="hidden" id="user-registration-login-nonce" name="user-registration-login-nonce" value="40fd06bedc"><input type="hidden" name="_wp_http_referer" value="/consulting-services/">						<div class="user-registration-before-login-btn">
+															<div class="" data-field="remember-me">
+									<label class="user-registration-form__label user-registration-form__label-for-checkbox inline">
+										<input class="user-registration-form__input user-registration-form__input-checkbox" name="rememberme" type="checkbox" id="rememberme" value="forever">
+										<span>Remember Me</span>
+									</label>
+								</div>
+																							<div data-field="lost-password" class="user-registration-LostPassword lost_password ">
+									<label class="user-registration-form__label user-registration-form__label-for-checkbox inline">
+										<a href="https://acoustieg.com/lost-password/">Forget Password?</a>
+									</label>
+								</div>
+														</div>
+										</div>
+				<div data-field="login-button" class="">
+																<button type="submit" class="user-registration-Button button ur-submit-button  " name="login" value="Sign in">Sign in</button>
+									</div>
+				<input type="hidden" name="redirect" value="">
+
+											</div>
+		</div>
+	</form>
+</div>
+
+</div></div>
+						</div>
+				<div class="elementor-element elementor-element-27f2922 elementor-widget elementor-widget-text-editor" data-id="27f2922" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
+									<p>Don’t have an account? <a href="https://acoustieg.com/sign-up/"><span style="color: #0fa47f;">Sign up</span></a></p>								</div>
+				</div>
+		<div class="elementor-element elementor-element-2f62b74 e-con-full elementor-hidden-mobile e-flex e-con e-child" data-id="2f62b74" data-element_type="container" data-e-type="container">
+				<div class="elementor-element elementor-element-5e89cad dce_masking-none elementor-widget elementor-widget-image" data-id="5e89cad" data-element_type="widget" data-e-type="widget" data-widget_type="image.default">
+															<img width="623" height="800" src="https://acoustieg.com/wp-content/uploads/2025/10/Login-EN.png" class="attachment-full size-full wp-image-9717" alt="" srcset="https://acoustieg.com/wp-content/uploads/2025/10/Login-EN.png 623w, https://acoustieg.com/wp-content/uploads/2025/10/Login-EN-234x300.png 234w, https://acoustieg.com/wp-content/uploads/2025/10/Login-EN-600x770.png 600w, https://acoustieg.com/wp-content/uploads/2025/10/Login-EN-64x82.png 64w" sizes="(max-width: 623px) 100vw, 623px">															</div>
+				</div>
+				</div>
+				</div>
+					<script>
+				const lazyloadRunObserver = () => {
+					const lazyloadBackgrounds = document.querySelectorAll( `.e-con.e-parent:not(.e-lazyloaded)` );
+					const lazyloadBackgroundObserver = new IntersectionObserver( ( entries ) => {
+						entries.forEach( ( entry ) => {
+							if ( entry.isIntersecting ) {
+								let lazyloadBackground = entry.target;
+								if( lazyloadBackground ) {
+									lazyloadBackground.classList.add( 'e-lazyloaded' );
+								}
+								lazyloadBackgroundObserver.unobserve( entry.target );
+							}
+						});
+					}, { rootMargin: '200px 0px 200px 0px' } );
+					lazyloadBackgrounds.forEach( ( lazyloadBackground ) => {
+						lazyloadBackgroundObserver.observe( lazyloadBackground );
+					} );
+				};
+				const events = [
+					'DOMContentLoaded',
+					'elementor/lazyload/observe',
+				];
+				events.forEach( ( event ) => {
+					document.addEventListener( event, lazyloadRunObserver );
+				} );
+			</script>
+			<script>(function () {
+
+  function getParamKey(nav) {
+    var links = nav.querySelectorAll('a.page-numbers:not(.next):not(.prev)');
+    for (var i = 0; i < links.length; i++) {
+      var url = new URL(links[i].href);
+      var found = null;
+      url.searchParams.forEach(function (val, key) {
+        if (key.startsWith('e-page-')) found = key;
+      });
+      if (found) return found;
+    }
+    var currentUrl = new URL(window.location.href);
+    var fromCurrent = null;
+    currentUrl.searchParams.forEach(function (val, key) {
+      if (key.startsWith('e-page-')) fromCurrent = key;
+    });
+    return fromCurrent;
+  }
+
+  function addFirstLastButtons(nav) {
+    nav.querySelectorAll('.first-page, .last-page').forEach(function (el) {
+      el.remove();
+    });
+
+    var paramKey = getParamKey(nav);
+    if (!paramKey) return;
+
+    var numbered = Array.from(
+      nav.querySelectorAll('a.page-numbers:not(.next):not(.prev)')
+    );
+
+    var lastPageNum = 0;
+    numbered.forEach(function (a) {
+      var url = new URL(a.href);
+      var pageNum = parseInt(url.searchParams.get(paramKey));
+      if (!isNaN(pageNum) && pageNum > lastPageNum) lastPageNum = pageNum;
+    });
+
+    // Also check current span
+    var currentSpan = nav.querySelector('span.current');
+    if (currentSpan) {
+      var cn = parseInt(currentSpan.textContent.replace('Page', '').trim());
+      if (!isNaN(cn) && cn > lastPageNum) lastPageNum = cn;
+    }
+
+    if (lastPageNum === 0) return;
+
+    var baseUrl = window.location.origin + window.location.pathname;
+    var page1Url = baseUrl;
+    var lastPageUrl = baseUrl + '?' + paramKey + '=' + lastPageNum;
+
+    function simulateClick(href) {
+      var tempLink = document.createElement('a');
+      tempLink.href = href;
+      tempLink.className = 'page-numbers';
+      tempLink.style.cssText = 'position:absolute;opacity:0;pointer-events:none;';
+      nav.appendChild(tempLink);
+      tempLink.click();
+      setTimeout(function () { tempLink.remove(); }, 500);
+    }
+
+    // « First button
+    var firstBtn = document.createElement('a');
+    firstBtn.className = 'page-numbers first-page';
+    firstBtn.href = page1Url;
+    firstBtn.innerHTML = '&laquo;';
+    firstBtn.setAttribute('aria-label', 'First Page');
+    firstBtn.addEventListener('click', function (e) {
+      e.preventDefault();
+      simulateClick(page1Url);
+    });
+
+    // » Last button
+    var lastBtn = document.createElement('a');
+    lastBtn.className = 'page-numbers last-page';
+    lastBtn.href = lastPageUrl;
+    lastBtn.innerHTML = '&raquo;';
+    lastBtn.setAttribute('aria-label', 'Last Page');
+    lastBtn.addEventListener('click', function (e) {
+      e.preventDefault();
+      simulateClick(lastPageUrl);
+    });
+
+    nav.insertBefore(firstBtn, nav.firstChild);
+    nav.appendChild(lastBtn);
+  }
+
+  function init() {
+    document.querySelectorAll('nav.elementor-pagination').forEach(addFirstLastButtons);
+
+    var observer = new MutationObserver(function (mutations) {
+      mutations.forEach(function (mutation) {
+        mutation.addedNodes.forEach(function (node) {
+          if (node.nodeType !== 1) return;
+          if (node.matches && node.matches('nav.elementor-pagination')) {
+            addFirstLastButtons(node);
+          } else if (node.querySelectorAll) {
+            node.querySelectorAll('nav.elementor-pagination').forEach(addFirstLastButtons);
+          }
+        });
+      });
+    });
+
+    observer.observe(document.body, { childList: true, subtree: true });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+
+})();</script>	<script>
+		(function () {
+			var c = document.body.className;
+			c = c.replace(/woocommerce-no-js/, 'woocommerce-js');
+			document.body.className = c;
+		})();
+	</script>
+	<link rel="stylesheet" id="wc-blocks-style-css" href="https://acoustieg.com/wp-content/plugins/woocommerce/assets/client/blocks/wc-blocks.css?ver=wc-10.6.0" media="all">
+<link rel="stylesheet" id="dce-style-css" href="https://acoustieg.com/wp-content/plugins/dynamic-content-for-elementor/assets/css/style.min.css?ver=3.3.11" media="all">
+<link rel="stylesheet" id="dce-dynamic-visibility-css" href="https://acoustieg.com/wp-content/plugins/dynamic-content-for-elementor/assets/css/dynamic-visibility.min.css?ver=3.3.11" media="all">
+<link rel="stylesheet" id="elementor-post-5599-css" href="https://acoustieg.com/wp-content/uploads/elementor/css/post-5599.css?ver=1774432407" media="all">
+<link rel="stylesheet" id="e-popup-css" href="https://acoustieg.com/wp-content/plugins/elementor-pro/assets/css/conditionals/popup.min.css?ver=3.35.1" media="all">
+<link rel="stylesheet" id="elementor-post-2634-css" href="https://acoustieg.com/wp-content/uploads/elementor/css/post-2634.css?ver=1774432407" media="all">
+<link rel="stylesheet" id="sweetalert2-css" href="https://acoustieg.com/wp-content/plugins/user-registration/assets/css/sweetalert2/sweetalert2.min.css?ver=10.16.7" media="all">
+<link rel="stylesheet" id="ltr-support-css" href="https://acoustieg.com/wp-content/plugins/user-registration/assets/css/ltr_only_support.css?ver=5.1.4" media="all">
+<link rel="stylesheet" id="elementor-gf-local-montserrat-css" href="https://acoustieg.com/wp-content/uploads/elementor/google-fonts/css/montserrat.css?ver=1754995491" media="all">
+<script src="https://acoustieg.com/wp-content/plugins/elementskit-lite/widgets/init/assets/js/widget-scripts.js?ver=3.8.1" id="ekit-widget-scripts-js"></script>
+<script id="woocommerce-js-extra">
+var woocommerce_params = {"ajax_url":"/wp-admin/admin-ajax.php","wc_ajax_url":"/?wc-ajax=%%endpoint%%","i18n_password_show":"Show password","i18n_password_hide":"Hide password"};
+//# sourceURL=woocommerce-js-extra
+</script>
+<script src="https://acoustieg.com/wp-content/plugins/woocommerce/assets/js/frontend/woocommerce.min.js?ver=10.6.0" id="woocommerce-js" data-wp-strategy="defer"></script>
+<script id="smush-detector-js-extra">
+var smush_detector = {"ajax_url":"https://acoustieg.com/wp-admin/admin-ajax.php","nonce":"821422f42f","is_mobile":"","data_store":{"type":"post-meta","data":{"post_id":1205}},"previous_data_version":"0","previous_data_hash":"98e051121d5c8c980806b8fe92bc9d76"};
+//# sourceURL=smush-detector-js-extra
+</script>
+<script src="https://acoustieg.com/wp-content/plugins/wp-smush-pro/app/assets/js/smush-detector.min.js?ver=3.22.1" id="smush-detector-js"></script>
+<script src="https://acoustieg.com/wp-content/plugins/metform/public/assets/lib/cute-alert/cute-alert.js?ver=4.1.3" id="cute-alert-js"></script>
+<script src="https://acoustieg.com/wp-content/themes/hello-elementor/assets/js/hello-frontend.js?ver=3.4.6" id="hello-theme-frontend-js"></script>
+<script src="https://acoustieg.com/wp-content/plugins/elementor/assets/js/webpack.runtime.min.js?ver=3.35.7" id="elementor-webpack-runtime-js"></script>
+<script src="https://acoustieg.com/wp-content/plugins/elementor/assets/js/frontend-modules.min.js?ver=3.35.7" id="elementor-frontend-modules-js"></script>
+<script src="https://acoustieg.com/wp-includes/js/jquery/ui/core.min.js?ver=1.13.3" id="jquery-ui-core-js"></script>
+<script id="elementor-frontend-js-extra">
+var PremiumSettings = {"ajaxurl":"https://acoustieg.com/wp-admin/admin-ajax.php","nonce":"7c007108ae"};
+//# sourceURL=elementor-frontend-js-extra
+</script>
+<script id="elementor-frontend-js-before">
+var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false,"isScriptDebug":false},"i18n":{"shareOnFacebook":"Share on Facebook","shareOnTwitter":"Share on Twitter","pinIt":"Pin it","download":"Download","downloadImage":"Download image","fullscreen":"Fullscreen","zoom":"Zoom","share":"Share","playVideo":"Play Video","previous":"Previous","next":"Next","close":"Close","a11yCarouselPrevSlideMessage":"Previous slide","a11yCarouselNextSlideMessage":"Next slide","a11yCarouselFirstSlideMessage":"This is the first slide","a11yCarouselLastSlideMessage":"This is the last slide","a11yCarouselPaginationBulletMessage":"Go to slide"},"is_rtl":false,"breakpoints":{"xs":0,"sm":480,"md":768,"lg":1261,"xl":1440,"xxl":1600},"responsive":{"breakpoints":{"mobile":{"label":"Mobile Portrait","value":767,"default_value":767,"direction":"max","is_enabled":true},"mobile_extra":{"label":"Mobile Landscape","value":880,"default_value":880,"direction":"max","is_enabled":false},"tablet":{"label":"Tablet Portrait","value":1260,"default_value":1024,"direction":"max","is_enabled":true},"tablet_extra":{"label":"Tablet Landscape","value":1200,"default_value":1200,"direction":"max","is_enabled":false},"laptop":{"label":"Laptop","value":1366,"default_value":1366,"direction":"max","is_enabled":false},"widescreen":{"label":"Widescreen","value":2400,"default_value":2400,"direction":"min","is_enabled":false}},
+"hasCustomBreakpoints":true},"version":"3.35.7","is_static":false,"experimentalFeatures":{"e_font_icon_svg":true,"additional_custom_breakpoints":true,"container":true,"e_optimized_markup":true,"theme_builder_v2":true,"hello-theme-header-footer":true,"nested-elements":true,"home_screen":true,"global_classes_should_enforce_capabilities":true,"e_variables":true,"cloud-library":true,"e_opt_in_v4_page":true,"e_components":true,"e_interactions":true,"e_editor_one":true,"import-export-customization":true,"mega-menu":true,"e_pro_variables":true},"urls":{"assets":"https:\/\/acoustieg.com\/wp-content\/plugins\/elementor\/assets\/","ajaxurl":"https:\/\/acoustieg.com\/wp-admin\/admin-ajax.php","uploadUrl":"https:\/\/acoustieg.com\/wp-content\/uploads"},"nonces":{"floatingButtonsClickTracking":"a9cfd093af"},"swiperClass":"swiper","settings":{"page":[],"editorPreferences":[],"dynamicooo":[]},"kit":{"viewport_tablet":1260,"active_breakpoints":["viewport_mobile","viewport_tablet"],"global_image_lightbox":"yes","lightbox_enable_counter":"yes","lightbox_enable_fullscreen":"yes","lightbox_enable_zoom":"yes","lightbox_enable_share":"yes","lightbox_title_src":"title","lightbox_description_src":"description","woocommerce_notices_elements":[],"hello_header_logo_type":"logo","hello_header_menu_layout":"horizontal","hello_footer_logo_type":"logo"},"post":{"id":1205,"title":"Consulting%20Services%20-%20ACOUSTIEG%20for%20Sound%20Acoustic%20Solutions","excerpt":"","featuredImage":false}};
+//# sourceURL=elementor-frontend-js-before
+</script>
+<script src="https://acoustieg.com/wp-content/plugins/elementor/assets/js/frontend.min.js?ver=3.35.7" id="elementor-frontend-js"></script>
+<script src="https://acoustieg.com/wp-content/plugins/elementor-pro/assets/lib/smartmenus/jquery.smartmenus.min.js?ver=1.2.1" id="smartmenus-js"></script>
+<script id="cart-widget-js-extra">
+var actions = {"is_lang_switched":"0","force_reset":"0"};
+//# sourceURL=cart-widget-js-extra
+</script>
+<script src="https://acoustieg.com/wp-content/plugins/woocommerce-multilingual/res/js/cart_widget.min.js?ver=5.5.3.1" id="cart-widget-js" defer="" data-wp-strategy="defer"></script>
+<script src="https://acoustieg.com/wp-content/plugins/woocommerce/assets/js/sourcebuster/sourcebuster.min.js?ver=10.6.0" id="sourcebuster-js-js"></script>
+<script id="wc-order-attribution-js-extra">
+var wc_order_attribution = {"params":{"lifetime":1.0e-5,"session":30,"base64":false,"ajaxurl":"https://acoustieg.com/wp-admin/admin-ajax.php","prefix":"wc_order_attribution_","allowTracking":true},"fields":{"source_type":"current.typ","referrer":"current_add.rf","utm_campaign":"current.cmp","utm_source":"current.src","utm_medium":"current.mdm","utm_content":"current.cnt","utm_id":"current.id","utm_term":"current.trm","utm_source_platform":"current.plt","utm_creative_format":"current.fmt","utm_marketing_tactic":"current.tct","session_entry":"current_add.ep","session_start_time":"current_add.fd","session_pages":"session.pgs","session_count":"udata.vst","user_agent":"udata.uag"}};
+//# sourceURL=wc-order-attribution-js-extra
+</script>
+<script src="https://acoustieg.com/wp-content/plugins/woocommerce/assets/js/frontend/order-attribution.min.js?ver=10.6.0" id="wc-order-attribution-js"></script>
+<script id="googlesitekit-events-provider-woocommerce-js-before">
+window._googlesitekit.wcdata = window._googlesitekit.wcdata || {};
+window._googlesitekit.wcdata.products = [];
+window._googlesitekit.wcdata.add_to_cart = null;
+window._googlesitekit.wcdata.currency = "SAR";
+window._googlesitekit.wcdata.eventsToTrack = ["add_to_cart","purchase"];
+//# sourceURL=googlesitekit-events-provider-woocommerce-js-before
+</script>
+<script src="https://acoustieg.com/wp-content/plugins/google-site-kit/dist/assets/js/googlesitekit-events-provider-woocommerce-3cd9b44a3ba68626e9cb.js" id="googlesitekit-events-provider-woocommerce-js" defer=""></script>
+<script src="https://acoustieg.com/wp-content/plugins/premium-addons-for-elementor/assets/frontend/min-js/elements-handler.min.js?ver=4.11.70" id="pa-elements-handler-js"></script>
+<script src="https://acoustieg.com/wp-content/uploads/ac_assets/fullscreen_navigation_menu/menu.js?ver=1.5.143" id="uc_ac_assets_file_menu_js_10459-js"></script>
+<script src="https://acoustieg.com/wp-content/plugins/dynamic-content-for-elementor/assets/js/fix-background-loop.min.js?ver=3.3.11" id="dce-fix-background-loop-js"></script>
+<script src="https://acoustieg.com/wp-content/plugins/dynamic-content-for-elementor/assets/js/settings.min.js?ver=3.3.11" id="dce-settings-js"></script>
+<script src="https://acoustieg.com/wp-content/plugins/dynamic-content-for-elementor/assets/js/visibility.min.js?ver=3.3.11" id="dce-visibility-js"></script>
+<script id="ur-login-js-extra">
+var ur_login_params = {"ajax_url":"https://acoustieg.com/wp-admin/admin-ajax.php","ur_login_form_save_nonce":"b92e03ed4c","ajax_submission_on_ur_login":"","recaptcha_type":"","ajax_form_submit_error":"Something went wrong while submitting form through AJAX request. Please contact site administrator."};
+//# sourceURL=ur-login-js-extra
+</script>
+<script src="https://acoustieg.com/wp-content/plugins/user-registration/assets/js/frontend/ur-login.min.js?ver=5.1.4" id="ur-login-js"></script>
+<script src="https://acoustieg.com/wp-content/plugins/user-registration/assets/js/frontend/ur-common.min.js?ver=5.1.4" id="ur-common-js"></script>
+<script src="https://acoustieg.com/wp-content/plugins/user-registration/assets/js/frontend/jquery.validate.min.js?ver=1.20.0" id="ur-jquery-validate-js"></script>
+<script src="https://acoustieg.com/wp-content/plugins/user-registration/assets/js/inputmask/jquery.inputmask.bundle.min.js?ver=4.0.0-beta.58" id="ur-inputmask-js"></script>
+<script id="user-registration-js-extra">
+var user_registration_params = {"ajax_url":"https://acoustieg.com/wp-admin/admin-ajax.php","user_registration_form_data_save":"f1809c1bb4","user_registration_update_state_field":"736e03f890","user_registration_profile_details_save":"ccb1d3a4f0","user_registration_profile_picture_upload_nonce":"e654af7585","user_registration_profile_picture_remove_nonce":"88fc3865c8","form_required_fields":["user_email","user_pass"],"login_option":"","recaptcha_type":"v2","user_registration_profile_picture_uploading":"Uploading...","user_registration_profile_picture_removing":"Removing...","ajax_submission_on_edit_profile":"","message_required_fields":"This field is required.","message_email_fields":"Please enter a valid email address.","message_url_fields":"Please enter a valid URL.","message_number_fields":"Please enter a valid number.","message_confirm_password_fields":"Password and confirm password not matched.","message_min_words_fields":"Please enter at least %qty% words.","message_validate_phone_number":"Please enter a valid phone number.","message_username_character_fields":"Please enter a valid username.","message_confirm_email_fields":"Email and confirm email not matched.","message_confirm_number_field_max":"Please enter a value less than or equal to %qty%.","message_confirm_number_field_min":"Please enter a value greater than or equal to %qty%.","message_confirm_number_field_step":"Please enter a multiple of %qty%.","message_min_length_fields":"Please enter at least %qty% characters.","message_max_length_fields":"Please enter no more than %qty% characters.","ursL10n":{"user_successfully_saved":"User successfully registered.","user_under_approval":"User registered. Wait until admin approves your registration.","user_email_pending":"User registered. Verify your email by clicking on the link sent to your email.","captcha_error":"Captcha code error, please try again.","hide_password_title":"Hide Password","show_password_title":"Show Password","i18n_total_field_value_zero":"Total field value should be greater than zero.","i18n_discount_total_zero":"Discounted amount cannot be less than or equals to Zero. Please adjust your coupon code.","password_strength_error":"Password strength is not strong enough"},"is_payment_compatible":"1","ur_hold_data_before_redirection":"","ajax_form_submit_error":"Something went wrong while submitting the form. Please try again. If the issue continues, contact the site administrator for help","logout_popup_text":"Are you sure you want to logout?","logout_popup_cancel_text":"Cancel","user_registration_checkbox_validation_message":"Please select no more than {0} options.","user_registration_membership_renew_plan_button_text":"Change","network_error":"Network error","tax_calculation_method":"","regions_list":[],"currency_symbol":"$","currency_pos":"left","is_tax_calculation_activated":""};
+//# sourceURL=user-registration-js-extra
+</script>
+<script src="https://acoustieg.com/wp-content/plugins/user-registration/assets/js/frontend/user-registration.min.js?ver=5.1.4" id="user-registration-js"></script>
+<script src="https://acoustieg.com/wp-content/plugins/user-registration/assets/js/frontend/user-registration-form-validator.min.js?ver=5.1.4" id="ur-form-validator-js"></script>
+<script src="https://acoustieg.com/wp-content/plugins/elementor-pro/assets/js/webpack-pro.runtime.min.js?ver=3.35.1" id="elementor-pro-webpack-runtime-js"></script>
+<script src="https://acoustieg.com/wp-includes/js/dist/hooks.min.js?ver=dd5603f07f9220ed27f1" id="wp-hooks-js"></script>
+<script src="https://acoustieg.com/wp-includes/js/dist/i18n.min.js?ver=c26c3dc7bed366793375" id="wp-i18n-js"></script>
+<script id="wp-i18n-js-after">
+wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
+//# sourceURL=wp-i18n-js-after
+</script>
+<script id="elementor-pro-frontend-js-before">
+var ElementorProFrontendConfig = {"ajaxurl":"https:\/\/acoustieg.com\/wp-admin\/admin-ajax.php","nonce":"0415821d9c","urls":{"assets":"https:\/\/acoustieg.com\/wp-content\/plugins\/elementor-pro\/assets\/","rest":"https:\/\/acoustieg.com\/wp-json\/"},"settings":{"lazy_load_background_images":true},"popup":{"hasPopUps":true},"shareButtonsNetworks":{"facebook":{"title":"Facebook","has_counter":true},"twitter":{"title":"Twitter"},"linkedin":{"title":"LinkedIn","has_counter":true},"pinterest":{"title":"Pinterest","has_counter":true},"reddit":{"title":"Reddit","has_counter":true},"vk":{"title":"VK","has_counter":true},"odnoklassniki":{"title":"OK","has_counter":true},"tumblr":{"title":"Tumblr"},"digg":{"title":"Digg"},"skype":{"title":"Skype"},"stumbleupon":{"title":"StumbleUpon","has_counter":true},"mix":{"title":"Mix"},"telegram":{"title":"Telegram"},"pocket":{"title":"Pocket","has_counter":true},"xing":{"title":"XING","has_counter":true},"whatsapp":{"title":"WhatsApp"},"email":{"title":"Email"},"print":{"title":"Print"},"x-twitter":{"title":"X"},"threads":{"title":"Threads"}},
+"woocommerce":{"menu_cart":{"cart_page_url":"https:\/\/acoustieg.com\/cart-2\/","checkout_page_url":"https:\/\/acoustieg.com\/?page_id=883","fragments_nonce":"5409023bc8"}},
+"facebook_sdk":{"lang":"en_US","app_id":""},"lottie":{"defaultAnimationUrl":"https:\/\/acoustieg.com\/wp-content\/plugins\/elementor-pro\/modules\/lottie\/assets\/animations\/default.json"}};
+//# sourceURL=elementor-pro-frontend-js-before
+</script>
+<script src="https://acoustieg.com/wp-content/plugins/elementor-pro/assets/js/frontend.min.js?ver=3.35.1" id="elementor-pro-frontend-js"></script>
+<script src="https://acoustieg.com/wp-content/plugins/elementor-pro/assets/js/elements-handlers.min.js?ver=3.35.1" id="pro-elements-handlers-js"></script>
+<script id="elementskit-elementor-js-extra">
+var ekit_config = {"ajaxurl":"https://acoustieg.com/wp-admin/admin-ajax.php","nonce":"975b9f464f"};
+//# sourceURL=elementskit-elementor-js-extra
+</script>
+<script src="https://acoustieg.com/wp-content/plugins/elementskit-lite/widgets/init/assets/js/elementor.js?ver=3.8.1" id="elementskit-elementor-js"></script>
+
+<!--   Unlimited Elements 1.5.143 Scripts --> 
+<script type="text/javascript" id="unlimited-elements-scripts">
+
+/* Fullscreen Menu scripts: */ 
+
+jQuery(document).ready(function(){
+function uc_fullscreen_navigation_menu_elementor_340c3f6_start(){
+			
+		
+ 	var objWidget = jQuery("#uc_fullscreen_navigation_menu_elementor_340c3f6");
+	var objCheckbox = objWidget.find(".checkbox-toggle");
+  	var objInputWrapper = objWidget.find(".ue-input-wrapper-align");
+	var classActive = "is-active";
+	var objHamburgerMenu = objWidget.find(".ue_hamburger");
+	var objAnimatedHamburger = jQuery("#uc_fullscreen_navigation_menu_elementor_340c3f6 .uc_hamburger");
+    var objAnimatedHamburgerLink = jQuery("#uc_fullscreen_navigation_menu_elementor_340c3f6 .uc_animated_hamburger_icon"); 
+ 	var isLoaded = false;
+  
+  	var menuOpenedClass = "menu-opened";
+  
+	if (objCheckbox.is(":checked"))
+    objCheckbox.removeAttr("checked");
+          
+    objCheckbox.prop('checked',false);
+    objWidget.removeClass(menuOpenedClass);
+	
+	var objLinks = jQuery("#uc_fullscreen_navigation_menu_elementor_340c3f6 .uc-list-menu a");
+  	var objBody = jQuery("body.elementor-page");
+  	var objHTML = jQuery("html");
+
+
+    objHamburgerMenu.on("keydown", function(event){
+      var keyCode =  event.keyCode;
+      
+      if(keyCode == 13 && objHamburgerMenu.is(":focus")){
+      	var objToggleCheckbox = objWidget.find(".checkbox-toggle");
+        objToggleCheckbox.trigger("click");
+      }
+    });
+ 
+  
+  	objWidget.delegate(".checkbox-toggle", "click", function(){
+  
+      if(objCheckbox.is(":checked")){
+        objBody.addClass(menuOpenedClass);
+        objHTML.addClass(menuOpenedClass);
+        objWidget.addClass(menuOpenedClass);
+        objMenu.collapseAll();
+        objHamburgerMenu.attr("aria-expanded", true);
+        
+        objMenu.openCurrentPageMenuItem();        
+        if(isLoaded == false){
+        	objMenu.expandAllAfterPageLoad();
+        }
+        
+        isLoaded = true;                                                                                       
+        
+        objLinks.each(function(){
+          var objLink = jQuery(this);
+          toggleIcon(objLink);
+        });
+                                                                                               
+        if(objAnimatedHamburger && objAnimatedHamburger.length > 0){
+          objAnimatedHamburger.addClass(classActive);
+     	  objAnimatedHamburgerLink.addClass(classActive);
+        }                                                                                       
+                
+      }else{
+      	objBody.removeClass(menuOpenedClass);
+        objHTML.removeClass(menuOpenedClass);
+        objWidget.removeClass(menuOpenedClass);
+        objHamburgerMenu.attr("aria-expanded", false);
+        
+        if(objAnimatedHamburger && objAnimatedHamburger.length > 0){
+          objAnimatedHamburger.removeClass(classActive);
+     	  objAnimatedHamburgerLink.removeClass(classActive);
+        }
+        
+      }            
+    });
+  
+function toggleIcons() {
+    var objLinks = jQuery("#uc_fullscreen_navigation_menu_elementor_340c3f6 .uc-list-menu a");
+    var objMenu = jQuery("#uc_fullscreen_navigation_menu_elementor_340c3f6");
+    var objExpandIcon = objMenu.find(".ue_inner_menu_expand_icon").html();
+    var objCollapseIcon = objMenu.find(".ue_inner_menu_collapse_icon").html();
+
+    objLinks.each(function() {
+        var objLink = jQuery(this);
+        var isLinkOpened = objLink.hasClass('expanded');
+        var objLinkContainer = objLink.find('.uc-menu-item-pointer');
+
+        // Update icon based on the state of the menu item
+        if (isLinkOpened) {
+            objLinkContainer.html(objCollapseIcon);
+        } else {
+            objLinkContainer.html(objExpandIcon);
+        }
+    });
+}
+  
+function toggleIcon(objLink) {
+    var isLinkOpened = objLink.hasClass('expanded');
+    var objLinkContainer = objLink.find('.uc-menu-item-pointer');
+    var objMenu = jQuery("#uc_fullscreen_navigation_menu_elementor_340c3f6");
+    var objExpandIcon = objMenu.find(".ue_inner_menu_expand_icon").html();
+    var objCollapseIcon = objMenu.find(".ue_inner_menu_collapse_icon").html();
+
+    // Update icon based on the state of the menu item
+    if (isLinkOpened) {
+        objLinkContainer.html(objCollapseIcon);
+    } else {
+        objLinkContainer.html(objExpandIcon);
+    }
+
+    // Update all icons
+    toggleIcons();
+}
+
+	
+  	jQuery(window).on("keydown", function(e) {
+        if(e.key == "Escape"){
+           if (objCheckbox.is(":checked"))
+            objCheckbox.removeAttr("checked");
+
+            objCheckbox.prop('checked',false); 
+          	objWidget.removeClass(menuOpenedClass);
+          
+            objHTML.removeClass(menuOpenedClass);
+        } 
+	});
+  
+  	//imitate top position of the close icon
+    	
+  
+    if(typeof UCFullscreenMenu == "undefined")
+    console.log("fullscreen menu error: the fullscreen file: menu.js in ac_assets folder is missing or empty, please check");
+    
+    var objMenu = new UCFullscreenMenu("uc_fullscreen_navigation_menu_elementor_340c3f6 .ue_inner_menu");
+    objMenu.runMenu();     
+     
+    objLinks.click(function(e){      
+		var objLink = jQuery(this);
+      
+      	toggleIcon(objLink);
+        
+		var url = objLink.attr("href");
+		url = jQuery.trim(url);
+		
+		if(!url)
+			return(true);
+      
+      	var objLinkParent = objLink.parent();
+      	var isClickable = jQuery("#uc_fullscreen_navigation_menu_elementor_340c3f6 .ue_inner_menu").data('clickable');
+      
+      	function goToItem(){        	
+              if (objCheckbox.is(":checked"))
+              objCheckbox.removeAttr("checked");
+
+              objCheckbox.prop('checked',false);
+              objWidget.removeClass(menuOpenedClass);
+              objAnimatedHamburger.removeClass(classActive);
+
+          	  objBody.removeClass(menuOpenedClass);
+          	  objHTML.removeClass(menuOpenedClass);
+        }
+      
+      	var expandCollapsed = jQuery('.uc-menu-item-pointer');
+      	var target = e.target
+        
+        if(expandCollapsed && expandCollapsed.length > 0 && target.className == expandCollapsed[0].className)
+        return(true);
+      
+      	if(isClickable == false){
+          
+          if(objLinkParent.hasClass('menu-item-has-children'))
+          return(true)
+          else
+          goToItem();          
+          
+        }else{
+          goToItem();
+        }
+      
+		return(true);
+	});
+     
+          
+        
+      objLinks.each(function(){
+         objLink = jQuery(this);
+         toggleIcon(objLink);
+      }); 
+     
+      
+       
+    /**
+    * fix for sticky parent section
+    */
+    function initFixForStickyParent(){
+    	var objParents = objWidget.parents();
+        var objStikyParent;
+      
+      	objParents.each(function(){
+        	var objParent = jQuery(this); 
+          
+          	if(objParent.hasClass("elementor-sticky") == true){
+            	var isParentVisible = objParent.is(":visible");
+              
+              	if(isParentVisible == true){
+                  objParent.addClass("uc-visible")
+                  objParent.removeClass("uc-hidden")
+                } else{
+                  objParent.addClass("uc-hidden")
+                  objParent.removeClass("uc-visible")
+                }
+                  
+            }	
+              
+        });
+    }
+     
+    //init fix for sticky
+    setTimeout(initFixForStickyParent,300);
+     
+    jQuery(window).on("scroll", function(){
+     	//init fix for sticky
+    	setTimeout(initFixForStickyParent,100);
+    });
+  
+    // Fix: safari browser fullscrenn menu not displayed correctly
+    jQuery(document).ready(function() {
+      var isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+      if (isSafari) {
+        jQuery("#uc_fullscreen_navigation_menu_elementor_340c3f6").closest(".e-flex.e-con-boxed.e-con.e-parent").css("overflow", "visible");
+      }
+    });
+    	
+}if(jQuery("#uc_fullscreen_navigation_menu_elementor_340c3f6").length) uc_fullscreen_navigation_menu_elementor_340c3f6_start();
+	jQuery( document ).on( 'elementor/popup/show', (event, id, objPopup) => {
+	if(objPopup.$element.has(jQuery("#uc_fullscreen_navigation_menu_elementor_340c3f6")).length) uc_fullscreen_navigation_menu_elementor_340c3f6_start();});
+});
+
+			
+</script>
+<script id="wp-emoji-settings" type="application/json">
+{"baseUrl":"https://s.w.org/images/core/emoji/17.0.2/72x72/","ext":".png","svgUrl":"https://s.w.org/images/core/emoji/17.0.2/svg/","svgExt":".svg","source":{"concatemoji":"https://acoustieg.com/wp-includes/js/wp-emoji-release.min.js?ver=6.9.4"}}
+</script>
+<script type="module">
+/*! This file is auto-generated */
+const a=JSON.parse(document.getElementById("wp-emoji-settings").textContent),o=(window._wpemojiSettings=a,"wpEmojiSettingsSupports"),s=["flag","emoji"];function i(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function c(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0);const a=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);return t.every((e,t)=>e===a[t])}function p(e,t){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var n=e.getImageData(16,16,1,1);for(let e=0;e<n.data.length;e++)if(0!==n.data[e])return!1;return!0}function u(e,t,n,a){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\udde8\ud83c\uddf6","\ud83c\udde8\u200b\ud83c\uddf6")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!a(e,"\ud83e\u1fac8")}return!1}function f(e,t,n,a){let r;const o=(r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):document.createElement("canvas")).getContext("2d",{willReadFrequently:!0}),s=(o.textBaseline="top",o.font="600 32px Arial",{});return e.forEach(e=>{s[e]=t(o,e,n,a)}),s}function r(e){var t=document.createElement("script");t.src=e,t.defer=!0,document.head.appendChild(t)}a.supports={everything:!0,everythingExceptFlag:!0},new Promise(t=>{let n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(s),u.toString(),c.toString(),p.toString()].join(",")+"));",a=new Blob([e],{type:"text/javascript"});const r=new Worker(URL.createObjectURL(a),{name:"wpTestEmojiSupports"});return void(r.onmessage=e=>{i(n=e.data),r.terminate(),t(n)})}catch(e){}i(n=f(s,u,c,p))}t(n)}).then(e=>{for(const n in e)a.supports[n]=e[n],a.supports.everything=a.supports.everything&&a.supports[n],"flag"!==n&&(a.supports.everythingExceptFlag=a.supports.everythingExceptFlag&&a.supports[n]);var t;a.supports.everythingExceptFlag=a.supports.everythingExceptFlag&&!a.supports.flag,a.supports.everything||((t=a.source||{}).concatemoji?r(t.concatemoji):t.wpemoji&&t.twemoji&&(r(t.twemoji),r(t.wpemoji)))});
+//# sourceURL=https://acoustieg.com/wp-includes/js/wp-emoji-loader.min.js
+</script>
+
+
+<script>'undefined'=== typeof _trfq || (window._trfq = []);'undefined'=== typeof _trfd && (window._trfd=[]),_trfd.push({'tccl.baseHost':'secureserver.net'},{'ap':'cpbh-mt'},{'server':'sxb1plmcpnl510273'},{'dcenter':'sxb1'},{'cp_id':'10889452'},{'cp_cl':'8'}) // Monitoring performance to make your website faster. If you want to opt-out, please contact web hosting support.</script><script src="https://img1.wsimg.com/traffic-assets/js/tccl.min.js"></script>
+
+

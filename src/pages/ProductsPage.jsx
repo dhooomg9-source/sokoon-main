@@ -1,15 +1,14 @@
 import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
+import { Link } from 'react-router-dom';
 import QuoteJourney from '../components/QuoteJourney';
+import catalog from '../data/abstracta_catalog.json';
 
 export default function ProductsPage() {
   const pageRef = useRef(null);
-
-  const images = {
-    product1: "https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=800&auto=format&fit=crop",
-    product2: "https://images.unsplash.com/photo-1522066826130-ab088e894c25?q=80&w=800&auto=format&fit=crop",
-    product3: "https://images.unsplash.com/photo-1616422285623-13ff0162193c?q=80&w=800&auto=format&fit=crop",
-  };
+  
+  // Extract clean text title from raw HTML link extracted from cheerio
+  const getCleanTitle = (raw) => raw.replace(/<[^>]*>?/gm, '').trim();
 
   useEffect(() => {
     let ctx = gsap.context(() => {
@@ -17,7 +16,7 @@ export default function ProductsPage() {
         y: 60,
         opacity: 0,
         duration: 1,
-        stagger: 0.2,
+        stagger: 0.1,
         ease: "power3.out"
       });
     }, pageRef);
@@ -25,41 +24,42 @@ export default function ProductsPage() {
   }, []);
 
   return (
-    <div ref={pageRef} className="w-full flex flex-col pt-24 relative overflow-hidden bg-background">
-      {/* Thematic Background Removed */}
-      <div className="absolute top-0 inset-x-0 h-64 bg-gradient-to-b from-background via-background/80 to-transparent z-10 pointer-events-none"></div>
+    <div ref={pageRef} className="w-full flex flex-col pt-32 pb-16 relative overflow-hidden bg-[#fafafa] text-black min-h-screen font-body">
+      <section className="w-full flex flex-col items-center relative z-20 px-6 max-w-[1400px] mx-auto">
+        
+        <div className="mb-20 reveal-block flex flex-col items-center text-center">
+          <h1 className="font-heading font-black text-[3.5rem] md:text-7xl mb-6 text-accent tracking-tight tracking-tighter">Products</h1>
+          <p className="font-data text-slate-800 max-w-4xl text-[1.15rem] md:text-xl leading-relaxed font-semibold">
+            Our products are developed in collaboration with influential contemporary designers, with the aim to create better soundscapes.
+          </p>
+        </div>
 
-      <section className="py-16 px-6 md:px-12 lg:px-24 bg-transparent w-full flex flex-col items-center relative z-20">
-        <div className="w-full max-w-6xl">
-          <div className="mb-12 reveal-block border-b border-dark/10 pb-8">
-            <h1 className="font-heading font-bold text-5xl md:text-7xl uppercase tracking-tighter">Core Products</h1>
-            <p className="font-data text-dark/70 mt-6 max-w-3xl text-lg md:text-xl leading-relaxed">
-              Industrial-grade components designed, milled, and tested for maximum sound attenuation in hostile acoustic environments.
-            </p>
-          </div>
+        <div className="w-full mb-12 reveal-block text-center flex flex-col items-center">
+          <h2 className="font-heading font-black text-3xl md:text-4xl text-accent tracking-tight mb-2">Product Categories</h2>
+          <div className="w-12 h-1 bg-black/10 rounded-full mt-4"></div>
+        </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
-            {[
-              { title: 'WavePanel Pro', tag: 'Absorption', desc: 'High-density geometric diffusers with mathematically modeled surface areas to scatter rogue soundwaves.', img: images.product1 },
-              { title: 'SilentPod Max', tag: 'Isolation', desc: 'Freestanding 4-person acoustic meeting cell with active ventilation silencing and total frequency blockage.', img: images.product2 },
-              { title: 'SoundBarrier Elite', tag: 'Constraint', desc: 'Mass-loaded vinyl core wall partitions achieving STC-65 ratings for extreme isolation.', img: images.product3 }
-            ].map((prod, i) => (
-              <div key={i} className="reveal-block group p-5 bg-paper border border-dark/5 rounded-[2rem] hover:-translate-y-2 hover:shadow-2xl transition-all duration-500">
-                <div className="h-56 md:h-64 w-full rounded-[1.5rem] mb-6 bg-dark/5 transition-all duration-700"></div>
-                <div className="px-2 pb-4">
-                  <span className="font-data text-xs px-3 py-1 bg-accent/10 text-accent rounded-full uppercase mb-4 inline-block font-bold">{prod.tag}</span>
-                  <h3 className="font-heading font-bold text-2xl md:text-3xl text-dark mb-3">{prod.title}</h3>
-                  <p className="font-data text-dark/70 text-sm leading-relaxed">{prod.desc}</p>
-                  <button className="mt-6 font-heading font-bold text-accent text-xs uppercase tracking-wider flex items-center gap-2 group-hover:gap-4 transition-all">
-                    Initialize Specs <span className="bg-accent w-6 h-[2px] block group-hover:w-16 transition-all duration-500"></span>
-                  </button>
-                </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 w-full mb-24 px-4">
+          {catalog.categories.map((cat, i) => (
+            <Link key={i} to={`/products/${cat.slug}`} className="reveal-block group flex flex-col cursor-pointer pb-6 hover:-translate-y-1 transition-transform duration-500">
+              <h3 className="mb-4 font-heading text-black font-extrabold text-[15px] md:text-[17px] text-center transition-colors duration-300 group-hover:text-accent">
+                {getCleanTitle(cat.title)}
+              </h3>
+              <div className="w-full aspect-square bg-[#f2f2f2] relative overflow-hidden flex items-center justify-center group-hover:bg-[#ebebeb] transition-colors duration-500 shadow-sm group-hover:shadow-md">
+                <img 
+                  src={(cat.img || "").replace(/&amp;/g, '&')} 
+                  alt={cat.slug} 
+                  className="w-[85%] h-[85%] object-contain group-hover:scale-105 transition-transform duration-700 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] mix-blend-multiply"
+                />
               </div>
-            ))}
-          </div>
+            </Link>
+          ))}
         </div>
       </section>
-      <QuoteJourney />
+      
+      <div className="reveal-block px-4 max-w-[1400px] mx-auto w-full">
+        <QuoteJourney />
+      </div>
     </div>
   );
 }

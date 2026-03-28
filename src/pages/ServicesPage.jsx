@@ -1,67 +1,202 @@
 import React, { useEffect, useRef } from 'react';
+import { Link } from 'react-router-dom';
 import { gsap } from 'gsap';
-import { ArrowUpRight } from 'lucide-react';
-import QuoteJourney from '../components/QuoteJourney';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { ArrowRight, FileText, Blocks, Volume2, ShieldCheck, Hammer, Sparkles, Building2, Trees, Activity, Palette } from 'lucide-react';
+
+gsap.registerPlugin(ScrollTrigger);
+
+const acousticServices = [
+  {
+    title: 'Assessment & Testing',
+    slug: 'assessment-and-testing',
+    img: 'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=1200',
+    icon: FileText
+  },
+  {
+    title: 'Acoustic Panelling',
+    slug: 'acoustic-paneling',
+    img: 'https://images.unsplash.com/photo-1600607686527-6fb886090705?auto=format&fit=crop&q=80&w=1200',
+    icon: Blocks
+  },
+  {
+    title: 'Sound Masking',
+    slug: 'sound-masking',
+    img: 'https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&q=80&w=1200',
+    icon: Volume2
+  }
+];
+
+const specialistSolutions = [
+  {
+    title: 'Acoustic Spray',
+    desc: 'We apply high-performance acoustic spray to control echo and improve sound quality in large, open spaces. Creates a seamless, sound-absorbing surface that blends into the architecture without affecting visual design.'
+  },
+  {
+    title: 'Fabric Stretch Systems',
+    desc: 'Custom fabric installations designed to control sound reflections and improve room acoustics. Enhances clarity and reduces noise, creating more comfortable and functional spaces like offices or auditoriums.'
+  },
+  {
+    title: 'Box in a Box Systems',
+    desc: 'The ultimate noise isolation method. We construct a fully decoupled inner room floating within the outer structure, guaranteeing zero structural vibration or airborne noise transfer for hyper-sensitive spaces.'
+  },
+  {
+    title: 'Floating Floor, Ceiling & Wall Systems',
+    desc: 'Engineered structural decoupling. By isolating floors, walls, and ceilings from the base structure, we mitigate impact noise and vibration transmission between levels in high-performance environments.'
+  },
+  {
+    title: 'Sound Masking Systems',
+    desc: 'Sophisticated electronic systems that introduce a subtle, ambient background noise. Designed to match the frequencies of human speech, effectively masking it from listeners and guaranteeing privacy.'
+  }
+];
+
+const consultationServices = [
+  { title: "Noise Survey", icon: Activity, desc: "Detailed on-site assessment to measure noise levels and identify specific sound-related issues with tailored recommendations for effective noise control." },
+  { title: "Acoustic Consultancy", icon: Building2, desc: "Specialized advice and planning to optimize acoustic performance in various environments, including offices, theaters, and industrial spaces." },
+  { title: "Acoustic Design Services", icon: Palette, desc: "Customized design strategies focused on improving clarity, reducing unwanted noise, and optimizing acoustic for both comfort and functionality in different settings." },
+  { title: "Sound Proofing Consultancy", icon: ShieldCheck, desc: "Bespoke solutions to reduce sound transmission, enhance privacy, and create quieter, more peaceful spaces in residential, commercial, and industrial buildings." }
+];
+
+const servicePromises = [
+  { num: "01", title: "Acoustic Survey & Design", desc: "We begin with rigorous on-site acoustic testing and detailed 3D modeling to tailor a solution precisely to your spatial acoustic signature." },
+  { num: "02", title: "Product Specification", desc: "Leveraging our vast catalog of premium materials, we specify solutions that perform flawlessly while adhering strictly to your design aesthetic." },
+  { num: "03", title: "Expert Installation", desc: "Our in-house master acoustic fitters ensure that every panel, spray, and system is installed with absolute precision and no disruption." },
+  { num: "04", title: "Post-Completion Testing", desc: "We don't guess. We verify. Our final stage involves comprehensive acoustic testing to guarantee we hit the targeted performance parameters." }
+];
 
 export default function ServicesPage() {
-  const pageRef = useRef(null);
-
-  const images = {
-    testing: "https://images.unsplash.com/photo-1541888085922-8178125868bf?q=80&w=1200&auto=format&fit=crop",
-    paneling: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1200&auto=format&fit=crop",
-    masking: "https://images.unsplash.com/photo-1581092160562-40aa08e78837?q=80&w=1200&auto=format&fit=crop",
-    booth: "https://images.unsplash.com/photo-1542406775-1facd50ceeb9?q=80&w=1200&auto=format&fit=crop",
-  };
+  const containerRef = useRef(null);
 
   useEffect(() => {
     let ctx = gsap.context(() => {
-      gsap.from(".reveal-block", {
-        y: 60,
+      gsap.from(".reveal-item", {
+        y: 50,
         opacity: 0,
         duration: 1,
-        stagger: 0.2,
-        ease: "power3.out"
+        stagger: 0.1,
+        ease: "power3.out",
+        clearProps: "all",
+        scrollTrigger: {
+          trigger: containerRef.current,
+          start: "top 80%",
+        }
       });
-    }, pageRef);
+    }, containerRef);
     return () => ctx.revert();
   }, []);
 
   return (
-    <div ref={pageRef} className="w-full flex flex-col pt-24 relative overflow-hidden bg-background">
-      {/* Thematic Background Removed */}
-      <div className="absolute top-0 inset-x-0 h-64 bg-gradient-to-b from-background via-background/80 to-transparent z-10 pointer-events-none"></div>
-
-      <section className="py-16 px-6 md:px-12 lg:px-24 bg-transparent w-full flex flex-col items-center relative z-20">
-        <div className="w-full max-w-6xl">
-          <div className="mb-12 reveal-block border-b border-dark/10 pb-8">
-            <h1 className="font-heading font-bold text-5xl md:text-7xl uppercase tracking-tighter">Acoustic Services</h1>
-            <p className="font-data text-dark/70 mt-6 max-w-3xl text-lg md:text-xl leading-relaxed">
-              Deploying tailored acoustic protocols across assessment, manufacturing, installation, and optimization. We analyze your spatial constraints and deliver absolute sonic equilibrium.
-            </p>
+    <div ref={containerRef} className="min-h-screen bg-body text-primary pt-[180px] pb-24">
+      
+      <section className="px-6 md:px-12 lg:px-24 max-w-[1600px] mx-auto mb-16">
+        <div className="mb-12 reveal-item border-b border-primary/10 pb-8 flex flex-col lg:flex-row lg:items-end justify-between gap-8">
+          <div>
+            <h1 className="font-heading font-bold text-5xl md:text-7xl uppercase tracking-tighter text-accent">
+              Our Integrated <br /><span className="font-drama italic">Services.</span>
+            </h1>
           </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">
-            {[
-              { title: 'Assessment & Testing', desc: 'Precision SPL reading and RT60 reverberation analysis protocols using advanced mic arrays.', img: images.testing },
-              { title: 'Acoustic Paneling', desc: 'Architectural-grade absorbers designed to kill rogue frequencies and standing waves.', img: images.paneling },
-              { title: 'Sound Masking', desc: 'Active white-noise emitters calibrated to blend into the human auditory threshold for absolute corporate privacy.', img: images.masking },
-              { title: 'Isolated Booths', desc: 'Standalone silence chambers engineered for absolute sensory deprivation and secure communications.', img: images.booth }
-            ].map((srv, i) => (
-              <div key={i} className="reveal-block group relative rounded-[2rem] overflow-hidden bg-dark h-[350px] md:h-[400px] flex items-end w-full shadow-2xl">
-                <div className="absolute inset-0 bg-dark opacity-50 group-hover:opacity-80 group-hover:scale-105 transition-all duration-700 ease-[cubic-bezier(0.25,1,0.5,1)]"></div>
-                <div className="absolute inset-0 bg-gradient-to-t from-dark via-dark/40 to-transparent"></div>
-                <div className="relative z-10 p-10 w-full transform group-hover:-translate-y-4 transition-transform duration-500">
-                  <h3 className="font-heading font-bold text-3xl md:text-4xl text-paper mb-3 flex justify-between items-center w-full">
-                    {srv.title} <ArrowUpRight className="opacity-0 group-hover:opacity-100 transition-opacity text-accent w-8 h-8" />
-                  </h3>
-                  <p className="font-data text-paper/70 text-sm md:text-base max-w-md leading-relaxed">{srv.desc}</p>
-                </div>
-              </div>
-            ))}
-          </div>
+          <p className="font-body text-lg md:text-xl leading-relaxed max-w-2xl text-primary font-medium">
+            From precise acoustic diagnostics to the installation of premium sound control systems. We engineer silence with unparalleled accuracy.
+          </p>
         </div>
       </section>
-      <QuoteJourney />
+
+      {/* Core 3 Columns (Reference Resonics) */}
+      <section className="reveal-item w-full flex flex-col md:flex-row h-auto md:h-[600px] mb-32">
+        {acousticServices.map((service, idx) => (
+          <Link 
+            to={`/services/${service.slug}`} 
+            key={idx}
+            className="group relative flex-1 min-h-[300px] overflow-hidden bg-black border-r border-body/10 last:border-0"
+          >
+            <div 
+              className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105 opacity-70 group-hover:opacity-60"
+              style={{ backgroundImage: `url(${service.img})`}}
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent"></div>
+            
+            <div className="absolute inset-0 p-8 md:p-12 flex flex-col justify-end">
+              <div className="w-14 h-14 rounded-full bg-body/10 backdrop-blur-md flex items-center justify-center mb-6 group-hover:-translate-y-2 transition-transform duration-500">
+                <service.icon className="w-6 h-6 text-white" />
+              </div>
+              <h2 className="font-heading font-black text-3xl md:text-4xl text-white mb-4 group-hover:-translate-y-2 transition-transform duration-500 delay-75">
+                {service.title}
+              </h2>
+              <div className="w-8 h-8 rounded-full bg-accent flex items-center justify-center text-white opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 delay-150">
+                <ArrowRight size={16} />
+              </div>
+            </div>
+          </Link>
+        ))}
+      </section>
+
+      {/* Specialist Solutions */}
+      <section className="px-6 md:px-12 lg:px-24 max-w-[1600px] mx-auto mb-32">
+        <h2 className="reveal-item font-heading font-bold text-4xl text-accent mb-12">Acoustic Specialist Solutions</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {specialistSolutions.map((sol, idx) => (
+            <div key={idx} className="reveal-item">
+              <div className="bg-card h-full p-10 rounded-[2rem] border border-subtle/30 shadow-sm hover:shadow-xl hover:border-accent hover:-translate-y-2 transition-all duration-500 group">
+                <h3 className="font-heading font-bold text-2xl text-primary mb-4 group-hover:text-accent transition-colors">{sol.title}</h3>
+                <p className="font-data text-copy/80 leading-relaxed text-sm">{sol.desc}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Consultation Services (Acoustieg reference) */}
+      <section className="px-6 md:px-12 lg:px-24 max-w-[1600px] mx-auto mb-32">
+        <h2 className="reveal-item font-heading font-bold text-4xl text-accent mb-6 relative z-10">Consultation Services</h2>
+        <p className="reveal-item font-data text-copy/70 max-w-2xl mb-12 text-lg relative z-10">
+          Independent, expert acoustic engineering consultation. We provide data-driven insights and architectural guidance.
+        </p>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 relative z-10">
+          {consultationServices.map((consult, idx) => (
+            <div key={idx} className="reveal-item">
+              <div className="bg-card h-full p-10 rounded-[2rem] border border-subtle/30 shadow-sm hover:shadow-xl hover:border-accent hover:-translate-y-2 transition-all duration-500 group">
+                <consult.icon className="w-10 h-10 text-accent mb-6 group-hover:scale-110 transition-transform duration-500" />
+                <h3 className="font-heading font-bold text-2xl text-primary mb-4 group-hover:text-accent transition-colors">{consult.title}</h3>
+                <p className="font-data text-copy/80 leading-relaxed text-sm">{consult.desc}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Service Promise (Resonics Start to finish reference) */}
+      <section className="px-6 md:px-12 lg:px-24 max-w-[1600px] mx-auto">
+        <div className="mb-16">
+          <p className="reveal-item font-data text-accent font-bold uppercase tracking-widest mb-4">Our Service Promise</p>
+          <h2 className="reveal-item font-heading font-black text-5xl md:text-6xl text-black max-w-3xl leading-tight">
+            From start to finish, <br/><span className="text-slate-400">we handle everything.</span>
+          </h2>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          {servicePromises.map((promise, idx) => (
+            <div key={idx} className="reveal-item">
+              <div 
+                className="group relative h-[300px] md:h-[400px] rounded-[2rem] overflow-hidden bg-white border border-slate-200 cursor-default"
+              >
+                {/* Default state */}
+                <div className="absolute inset-0 p-8 flex flex-col justify-between transition-opacity duration-500 group-hover:opacity-0 z-10">
+                  <span className="font-data text-4xl text-slate-300 font-black">{promise.num}</span>
+                  <h3 className="font-heading font-bold text-2xl text-black">{promise.title}</h3>
+                </div>
+
+                {/* Hover state */}
+                <div className="absolute inset-0 p-8 bg-accent text-white flex flex-col justify-center translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out z-20">
+                  <h3 className="font-heading font-bold text-xl mb-4">{promise.title}</h3>
+                  <p className="font-data text-sm text-white/90 leading-relaxed">{promise.desc}</p>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
     </div>
   );
 }

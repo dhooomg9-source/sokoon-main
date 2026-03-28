@@ -3,19 +3,28 @@
 @tailwind utilities;
 
 @layer base {
+  :root {
+    --bg-body: #F4F6F7;
+    --bg-card: #FFFFFF;
+    --text-on-dark: #FFFFFF;
+    --text-primary: #0A1128;
+    --text-body: #0A1128;
+    --nav-default: #0A1128;
+    --accent-warm: #774b2a;
+    --bg-dark: #1C375B;
+    --border-subtle: #8CA0A8;
+    --text-muted: #8CA0A8;
+  }
+
   body {
-    @apply bg-background text-dark font-body antialiased;
+    @apply bg-body text-body font-body antialiased;
     overflow-x: hidden;
-    /* Subtle 3D Premium Acoustic Panel Texture */
-    background-color: transparent;
+    background-color: var(--bg-body);
   }
 }
 
 @layer utilities {
-  .bg-background {
-    background-color: #FAF8F5;
-    /* Midnight Luxe Ivory Base */
-  }
+  /* Removed legacy bg-background utility */
 
   .clip-noise {
     position: fixed;
@@ -63,5 +72,111 @@
 
   .animate-marquee-scroll {
     animation: marquee-scroll 40s linear infinite;
+  }
+
+  /* Abstracta Scraped Content Styles */
+  .partialsblock {
+    @apply w-full my-12;
+  }
+  .imageOrganic {
+    @apply w-full;
+  }
+  .imageOrganic--columns {
+    @apply grid grid-cols-1 md:grid-cols-2 gap-8;
+  }
+  .detailCard {
+    @apply flex flex-col gap-4 mb-4 bg-white p-4 rounded-xl shadow-sm border border-slate-100;
+  }
+  .detailCard__media {
+    @apply w-full rounded-lg overflow-hidden bg-slate-50 flex items-center justify-center p-4 min-h-[250px];
+  }
+  .detailCard__media img {
+    @apply w-full h-auto max-h-[300px] object-contain mix-blend-multiply m-0 !important;
+  }
+  .detailCard__info {
+    @apply p-2;
+  }
+  .detailCard__description {
+    @apply text-slate-700 text-base font-data leading-relaxed m-0;
+  }
+  .detailList__list {
+    @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 list-none pl-0 !important;
+  }
+  .detailList__item {
+    @apply m-0 p-0;
+  }
+  .content {
+    @apply max-w-4xl mx-auto my-8;
+  }
+  .content--center {
+    @apply text-center;
+  }
+  .content--info h2 {
+    @apply text-2xl font-heading font-bold mb-4 text-black;
+  }
+  .content p {
+    @apply text-slate-700 text-lg;
+  }
+  .productVideo {
+    @apply w-full rounded-2xl overflow-hidden shadow-lg my-12 border border-slate-200;
+  }
+  .productVideo video {
+    @apply w-full h-auto block m-0;
+  }
+
+  /* Product Section styles (Documentation, Downloads etc) */
+  .productSection {
+    @apply w-full mb-12;
+  }
+  .productSection__heading {
+    @apply mb-6 pb-2 border-b border-slate-200 mt-8;
+  }
+  .productSection__title {
+    @apply text-2xl font-heading font-black text-black m-0 !important;
+  }
+  .productSection__heading--sub {
+    @apply text-lg font-heading font-bold text-slate-800 mt-6 mb-4 !important;
+  }
+  .productSection__part {
+    @apply mb-8;
+  }
+  
+  /* Documentation / downloads list items */
+  ul[class*="productSection__list--"] {
+    @apply list-none pl-0 m-0 grid grid-cols-1 md:grid-cols-2 gap-4 !important;
+  }
+  ul[class*="productSection__list--"] li {
+    @apply bg-white p-4 rounded-xl border border-slate-200 hover:border-black transition-colors m-0 flex items-center justify-between shadow-sm cursor-pointer hover:-translate-y-1 hover:shadow-md duration-300 overflow-hidden !important;
+  }
+  ul[class*="productSection__list--"] a {
+    @apply text-slate-800 font-heading font-bold text-sm tracking-wide no-underline w-full h-full flex items-center !important;
+  }
+  ul[class*="productSection__list--"] a:hover {
+    @apply text-black !important;
+  }
+  ul[class*="productSection__list--"] img {
+    @apply max-h-16 w-auto object-contain m-0;
+  }
+
+  /* Technical Specifications normal list */
+  ul.productSection__list:not([class*="productSection__list--"]) {
+    @apply list-none pl-0 m-0 space-y-6 !important;
+  }
+  ul.productSection__list:not([class*="productSection__list--"]) li {
+    @apply flex flex-col md:flex-row gap-6 items-start p-0 m-0 border-b border-slate-100 pb-6 !important;
+  }
+  ul.productSection__list:not([class*="productSection__list--"]) img {
+    @apply w-full max-w-[200px] h-auto object-contain bg-white p-2 rounded-lg border border-slate-100 m-0 shadow-sm !important;
+  }
+  ul.productSection__list:not([class*="productSection__list--"]) p {
+    @apply m-0 text-slate-700 leading-relaxed font-data;
+  }
+  
+  /* Inspiration slider reset */
+  .swiper-wrapper {
+    @apply flex flex-wrap gap-4;
+  }
+  .swiper-slide {
+    @apply w-full sm:w-1/2 md:w-1/3 lg:w-1/4 !important;
   }
 }

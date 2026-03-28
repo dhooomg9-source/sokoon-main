@@ -5,17 +5,17 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 
 const RotatingMotif = () => (
-  <div className="w-48 h-48 border-[1px] border-dark/20 relative animate-[spin_20s_linear_infinite] flex items-center justify-center">
-    <div className="w-32 h-32 border-[1px] border-dark/40 rotate-45 flex items-center justify-center">
-      <div className="w-16 h-16 border-[1px] border-dark/60 -rotate-45 bg-dark"></div>
+  <div className="w-48 h-48 border-[1px] border-primary/20 relative animate-[spin_20s_linear_infinite] flex items-center justify-center">
+    <div className="w-32 h-32 border-[1px] border-primary/40 rotate-45 flex items-center justify-center">
+      <div className="w-16 h-16 border-[1px] border-primary/60 -rotate-45 bg-dark"></div>
     </div>
   </div>
 );
 
 const ScanningLaser = () => (
-  <div className="w-48 h-48 border border-paper/20 relative overflow-hidden bg-dark/50 grid grid-cols-4 grid-rows-4 gap-[1px]">
+  <div className="w-48 h-48 border border-card/20 relative overflow-hidden bg-dark/50 grid grid-cols-4 grid-rows-4 gap-[1px]">
     {Array.from({ length: 16 }).map((_, i) => (
-      <div key={i} className="bg-paper/5 w-full h-full"></div>
+      <div key={i} className="bg-card/5 w-full h-full"></div>
     ))}
     <div className="absolute top-0 left-0 w-full h-[2px] bg-accent shadow-[0_0_10px_#E63B2E] animate-[scan_3s_ease-in-out_infinite_alternate]"></div>
     <style>{`@keyframes scan { from { transform: translateY(0); } to { transform: translateY(192px); } }`}</style>
@@ -77,21 +77,21 @@ export default function Protocol() {
       num: "01",
       title: "Discovery & Measurement",
       desc: "Comprehensive on-site acoustical testing and data extraction.",
-      bg: "bg-paper text-dark",
+      bg: "bg-card text-primary",
       graphic: <RotatingMotif />
     },
     {
       num: "02",
       title: "Modeling & Analysis",
       desc: "Simulating reverberation dynamics to engineer precise interventions.",
-      bg: "bg-dark text-paper border-t border-paper/10",
+      bg: "bg-dark text-on-dark border-t border-card/10",
       graphic: <ScanningLaser />
     },
     {
       num: "03",
       title: "Tactical Execution",
       desc: "Deploying high-performance materials seamlessly into your architecture.",
-      bg: "bg-background text-dark border-t border-dark/10",
+      bg: "bg-body text-primary border-t border-primary/10",
       graphic: <PulsingWave />
     }
   ];

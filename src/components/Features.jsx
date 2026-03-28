@@ -7,9 +7,9 @@ gsap.registerPlugin(ScrollTrigger);
 
 const ShufflerCard = () => {
   const [cards, setCards] = useState([
-    { id: 1, title: 'Commercial', desc: 'Large scale office soundproofing.', color: 'bg-paper text-dark' },
-    { id: 2, title: 'Healthcare', desc: 'Clinical acoustic isolation setups.', color: 'bg-dark text-paper border border-paper/20' },
-    { id: 3, title: 'Education', desc: 'Classroom reverberation control.', color: 'bg-accent text-paper' }
+    { id: 1, title: 'Commercial', desc: 'Large scale office soundproofing.', color: 'bg-card text-primary' },
+    { id: 2, title: 'Healthcare', desc: 'Clinical acoustic isolation setups.', color: 'bg-dark text-on-dark border border-card/20' },
+    { id: 3, title: 'Education', desc: 'Classroom reverberation control.', color: 'bg-accent text-on-dark' }
   ]);
   const containerRef = useRef(null);
 
@@ -76,9 +76,9 @@ const TypewriterCard = () => {
   }, []);
 
   return (
-    <div className="h-64 w-full bg-dark text-emerald-400 p-6 rounded-[2rem] flex flex-col items-start justify-between shadow-lg border border-borderLight/20">
+    <div className="h-64 w-full bg-dark text-emerald-400 p-6 rounded-[2rem] flex flex-col items-start justify-between shadow-lg border border-subtle/20">
       <div className="flex w-full justify-between items-center mb-4">
-        <h4 className="font-heading text-sm text-paper/70 flex items-center gap-2">
+        <h4 className="font-heading text-sm text-slate-300 flex items-center gap-2">
           <Terminal size={14} /> LIVE TELEMETRY
         </h4>
         <span className="w-2 h-2 bg-emerald-500 rounded-full animate-pulse shadow-[0_0_10px_#10B981]"></span>
@@ -126,8 +126,8 @@ const SchedulerCard = () => {
   }, []);
 
   return (
-    <div className="h-64 w-full bg-paper p-6 rounded-[2rem] flex flex-col relative shadow-xl border border-dark/5 overflow-hidden">
-      <h4 className="font-heading font-bold text-dark mb-6 flex items-center gap-2">
+    <div className="h-64 w-full bg-card p-6 rounded-[2rem] flex flex-col relative shadow-xl border border-primary/5 overflow-hidden">
+      <h4 className="font-heading font-bold text-primary mb-6 flex items-center gap-2">
         <CalendarDays size={18} /> Protocol Timeline
       </h4>
 
@@ -135,7 +135,7 @@ const SchedulerCard = () => {
         {days.map((d, i) => (
           <div
             key={i}
-            className={`aspect-square rounded-md flex items-center justify-center font-data text-xs transition-colors duration-300 ${activeDay === i ? 'bg-accent text-paper shadow-lg scale-110' : 'bg-dark/5 text-dark/50'
+            className={`aspect-square rounded-md flex items-center justify-center font-data text-xs transition-colors duration-300 ${activeDay === i ? 'bg-accent text-on-dark shadow-lg scale-110' : 'bg-dark/5 text-primary/50'
               }`}
           >
             {d}
@@ -144,7 +144,7 @@ const SchedulerCard = () => {
       </div>
 
       <div className="relative z-10 self-end mt-auto">
-        <button className="bg-dark text-paper px-4 py-2 rounded-full font-heading text-xs font-semibold hover-lift">
+        <button className="bg-dark text-on-dark px-4 py-2 rounded-full font-heading text-xs font-semibold hover-lift">
           Confirm Rollout
         </button>
       </div>
@@ -186,24 +186,24 @@ export default function Features() {
         {/* Value Prop 1 */}
         <div className="feature-block flex flex-col gap-6">
           <div>
-            <h3 className="font-heading font-bold text-2xl text-dark">Industry Expertise</h3>
-            <p className="font-data text-sm text-dark/70 mt-2">Decades of specialized experience in deploying architectural acoustic blueprints.</p>
+            <h3 className="font-heading font-bold text-2xl text-primary">Industry Expertise</h3>
+            <p className="font-data text-sm text-slate-600 mt-2">Decades of specialized experience in deploying architectural acoustic blueprints.</p>
           </div>
         </div>
 
         {/* Value Prop 2 */}
         <div className="feature-block flex flex-col gap-6">
           <div>
-            <h3 className="font-heading font-bold text-2xl text-dark">Tailored Solutions</h3>
-            <p className="font-data text-sm text-dark/70 mt-2">Custom strategies mathematically modeled and calibrated for your specific environment.</p>
+            <h3 className="font-heading font-bold text-2xl text-primary">Tailored Solutions</h3>
+            <p className="font-data text-sm text-slate-600 mt-2">Custom strategies mathematically modeled and calibrated for your specific environment.</p>
           </div>
         </div>
 
         {/* Value Prop 3 */}
         <div className="feature-block flex flex-col gap-6">
           <div>
-            <h3 className="font-heading font-bold text-2xl text-dark">Fast Implementation</h3>
-            <p className="font-data text-sm text-dark/70 mt-2">Quick results with seamless rollout protocols and minimal operational disruption.</p>
+            <h3 className="font-heading font-bold text-2xl text-primary">Fast Implementation</h3>
+            <p className="font-data text-sm text-slate-600 mt-2">Quick results with seamless rollout protocols and minimal operational disruption.</p>
           </div>
         </div>
 
