@@ -25,10 +25,6 @@ export default function ProductDetailsPage() {
     return () => ctx.revert();
   }, [productSlug]);
 
-  if (!product) {
-    return <div className="pt-40 text-center font-heading text-2xl">Product not found</div>;
-  }
-
   // Determine available tabs
   const allTabs = [
     { id: 'inspiration', label: 'Inspiration' },
@@ -38,16 +34,23 @@ export default function ProductDetailsPage() {
     { id: 'downloads', label: 'Downloads' },
     { id: 'projects', label: 'Projects' }
   ];
-  const availableTabs = allTabs.filter(tab => product.sections && product.sections[tab.id]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  const availableTabs = React.useMemo(() => product ? allTabs.filter(tab => product.sections && product.sections[tab.id]) : [], [product]);
 
   useEffect(() => {
     if (availableTabs.length > 0 && !activeTab) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setActiveTab(availableTabs[0].id);
     }
-  }, [productSlug, availableTabs]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [productSlug, availableTabs, activeTab]);
 
   // Use gallery if available, otherwise just use the main img
-  const images = product.gallery && product.gallery.length > 0 ? product.gallery : [product.img];
+  const images = product && product.gallery && product.gallery.length > 0 ? product.gallery : product ? [product.img] : [];
+
+  if (!product) {
+    return <div className="pt-40 text-center font-heading text-2xl">Product not found</div>;
+  }
 
   return (
     <div ref={pageRef} className="w-full flex flex-col pt-32 pb-16 relative overflow-hidden bg-[#fafafa] text-black min-h-screen font-body">

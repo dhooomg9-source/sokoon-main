@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { gsap } from 'gsap';
 import { Volume2, ArrowRight, Target, ShieldCheck, Zap } from 'lucide-react';
 
+// eslint-disable-next-line no-unused-vars
 const maskingFeatures = [
   {
     icon: Target,

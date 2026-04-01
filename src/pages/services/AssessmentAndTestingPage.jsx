@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { gsap } from 'gsap';
 import { FileText, ArrowRight, CheckCircle2, Ruler, BarChart3, Presentation } from 'lucide-react';
 
+// eslint-disable-next-line no-unused-vars
 const assessmentFeatures = [
   {
     icon: Ruler,

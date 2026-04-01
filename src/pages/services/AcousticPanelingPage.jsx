@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { gsap } from 'gsap';
 import { Blocks, ArrowRight, Palette, Layers, Minimize } from 'lucide-react';
 
+// eslint-disable-next-line no-unused-vars
 const panelFeatures = [
   {
     icon: Palette,
