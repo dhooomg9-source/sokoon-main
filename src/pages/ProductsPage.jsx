@@ -3,7 +3,8 @@ import { gsap } from 'gsap';
 import { Link } from 'react-router-dom';
 import QuoteJourney from '../components/QuoteJourney';
 import catalog from '../data/abstracta_catalog.json';
-
+import imgSoundInsulation from '../assets/generated/sound_insulation.png';
+import imgAcousticDoor from '../assets/generated/acoustic_door.png';
 export default function ProductsPage() {
   const pageRef = useRef(null);
   
@@ -49,7 +50,7 @@ export default function ProductsPage() {
               </div>
               <div className="mt-auto w-full aspect-square bg-[#f2f2f2] relative overflow-hidden flex items-center justify-center group-hover:bg-[#ebebeb] transition-colors duration-500 shadow-sm group-hover:shadow-md">
                 <img 
-                  src={(cat.img || "").replace(/&amp;/g, '&')} 
+                  src={(cat.slug === 'sound-insulation' ? imgSoundInsulation : cat.slug === 'acoustic-door' ? imgAcousticDoor : cat.img || "").replace(/&amp;/g, '&')} 
                   alt={cat.slug} 
                   className={`group-hover:scale-105 transition-transform duration-700 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] ${(cat.img || "").includes('images.unsplash.com') ? 'w-full h-full object-cover' : 'w-[85%] h-[85%] object-contain mix-blend-multiply'}`}
                 />
