@@ -8,7 +8,7 @@ export default function ProductsPage() {
   const pageRef = useRef(null);
   
   // Extract clean text title from raw HTML link extracted from cheerio
-  const getCleanTitle = (raw) => raw.replace(/<[^>]*>?/gm, '').trim();
+  const getCleanTitle = (raw) => raw.replace(/<[^>]*>?/gm, '').replace(/\s+/g, ' ').trim();
 
   useEffect(() => {
     let ctx = gsap.context(() => {
@@ -41,15 +41,17 @@ export default function ProductsPage() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 w-full mb-24 px-4">
           {catalog.categories.map((cat, i) => (
-            <Link key={i} to={`/products/${cat.slug}`} className="reveal-block group flex flex-col cursor-pointer pb-6 hover:-translate-y-1 transition-transform duration-500">
-              <h3 className="mb-4 font-heading text-black font-extrabold text-[15px] md:text-[17px] text-center transition-colors duration-300 group-hover:text-accent">
-                {getCleanTitle(cat.title)}
-              </h3>
-              <div className="w-full aspect-square bg-[#f2f2f2] relative overflow-hidden flex items-center justify-center group-hover:bg-[#ebebeb] transition-colors duration-500 shadow-sm group-hover:shadow-md">
+            <Link key={i} to={`/products/${cat.slug}`} className="reveal-block group flex flex-col h-full cursor-pointer pb-6 hover:-translate-y-1 transition-transform duration-500">
+              <div className="mb-4 flex flex-col justify-end items-center h-12 md:h-16 px-2">
+                <h3 className="font-heading text-black font-extrabold text-[15px] md:text-[17px] text-center transition-colors duration-300 group-hover:text-accent leading-tight line-clamp-2">
+                  {getCleanTitle(cat.title)}
+                </h3>
+              </div>
+              <div className="mt-auto w-full aspect-square bg-[#f2f2f2] relative overflow-hidden flex items-center justify-center group-hover:bg-[#ebebeb] transition-colors duration-500 shadow-sm group-hover:shadow-md">
                 <img 
                   src={(cat.img || "").replace(/&amp;/g, '&')} 
                   alt={cat.slug} 
-                  className="w-[85%] h-[85%] object-contain group-hover:scale-105 transition-transform duration-700 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] mix-blend-multiply"
+                  className={`group-hover:scale-105 transition-transform duration-700 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] ${(cat.img || "").includes('images.unsplash.com') ? 'w-full h-full object-cover' : 'w-[85%] h-[85%] object-contain mix-blend-multiply'}`}
                 />
               </div>
             </Link>

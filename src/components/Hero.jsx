@@ -32,7 +32,7 @@ export default function Hero() {
 
       {/* Premium Acoustic Vibrant PET Felt Texture Background */}
       <div
-        className="hero-bg absolute inset-0 z-0 opacity-100 pointer-events-none mix-blend-multiply"
+        className="hero-bg absolute inset-0 z-0 opacity-100 pointer-events-none mix-blend-normal"
         style={{
           backgroundImage: "url('/elegant_acoustic_fabric.png')",
           backgroundSize: "cover",
@@ -40,8 +40,8 @@ export default function Hero() {
         }}
       ></div>
 
-      {/* Smooth fade into the rest of the site */}
-      <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-body to-transparent z-10 pointer-events-none"></div>
+      {/* Smooth fade into the rest of the site - reduced height to avoid blowing out the background */}
+      <div className="absolute bottom-0 left-0 w-full h-16 bg-gradient-to-t from-body to-transparent z-10 pointer-events-none opacity-50"></div>
 
       {/* Decorative calm geometry (Stripe/Apple inspired) */}
       <div className="absolute top-[-10%] right-[-5%] w-[50vw] h-[50vw] bg-accent/10 rounded-full blur-3xl pointer-events-none z-0"></div>

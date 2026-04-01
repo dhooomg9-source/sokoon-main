@@ -3,12 +3,12 @@ import '../index.css';
 
 export default function Partners() {
   const partners = [
-    { name: "Public Investment Fund", url: "https://www.pif.gov.sa", logo: "https://logo.clearbit.com/pif.gov.sa" },
-    { name: "NEOM", url: "https://www.neom.com", logo: "https://logo.clearbit.com/neom.com" },
-    { name: "Saudi Aramco", url: "https://www.aramco.com", logo: "https://logo.clearbit.com/aramco.com" },
-    { name: "SABIC", url: "https://www.sabic.com", logo: "https://logo.clearbit.com/sabic.com" },
-    { name: "stc", url: "https://www.stc.com.sa", logo: "https://logo.clearbit.com/stc.com.sa" },
-    { name: "ROSHN", url: "https://www.roshn.sa", logo: "https://logo.clearbit.com/roshn.sa" },
+    { name: "Public Investment Fund", url: "https://www.pif.gov.sa", logo: "/logos/pif.svg" },
+    { name: "NEOM", url: "https://www.neom.com", logo: "/logos/neom.svg" },
+    { name: "Saudi Aramco", url: "https://www.aramco.com", logo: "/logos/aramco.svg" },
+    { name: "SABIC", url: "https://www.sabic.com", logo: "/logos/sabic.svg" },
+    { name: "stc", url: "https://www.stc.com.sa", logo: "/logos/stc.svg" },
+    { name: "ROSHN", url: "https://www.roshn.sa", logo: "/logos/roshn.svg" },
   ];
 
   // Double the array for seamless marquee loops
@@ -28,7 +28,7 @@ export default function Partners() {
       </div>
 
       <div className="relative w-full flex overflow-hidden mask-edges z-0">
-        <div className="animate-marquee-scroll flex w-max items-center gap-16 md:gap-24 py-4 hover:pause-marquee">
+        <div className="animate-marquee-scroll flex w-max items-center gap-16 md:gap-24 py-4 hover:[animation-play-state:paused]">
           {duplicatedPartners.map((partner, index) => (
             <a key={index} href={partner.url} target="_blank" rel="noopener noreferrer" className="opacity-40 hover:opacity-100 transition-opacity duration-300 shrink-0 select-none">
               <img src={partner.logo} alt={`${partner.name} Logo`} className="h-12 md:h-16 object-contain pointer-events-none" />
