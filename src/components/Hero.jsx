@@ -1,5 +1,8 @@
 import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
 
 export default function Hero() {
   const containerRef = useRef(null);
@@ -17,10 +20,21 @@ export default function Hero() {
       });
 
       // Subtle image zoom on load
-      gsap.from(".hero-bg", {
-        scale: 1.05,
-        duration: 2,
-        ease: "power2.out"
+      gsap.fromTo(".hero-bg", 
+        { scale: 1.05 },
+        { scale: 1, duration: 2, ease: "power2.out" }
+      );
+
+      // Elegant Parallax transition for the background
+      gsap.to(".hero-bg", {
+        yPercent: 15,
+        ease: "none",
+        scrollTrigger: {
+          trigger: containerRef.current,
+          start: "top top",
+          end: "bottom top",
+          scrub: true
+        }
       });
     }, containerRef);
 
@@ -32,7 +46,7 @@ export default function Hero() {
 
       {/* Premium Acoustic Vibrant PET Felt Texture Background */}
       <div
-        className="hero-bg absolute inset-0 z-0 opacity-100 pointer-events-none mix-blend-normal"
+        className="hero-bg absolute -top-[15%] left-0 w-full h-[130%] z-0 opacity-100 pointer-events-none contrast-125 saturate-[1.2]"
         style={{
           backgroundImage: "url('/elegant_acoustic_fabric_hires.png')",
           backgroundSize: "cover",
@@ -40,8 +54,8 @@ export default function Hero() {
         }}
       ></div>
 
-      {/* Smooth fade into the rest of the site - reduced height to avoid blowing out the background */}
-      <div className="absolute bottom-0 left-0 w-full h-16 bg-gradient-to-t from-body to-transparent z-10 pointer-events-none opacity-50"></div>
+      {/* Extremely smooth elegant fade into the rest of the site */}
+      <div className="absolute bottom-0 left-0 w-full h-80 bg-gradient-to-t from-body via-body/90 to-transparent z-10 pointer-events-none"></div>
 
       {/* Decorative calm geometry (Stripe/Apple inspired) */}
       <div className="absolute top-[-10%] right-[-5%] w-[50vw] h-[50vw] bg-accent/10 rounded-full blur-3xl pointer-events-none z-0"></div>
