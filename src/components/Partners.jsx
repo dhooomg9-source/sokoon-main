@@ -1,21 +1,14 @@
 import React from 'react';
 import '../index.css';
 
-import pifLogo from '../assets/logos/pif.svg';
-import neomLogo from '../assets/logos/neom.svg';
-import aramcoLogo from '../assets/logos/aramco.svg';
-import sabicLogo from '../assets/logos/sabic.svg';
-import stcLogo from '../assets/logos/stc.svg';
-import roshnLogo from '../assets/logos/roshn.svg';
-
 export default function Partners() {
   const partners = [
-    { name: "Public Investment Fund", url: "https://www.pif.gov.sa", logo: pifLogo },
-    { name: "NEOM", url: "https://www.neom.com", logo: neomLogo },
-    { name: "Saudi Aramco", url: "https://www.aramco.com", logo: aramcoLogo },
-    { name: "SABIC", url: "https://www.sabic.com", logo: sabicLogo },
-    { name: "stc", url: "https://www.stc.com.sa", logo: stcLogo },
-    { name: "ROSHN", url: "https://www.roshn.sa", logo: roshnLogo },
+    { name: "Public Investment Fund", url: "https://www.pif.gov.sa", logo: "/logos/pif.svg" },
+    { name: "NEOM", url: "https://www.neom.com", logo: "/logos/neom.svg" },
+    { name: "Saudi Aramco", url: "https://www.aramco.com", logo: "/logos/aramco.svg" },
+    { name: "SABIC", url: "https://www.sabic.com", logo: "/logos/sabic.svg" },
+    { name: "stc", url: "https://www.stc.com.sa", logo: "/logos/stc.svg" },
+    { name: "ROSHN", url: "https://www.roshn.sa", logo: "/logos/roshn.svg" },
   ];
 
   // Double the array for seamless marquee loops
