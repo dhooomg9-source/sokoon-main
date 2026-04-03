@@ -28,13 +28,13 @@ export default function Hero() {
   return (
     <section ref={containerRef} className="relative min-h-[100dvh] w-full overflow-hidden bg-body text-primary flex flex-col justify-start pt-[200px] pb-20 px-6 md:px-12 lg:px-24 selection:bg-accent selection:text-on-dark">
 
-      {/* Warm Fabric Texture – user's actual photo, fully bright and fitted */}
+      {/* Sharp Acoustic Fabric Texture – Tiled for 1:1 pixel perfection */}
       <div
         className="hero-bg absolute inset-0 w-full h-full z-0 pointer-events-none"
         style={{
           backgroundImage: `url(${heroBg})`,
-          backgroundSize: "cover",
-          backgroundRepeat: "no-repeat",
+          backgroundSize: "450px",
+          backgroundRepeat: "repeat",
           backgroundAttachment: "fixed",
           backgroundPosition: "center",
           opacity: 1
