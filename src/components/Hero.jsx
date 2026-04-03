@@ -34,15 +34,13 @@ export default function Hero() {
 
       {/* Premium Acoustic Vibrant PET Felt Texture Background */}
       <div
-        className="hero-bg absolute inset-0 w-full h-full z-0 opacity-100 pointer-events-none contrast-125 saturate-[1.2]"
+        className="hero-bg absolute inset-0 w-full h-full z-0 pointer-events-none contrast-125 saturate-150 brightness-150"
         style={{
           backgroundImage: "url('/elegant_acoustic_fabric_hires.png')",
           backgroundSize: "600px",
           backgroundRepeat: "repeat",
           backgroundAttachment: "fixed",
-          backgroundPosition: "center",
-          WebkitMaskImage: "linear-gradient(to bottom, black 50%, transparent 100%)",
-          maskImage: "linear-gradient(to bottom, black 50%, transparent 100%)"
+          backgroundPosition: "center"
         }}
       ></div>
 
