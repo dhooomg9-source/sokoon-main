@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import heroBg from '../assets/elegant_acoustic_fabric_hires.png';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -19,11 +20,6 @@ export default function Hero() {
         delay: 0.2
       });
 
-      // Subtle image zoom on load
-      gsap.fromTo(".hero-bg", 
-        { scale: 1.05 },
-        { scale: 1, duration: 2, ease: "power2.out" }
-      );
     }, containerRef);
 
     return () => ctx.revert();
@@ -36,13 +32,16 @@ export default function Hero() {
       <div
         className="hero-bg absolute inset-0 w-full h-full z-0 pointer-events-none contrast-125 saturate-150 brightness-150"
         style={{
-          backgroundImage: "url('/elegant_acoustic_fabric_hires.png')",
+          backgroundImage: `url(${heroBg})`,
           backgroundSize: "600px",
           backgroundRepeat: "repeat",
           backgroundAttachment: "fixed",
           backgroundPosition: "center"
         }}
       ></div>
+
+      {/* Seamless transition to next section */}
+      <div className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-body to-transparent pointer-events-none z-10"></div>
 
       {/* Decorative calm geometry (Stripe/Apple inspired) */}
       <div className="absolute top-[-10%] right-[-5%] w-[50vw] h-[50vw] bg-accent/10 rounded-full blur-3xl pointer-events-none z-0"></div>
