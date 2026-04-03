@@ -28,19 +28,27 @@ export default function Hero() {
   return (
     <section ref={containerRef} className="relative min-h-[100dvh] w-full overflow-hidden bg-body text-primary flex flex-col justify-start pt-[200px] pb-20 px-6 md:px-12 lg:px-24 selection:bg-accent selection:text-on-dark">
 
-      {/* Premium Acoustic Vibrant PET Felt Texture Background */}
+      {/* Warm Fabric Texture Background – natural tone, smooth edges */}
       <div
-        className="hero-bg absolute inset-0 w-full h-full z-0 pointer-events-none contrast-125 saturate-150 brightness-150"
+        className="hero-bg absolute inset-0 w-full h-full z-0 pointer-events-none opacity-30"
         style={{
           backgroundImage: `url(${heroBg})`,
-          backgroundSize: "600px",
+          backgroundSize: "500px",
           backgroundRepeat: "repeat",
           backgroundAttachment: "fixed",
           backgroundPosition: "center"
         }}
       ></div>
 
-      {/* Seamless transition to next section */}
+      {/* Radial vignette – fades edges to body color smoothly */}
+      <div
+        className="absolute inset-0 z-[1] pointer-events-none"
+        style={{
+          background: "radial-gradient(ellipse at 50% 40%, transparent 30%, var(--color-body, #faf9f6) 85%)"
+        }}
+      ></div>
+
+      {/* Seamless bottom transition */}
       <div className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-body to-transparent pointer-events-none z-10"></div>
 
       {/* Decorative calm geometry (Stripe/Apple inspired) */}
