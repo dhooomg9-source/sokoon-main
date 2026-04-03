@@ -24,18 +24,6 @@ export default function Hero() {
         { scale: 1.05 },
         { scale: 1, duration: 2, ease: "power2.out" }
       );
-
-      // Elegant Parallax transition for the background
-      gsap.to(".hero-bg", {
-        yPercent: 15,
-        ease: "none",
-        scrollTrigger: {
-          trigger: containerRef.current,
-          start: "top top",
-          end: "bottom top",
-          scrub: true
-        }
-      });
     }, containerRef);
 
     return () => ctx.revert();
@@ -46,16 +34,17 @@ export default function Hero() {
 
       {/* Premium Acoustic Vibrant PET Felt Texture Background */}
       <div
-        className="hero-bg absolute -top-[15%] left-0 w-full h-[130%] z-0 opacity-100 pointer-events-none contrast-125 saturate-[1.2]"
+        className="hero-bg absolute inset-0 w-full h-full z-0 opacity-100 pointer-events-none contrast-125 saturate-[1.2]"
         style={{
           backgroundImage: "url('/elegant_acoustic_fabric_hires.png')",
-          backgroundSize: "cover",
-          backgroundPosition: "center"
+          backgroundSize: "600px",
+          backgroundRepeat: "repeat",
+          backgroundAttachment: "fixed",
+          backgroundPosition: "center",
+          WebkitMaskImage: "linear-gradient(to bottom, black 50%, transparent 100%)",
+          maskImage: "linear-gradient(to bottom, black 50%, transparent 100%)"
         }}
       ></div>
-
-      {/* Extremely smooth elegant fade into the rest of the site */}
-      <div className="absolute bottom-0 left-0 w-full h-80 bg-gradient-to-t from-body via-body/90 to-transparent z-10 pointer-events-none"></div>
 
       {/* Decorative calm geometry (Stripe/Apple inspired) */}
       <div className="absolute top-[-10%] right-[-5%] w-[50vw] h-[50vw] bg-accent/10 rounded-full blur-3xl pointer-events-none z-0"></div>
