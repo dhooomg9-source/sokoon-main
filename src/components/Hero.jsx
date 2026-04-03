@@ -28,28 +28,19 @@ export default function Hero() {
   return (
     <section ref={containerRef} className="relative min-h-[100dvh] w-full overflow-hidden bg-body text-primary flex flex-col justify-start pt-[200px] pb-20 px-6 md:px-12 lg:px-24 selection:bg-accent selection:text-on-dark">
 
-      {/* Warm Fabric Texture Background – natural tone, smooth edges */}
+      {/* Warm Fabric Texture – user's actual photo, fully bright and fitted */}
       <div
-        className="hero-bg absolute inset-0 w-full h-full z-0 pointer-events-none opacity-30"
+        className="hero-bg absolute inset-0 w-full h-full z-0 pointer-events-none"
         style={{
           backgroundImage: `url(${heroBg})`,
-          backgroundSize: "500px",
-          backgroundRepeat: "repeat",
+          backgroundSize: "cover",
+          backgroundRepeat: "no-repeat",
           backgroundAttachment: "fixed",
-          backgroundPosition: "center"
+          backgroundPosition: "center",
+          opacity: 1
         }}
       ></div>
 
-      {/* Radial vignette – fades edges to body color smoothly */}
-      <div
-        className="absolute inset-0 z-[1] pointer-events-none"
-        style={{
-          background: "radial-gradient(ellipse at 50% 40%, transparent 30%, var(--color-body, #faf9f6) 85%)"
-        }}
-      ></div>
-
-      {/* Seamless bottom transition */}
-      <div className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-body to-transparent pointer-events-none z-10"></div>
 
       {/* Decorative calm geometry (Stripe/Apple inspired) */}
       <div className="absolute top-[-10%] right-[-5%] w-[50vw] h-[50vw] bg-accent/10 rounded-full blur-3xl pointer-events-none z-0"></div>
