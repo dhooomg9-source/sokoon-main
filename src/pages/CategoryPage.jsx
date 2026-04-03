@@ -4,6 +4,32 @@ import { gsap } from 'gsap';
 import catalog from '../data/abstracta_catalog.json';
 import QuoteJourney from '../components/QuoteJourney';
 
+// Dynamic asset map for products
+const productAssets = import.meta.glob('../assets/products/*', { eager: true, import: 'default' });
+const categoryAssets = import.meta.glob('../assets/generated/*', { eager: true, import: 'default' });
+
+const resolveAsset = (path) => {
+  if (!path) return '';
+  if (path.startsWith('http')) return path;
+  
+  // Try to match path from catalog to bundled asset
+  // Catalog paths look like "/src/assets/products/filename.png" 
+  // or "/generated/filename.png"
+  const fileName = path.split('/').pop();
+  
+  if (path.includes('/products/')) {
+    const matched = Object.keys(productAssets).find(key => key.endsWith(fileName));
+    return matched ? productAssets[matched] : path;
+  }
+  
+  if (path.includes('/generated/')) {
+    const matched = Object.keys(categoryAssets).find(key => key.endsWith(fileName));
+    return matched ? categoryAssets[matched] : path;
+  }
+
+  return path;
+};
+
 export default function CategoryPage() {
   const { categorySlug } = useParams();
   const pageRef = useRef(null);
@@ -60,7 +86,7 @@ export default function CategoryPage() {
               </h3>
               <div className="w-full aspect-square bg-[#f2f2f2] relative overflow-hidden flex items-center justify-center group-hover:bg-[#ebebeb] transition-colors duration-500 shadow-sm group-hover:shadow-md">
                 <img 
-                  src={(prod.img || "").replace(/&amp;/g, '&')} 
+                  src={resolveAsset(prod.img)} 
                   alt={prod.title} 
                   className="w-[85%] h-[85%] object-contain group-hover:scale-105 transition-transform duration-700 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] mix-blend-multiply"
                 />

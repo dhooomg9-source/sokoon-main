@@ -5,6 +5,29 @@ import { ChevronLeft, Download } from 'lucide-react';
 import catalog from '../data/abstracta_catalog.json';
 import QuoteJourney from '../components/QuoteJourney';
 
+// Dynamic asset map for products
+const productAssets = import.meta.glob('../assets/products/*', { eager: true, import: 'default' });
+const categoryAssets = import.meta.glob('../assets/generated/*', { eager: true, import: 'default' });
+
+const resolveAsset = (path) => {
+  if (!path) return '';
+  if (path.startsWith('http')) return path;
+  
+  const fileName = path.split('/').pop();
+  
+  if (path.includes('/products/')) {
+    const matched = Object.keys(productAssets).find(key => key.endsWith(fileName));
+    return matched ? productAssets[matched] : path;
+  }
+  
+  if (path.includes('/generated/')) {
+    const matched = Object.keys(categoryAssets).find(key => key.endsWith(fileName));
+    return matched ? categoryAssets[matched] : path;
+  }
+
+  return path;
+};
+
 export default function ProductDetailsPage() {
   const { categorySlug, productSlug } = useParams();
   const pageRef = useRef(null);
@@ -69,7 +92,7 @@ export default function ProductDetailsPage() {
           {/* Left: Images */}
           <div className="w-full lg:w-3/5 flex flex-col gap-6">
             <div className="reveal-item w-full bg-[#f2f2f2] flex items-center justify-center p-8 lg:p-16 relative overflow-hidden rounded-md shadow-sm">
-              <img src={images[0]} alt={product.title} className="w-full max-w-[600px] object-contain drop-shadow-lg mix-blend-multiply" />
+              <img src={resolveAsset(images[0])} alt={product.title} className="w-full max-w-[600px] object-contain drop-shadow-lg mix-blend-multiply" />
             </div>
             
             {/* Gallery Grid */}
@@ -77,7 +100,7 @@ export default function ProductDetailsPage() {
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                 {images.slice(1).map((imgUrl, idx) => (
                   <div key={idx} className="reveal-item bg-[#f2f2f2] aspect-square flex items-center justify-center p-4 rounded-md shadow-sm">
-                    <img src={imgUrl} alt={`${product.title} thumbnail ${idx+1}`} className="w-full h-full object-contain mix-blend-multiply drop-shadow-md" />
+                    <img src={resolveAsset(imgUrl)} alt={`${product.title} thumbnail ${idx+1}`} className="w-full h-full object-contain mix-blend-multiply drop-shadow-md" />
                   </div>
                 ))}
               </div>
