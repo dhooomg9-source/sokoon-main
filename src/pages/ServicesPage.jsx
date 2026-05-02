@@ -106,10 +106,10 @@ export default function ServicesPage() {
       
       <section className="px-6 md:px-12 lg:px-24 max-w-[1600px] mx-auto mb-16">
         <div className="mb-20 reveal-item flex flex-col items-center text-center">
-          <h1 className="font-heading font-black text-[3.5rem] md:text-7xl mb-6 text-white tracking-tighter uppercase [text-shadow:_0_10px_30px_rgba(0,0,0,0.5)]">
+          <h1 className="font-heading font-black text-[3.5rem] md:text-7xl mb-6 text-accent tracking-tighter uppercase">
             Our Integrated <br className="hidden md:block"/> Services
           </h1>
-          <p className="font-data text-white/90 max-w-4xl text-[1.15rem] md:text-xl leading-relaxed font-semibold [text-shadow:_0_2px_10px_rgba(0,0,0,0.5)]">
+          <p className="font-data text-slate-800 max-w-4xl text-[1.15rem] md:text-xl leading-relaxed font-semibold">
             From precise acoustic diagnostics to the installation of premium sound control systems. We engineer silence with unparalleled accuracy.
           </p>
         </div>
