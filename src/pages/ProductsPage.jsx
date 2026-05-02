@@ -52,8 +52,8 @@ export default function ProductsPage() {
 
       <section className="w-full flex flex-col items-center relative z-20 px-6 max-w-[1400px] mx-auto">
         
-        <div className="mb-20 reveal-block flex flex-col items-center text-center">
-          <h1 className="font-heading font-black text-[3.5rem] md:text-7xl mb-6 text-accent tracking-tighter [text-shadow:_0_4px_30px_rgba(255,255,255,0.7)]">Products</h1>
+        <div className="mb-[350px] reveal-block flex flex-col items-center text-center">
+          <h1 className="font-heading font-black text-[3.5rem] md:text-7xl mb-6 text-[#774b2a] tracking-tighter [text-shadow:_0_4px_30px_rgba(255,255,255,0.7)]">Products</h1>
           <p className="font-data text-slate-800 max-w-4xl text-[1.15rem] md:text-xl leading-relaxed font-semibold [text-shadow:_0_2px_15px_rgba(255,255,255,0.8)]">
             Our products are developed in collaboration with influential contemporary designers, with the aim to create better soundscapes.
           </p>

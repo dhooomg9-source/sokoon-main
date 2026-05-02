@@ -104,9 +104,9 @@ export default function ServicesPage() {
         }
       `}} />
       
-      <section className="px-6 md:px-12 lg:px-24 max-w-[1600px] mx-auto mb-16">
+      <section className="px-6 md:px-12 lg:px-24 max-w-[1600px] mx-auto mb-[350px]">
         <div className="mb-20 reveal-item flex flex-col items-center text-center">
-          <h1 className="font-heading font-black text-[3.5rem] md:text-7xl mb-6 text-accent tracking-tighter uppercase">
+          <h1 className="font-heading font-black text-[3.5rem] md:text-7xl mb-6 text-[#774b2a] tracking-tighter uppercase">
             Our Integrated <br className="hidden md:block"/> Services
           </h1>
           <p className="font-data text-slate-800 max-w-4xl text-[1.15rem] md:text-xl leading-relaxed font-semibold">

@@ -39,13 +39,15 @@ export default function WhyChoosePage() {
         }
       `}} />
 
-      <section className="py-16 px-6 md:px-12 lg:px-24 bg-transparent w-full flex flex-col items-center relative z-20">
+      <section className="py-16 px-6 md:px-12 lg:px-24 bg-transparent w-full flex flex-col items-center relative z-20 mb-[350px]">
         <div className="w-full max-w-6xl">
-          <div className="mb-20 reveal-block flex flex-col items-center text-center">
-            <h1 className="font-heading font-black text-[3.5rem] md:text-7xl mb-6 text-accent tracking-tighter uppercase">
+          <div className="mb-20 reveal-block flex flex-col items-center text-center relative z-10">
+            {/* White wash just for the text to boost visibility on the dark image */}
+            <div className="absolute inset-0 bg-white/50 blur-3xl -z-10 rounded-[100%] scale-125"></div>
+            <h1 className="font-heading font-black text-[3.5rem] md:text-7xl mb-6 text-[#774b2a] tracking-tighter uppercase">
               Why Choose Sokoon
             </h1>
-            <p className="font-data text-slate-800 max-w-4xl text-[1.15rem] md:text-xl leading-relaxed font-semibold">
+            <p className="font-data text-white font-bold drop-shadow-md max-w-4xl text-[1.15rem] md:text-xl leading-relaxed">
               At SOKOON, we believe every space should be as comfortable acoustically as it is visually. Modern commercial design has embraced sleek, minimalist aesthetics—glass walls, exposed concrete, stone, and steel. While striking to the eye, these materials often create noisy, reverberant environments.
             </p>
           </div>
