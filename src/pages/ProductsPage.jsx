@@ -6,6 +6,7 @@ import catalog from '../data/abstracta_catalog.json';
 
 import acousticDoorImg from '../assets/generated/acoustic_door.png';
 import soundInsulationImg from '../assets/generated/sound_insulation.png';
+import productsHeroBg from '../assets/generated/products_hero_bg.png';
 
 const IMAGE_MAP = {
   "/generated/acoustic_door.png": acousticDoorImg,
@@ -32,7 +33,12 @@ export default function ProductsPage() {
   }, []);
 
   return (
-    <div ref={pageRef} className="w-full flex flex-col pt-32 pb-16 relative overflow-hidden bg-[#fafafa] text-black min-h-screen font-body">
+    <div ref={pageRef} className="w-full flex flex-col pt-32 pb-16 relative overflow-hidden bg-[#fafafa] text-black min-h-screen font-body z-0">
+      {/* Hero Background Image */}
+      <div className="absolute top-0 left-0 w-full h-[550px] -z-10 pointer-events-none">
+        <img src={productsHeroBg} alt="Products" className="w-full h-full object-cover opacity-25 mix-blend-multiply mask-image:linear-gradient(to_bottom,black,transparent)" />
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#fafafa]/80 to-[#fafafa]"></div>
+      </div>
       <section className="w-full flex flex-col items-center relative z-20 px-6 max-w-[1400px] mx-auto">
         
         <div className="mb-20 reveal-block flex flex-col items-center text-center">

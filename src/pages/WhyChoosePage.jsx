@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import QuoteJourney from '../components/QuoteJourney';
 import AboutSokoon from '../components/AboutSokoon';
+import whyChooseHeroBg from '../assets/generated/why_choose_hero_bg.png';
 
 export default function WhyChoosePage() {
   const pageRef = useRef(null);
@@ -21,9 +22,12 @@ export default function WhyChoosePage() {
   }, []);
 
   return (
-    <div ref={pageRef} className="w-full flex flex-col pt-24 relative overflow-hidden bg-body">
-      {/* Thematic Background Removed */}
-      <div className="absolute top-0 inset-x-0 h-64 bg-gradient-to-b from-body via-body/80 to-transparent z-10 pointer-events-none"></div>
+    <div ref={pageRef} className="w-full flex flex-col pt-24 relative overflow-hidden bg-body z-0">
+      {/* Hero Background Image */}
+      <div className="absolute top-0 left-0 w-full h-[550px] -z-10 pointer-events-none">
+        <img src={whyChooseHeroBg} alt="Why Choose Sokoon" className="w-full h-full object-cover opacity-40 mix-blend-multiply mask-image:linear-gradient(to_bottom,black,transparent)" />
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-body/80 to-body"></div>
+      </div>
 
       <section className="py-16 px-6 md:px-12 lg:px-24 bg-transparent w-full flex flex-col items-center relative z-20">
         <div className="w-full max-w-6xl">

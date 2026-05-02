@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { ArrowRight, FileText, Blocks, Volume2, ShieldCheck, Hammer, Sparkles, Building2, Trees, Activity, Palette } from 'lucide-react';
+import servicesHeroBg from '../assets/generated/services_hero_bg.png';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -86,7 +87,12 @@ export default function ServicesPage() {
   }, []);
 
   return (
-    <div ref={containerRef} className="min-h-screen bg-body text-primary pt-[180px] pb-24">
+    <div ref={containerRef} className="min-h-screen bg-body text-primary pt-[180px] pb-24 relative z-0">
+      {/* Hero Background Image */}
+      <div className="absolute top-0 left-0 w-full h-[650px] -z-10 pointer-events-none">
+        <img src={servicesHeroBg} alt="Services" className="w-full h-full object-cover opacity-40 mix-blend-multiply mask-image:linear-gradient(to_bottom,black,transparent)" />
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-body/60 to-body"></div>
+      </div>
       
       <section className="px-6 md:px-12 lg:px-24 max-w-[1600px] mx-auto mb-16">
         <div className="mb-12 reveal-item border-b border-primary/10 pb-8 flex flex-col lg:flex-row lg:items-end justify-between gap-8">
