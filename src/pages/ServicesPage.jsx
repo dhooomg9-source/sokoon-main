@@ -90,18 +90,18 @@ export default function ServicesPage() {
     <div ref={containerRef} className="min-h-screen bg-body text-primary pt-[180px] pb-24 relative z-0">
       {/* Hero Background Image */}
       <div className="absolute top-0 left-0 w-full h-[650px] -z-10 pointer-events-none">
-        <img src={servicesHeroBg} alt="Services" className="w-full h-full object-cover opacity-40 mix-blend-multiply mask-image:linear-gradient(to_bottom,black,transparent)" />
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-body/60 to-body"></div>
+        <img src={servicesHeroBg} alt="Services" className="w-full h-full object-cover opacity-100 object-center" />
+        <div className="absolute inset-0 bg-white/40"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-body via-body/20 to-transparent"></div>
       </div>
+
       
       <section className="px-6 md:px-12 lg:px-24 max-w-[1600px] mx-auto mb-16">
-        <div className="mb-12 reveal-item border-b border-primary/10 pb-8 flex flex-col lg:flex-row lg:items-end justify-between gap-8">
-          <div>
-            <h1 className="font-heading font-bold text-5xl md:text-7xl uppercase tracking-tighter text-accent">
-              Our Integrated <br /><span className="font-drama italic">Services.</span>
-            </h1>
-          </div>
-          <p className="font-body text-lg md:text-xl leading-relaxed max-w-2xl text-primary font-medium">
+        <div className="mb-20 reveal-item flex flex-col items-center text-center">
+          <h1 className="font-heading font-black text-[3.5rem] md:text-7xl mb-6 text-accent tracking-tighter uppercase">
+            Our Integrated <br className="hidden md:block"/> Services
+          </h1>
+          <p className="font-data text-slate-800 max-w-4xl text-[1.15rem] md:text-xl leading-relaxed font-semibold">
             From precise acoustic diagnostics to the installation of premium sound control systems. We engineer silence with unparalleled accuracy.
           </p>
         </div>

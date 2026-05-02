@@ -24,20 +24,19 @@ export default function WhyChoosePage() {
   return (
     <div ref={pageRef} className="w-full flex flex-col pt-24 relative overflow-hidden bg-body z-0">
       {/* Hero Background Image */}
-      <div className="absolute top-0 left-0 w-full h-[550px] -z-10 pointer-events-none">
-        <img src={whyChooseHeroBg} alt="Why Choose Sokoon" className="w-full h-full object-cover opacity-40 mix-blend-multiply mask-image:linear-gradient(to_bottom,black,transparent)" />
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-body/80 to-body"></div>
+      <div className="absolute top-0 left-0 w-full h-[650px] -z-10 pointer-events-none">
+        <img src={whyChooseHeroBg} alt="Why Choose Sokoon" className="w-full h-full object-cover opacity-100 object-center" />
+        <div className="absolute inset-0 bg-white/40"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-body via-body/20 to-transparent"></div>
       </div>
 
       <section className="py-16 px-6 md:px-12 lg:px-24 bg-transparent w-full flex flex-col items-center relative z-20">
         <div className="w-full max-w-6xl">
-          <div className="mb-12 reveal-block border-b border-primary/10 pb-8 flex flex-col lg:flex-row lg:items-end justify-between gap-8">
-            <div>
-              <h1 className="font-heading font-bold text-5xl md:text-7xl uppercase tracking-tighter text-accent">
-                Why Choose <br /><span className="text-accent font-drama italic">Sokoon.</span>
-              </h1>
-            </div>
-            <p className="font-body text-lg md:text-xl leading-relaxed max-w-2xl text-primary font-medium">
+          <div className="mb-20 reveal-block flex flex-col items-center text-center">
+            <h1 className="font-heading font-black text-[3.5rem] md:text-7xl mb-6 text-accent tracking-tighter uppercase">
+              Why Choose Sokoon
+            </h1>
+            <p className="font-data text-slate-800 max-w-4xl text-[1.15rem] md:text-xl leading-relaxed font-semibold">
               At SOKOON, we believe every space should be as comfortable acoustically as it is visually. Modern commercial design has embraced sleek, minimalist aesthetics—glass walls, exposed concrete, stone, and steel. While striking to the eye, these materials often create noisy, reverberant environments.
             </p>
           </div>
