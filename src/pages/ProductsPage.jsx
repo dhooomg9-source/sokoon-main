@@ -35,16 +35,26 @@ export default function ProductsPage() {
   return (
     <div ref={pageRef} className="w-full flex flex-col pt-32 pb-16 relative overflow-hidden bg-[#fafafa] text-black min-h-screen font-body z-0">
       {/* Hero Background Image */}
-      <div className="absolute top-0 left-0 w-full h-[600px] -z-10 pointer-events-none">
-        <img src={productsHeroBg} alt="Products" className="w-full h-full object-cover opacity-100 object-center" />
-        <div className="absolute inset-0 bg-white/40"></div>
-        <div className="absolute inset-0 bg-gradient-to-t from-[#fafafa] via-[#fafafa]/20 to-transparent"></div>
+      <div className="absolute top-0 left-0 w-full h-[700px] -z-10 pointer-events-none overflow-hidden">
+        <img 
+          src={productsHeroBg} 
+          alt="Products" 
+          className="w-full h-full object-cover object-center animate-[imageReveal_2s_ease-out_forwards] [mask-image:linear-gradient(to_bottom,black_40%,transparent_100%)] opacity-0 scale-105" 
+          style={{ animation: 'imageReveal 1.8s cubic-bezier(0.16, 1, 0.3, 1) forwards' }}
+        />
       </div>
+
+      <style dangerouslySetInnerHTML={{__html: `
+        @keyframes imageReveal {
+          to { opacity: 1; transform: scale(1); }
+        }
+      `}} />
+
       <section className="w-full flex flex-col items-center relative z-20 px-6 max-w-[1400px] mx-auto">
         
         <div className="mb-20 reveal-block flex flex-col items-center text-center">
-          <h1 className="font-heading font-black text-[3.5rem] md:text-7xl mb-6 text-accent tracking-tight tracking-tighter">Products</h1>
-          <p className="font-data text-slate-800 max-w-4xl text-[1.15rem] md:text-xl leading-relaxed font-semibold">
+          <h1 className="font-heading font-black text-[3.5rem] md:text-7xl mb-6 text-accent tracking-tighter [text-shadow:_0_4px_30px_rgba(255,255,255,0.7)]">Products</h1>
+          <p className="font-data text-slate-800 max-w-4xl text-[1.15rem] md:text-xl leading-relaxed font-semibold [text-shadow:_0_2px_15px_rgba(255,255,255,0.8)]">
             Our products are developed in collaboration with influential contemporary designers, with the aim to create better soundscapes.
           </p>
         </div>

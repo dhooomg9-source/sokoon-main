@@ -89,19 +89,27 @@ export default function ServicesPage() {
   return (
     <div ref={containerRef} className="min-h-screen bg-body text-primary pt-[180px] pb-24 relative z-0">
       {/* Hero Background Image */}
-      <div className="absolute top-0 left-0 w-full h-[650px] -z-10 pointer-events-none">
-        <img src={servicesHeroBg} alt="Services" className="w-full h-full object-cover opacity-100 object-center" />
-        <div className="absolute inset-0 bg-white/40"></div>
-        <div className="absolute inset-0 bg-gradient-to-t from-body via-body/20 to-transparent"></div>
+      <div className="absolute top-0 left-0 w-full h-[700px] -z-10 pointer-events-none overflow-hidden">
+        <img 
+          src={servicesHeroBg} 
+          alt="Services" 
+          className="w-full h-full object-cover object-center animate-[imageReveal_2s_ease-out_forwards] [mask-image:linear-gradient(to_bottom,black_40%,transparent_100%)] opacity-0 scale-105" 
+          style={{ animation: 'imageReveal 1.8s cubic-bezier(0.16, 1, 0.3, 1) forwards' }}
+        />
       </div>
 
+      <style dangerouslySetInnerHTML={{__html: `
+        @keyframes imageReveal {
+          to { opacity: 1; transform: scale(1); }
+        }
+      `}} />
       
       <section className="px-6 md:px-12 lg:px-24 max-w-[1600px] mx-auto mb-16">
         <div className="mb-20 reveal-item flex flex-col items-center text-center">
-          <h1 className="font-heading font-black text-[3.5rem] md:text-7xl mb-6 text-accent tracking-tighter uppercase">
+          <h1 className="font-heading font-black text-[3.5rem] md:text-7xl mb-6 text-white tracking-tighter uppercase [text-shadow:_0_10px_30px_rgba(0,0,0,0.5)]">
             Our Integrated <br className="hidden md:block"/> Services
           </h1>
-          <p className="font-data text-slate-800 max-w-4xl text-[1.15rem] md:text-xl leading-relaxed font-semibold">
+          <p className="font-data text-white/90 max-w-4xl text-[1.15rem] md:text-xl leading-relaxed font-semibold [text-shadow:_0_2px_10px_rgba(0,0,0,0.5)]">
             From precise acoustic diagnostics to the installation of premium sound control systems. We engineer silence with unparalleled accuracy.
           </p>
         </div>
