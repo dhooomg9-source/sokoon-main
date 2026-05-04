@@ -71,6 +71,12 @@ export default function CategoryPage() {
           </p>
         </div>
 
+        <div className="w-full mb-10 reveal-block flex justify-center">
+          <Link to="/products" className="px-8 py-3 bg-black text-white rounded-full font-heading font-bold text-lg hover:bg-accent hover:-translate-y-1 transition-all duration-300 shadow-md">
+            All Products
+          </Link>
+        </div>
+
         <div className="w-full mb-10 reveal-block text-center flex flex-col items-center">
           <h2 className="font-heading font-black text-3xl md:text-4xl text-accent tracking-tight mb-2">
             Products in this category
