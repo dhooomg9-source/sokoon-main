@@ -24,20 +24,14 @@ export default function WhyChoosePage() {
   return (
     <div ref={pageRef} className="w-full flex flex-col pt-24 relative overflow-hidden bg-body z-0">
       {/* Hero Background Image */}
-      <div className="absolute top-0 left-0 w-full h-[700px] -z-10 pointer-events-none overflow-hidden">
+      <div className="absolute top-0 left-0 w-full h-[700px] -z-10 pointer-events-none overflow-hidden flex justify-center">
         <img 
           src={whyChooseHeroBg} 
           alt="Why Choose Sokoon" 
-          className="w-full h-full object-cover object-center animate-[imageReveal_2s_ease-out_forwards] [mask-image:linear-gradient(to_bottom,black_40%,transparent_100%)] opacity-0 scale-105" 
-          style={{ animation: 'imageReveal 1.8s cubic-bezier(0.16, 1, 0.3, 1) forwards' }}
+          className="w-full max-w-[1600px] h-full object-cover object-center [mask-image:linear-gradient(to_bottom,black_40%,transparent_100%)]" 
+          style={{ imageRendering: '-webkit-optimize-contrast' }}
         />
       </div>
-
-      <style dangerouslySetInnerHTML={{__html: `
-        @keyframes imageReveal {
-          to { opacity: 1; transform: scale(1); }
-        }
-      `}} />
 
       <section className="py-16 px-6 md:px-12 lg:px-24 bg-transparent w-full flex flex-col items-center relative z-20 mb-[350px]">
         <div className="w-full max-w-6xl">
