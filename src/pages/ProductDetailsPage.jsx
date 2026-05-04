@@ -52,13 +52,40 @@ export default function ProductDetailsPage() {
   const allTabs = [
     { id: 'inspiration', label: 'Inspiration' },
     { id: 'technical-specification', label: 'Technical specification' },
-    { id: 'documentation', label: 'Documentation' },
-    { id: 'materials-and-colours', label: 'Materials and colours' },
-    { id: 'downloads', label: 'Downloads' },
-    { id: 'projects', label: 'Projects' }
+    { id: 'documentation', label: 'Documentation' }
   ];
+
+  const extractMediaFromHTML = (htmlString) => {
+    if (!htmlString) return '';
+    try {
+      const parser = new DOMParser();
+      const doc = parser.parseFromString(htmlString, 'text/html');
+      const mediaElements = Array.from(doc.querySelectorAll('video, iframe'));
+      
+      if (mediaElements.length === 0) return '';
+      
+      return mediaElements.map(el => {
+        const productVideo = el.closest('.productVideo');
+        if (productVideo) return productVideo.outerHTML;
+        return `<div class="w-full flex justify-center my-8 rounded-xl overflow-hidden bg-black/5 shadow-sm">${el.outerHTML}</div>`;
+      }).join('');
+    } catch(e) {
+      return htmlString;
+    }
+  };
+
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  const availableTabs = React.useMemo(() => product ? allTabs.filter(tab => product.sections && product.sections[tab.id]) : [], [product]);
+  const availableTabs = React.useMemo(() => {
+    if (!product) return [];
+    return allTabs.filter(tab => {
+      if (!product.sections || !product.sections[tab.id]) return false;
+      if (tab.id === 'inspiration') {
+        const mediaHtml = extractMediaFromHTML(product.sections[tab.id]);
+        return mediaHtml.trim().length > 0;
+      }
+      return true;
+    });
+  }, [product]);
 
   useEffect(() => {
     if (availableTabs.length > 0 && !activeTab) {
@@ -177,7 +204,7 @@ export default function ProductDetailsPage() {
                     prose-ul:list-disc prose-ol:list-decimal
                     ${activeTab === tab.id ? 'block' : 'hidden'}
                   `}
-                  dangerouslySetInnerHTML={{ __html: product.sections[tab.id] }}
+                  dangerouslySetInnerHTML={{ __html: tab.id === 'inspiration' ? extractMediaFromHTML(product.sections[tab.id]) : product.sections[tab.id] }}
                 />
               ))}
             </div>
